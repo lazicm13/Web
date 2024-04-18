@@ -1,11 +1,11 @@
+import './../Style/registration.css';
 
 function Registration(){
-
     return(
-        <div className="registration-container">
+        <div className="login-container">
             <p id="naslov">Welcome to Taxi Tracker</p>
             <h2>Sign Up</h2>
-            <form className="registration-form">
+            <form className="login-form">
                 <input
                     className="input-login"
                     type="text"
@@ -36,8 +36,23 @@ function Registration(){
                     name="address"
                     placeholder="Address"
                 />
-
+                <input
+                    className="input-login"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                />
+                <input
+                    className="input-login"
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Password confirm"
+                />
             </form>
+            <div className="button-container">
+                <button id="login-btn">Sign up</button>
+                <p>Have account? ⇒ <a href='/login'>Login</a></p>
+            </div>
         </div>
     );
 }
