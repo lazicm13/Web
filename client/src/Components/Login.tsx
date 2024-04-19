@@ -1,11 +1,10 @@
-import './../Style/registration.css';
 
 function Login()
 {
     return (
         <div className="login-container">
             <p id="naslov">Welcome to Taxi Tracker</p>
-            <h2>Login</h2>
+            <h2>Sign in</h2>
             <br/>
             <form className="login-form">
                 <input
@@ -21,7 +20,7 @@ function Login()
                     placeholder="Password"
                 />
             </form>
-            <button id='loginBtn'>Login</button>
+            <button id='loginBtn'>Sign in</button>
             <p>Don't have account? ⇒ <a href='/registration'>Sign up</a></p>
         </div>
     );

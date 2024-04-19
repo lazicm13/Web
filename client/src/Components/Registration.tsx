@@ -1,4 +1,3 @@
-import './../Style/registration.css';
 
 function Registration(){
     return(
@@ -51,7 +50,7 @@ function Registration(){
             </form>
             <div className="button-container">
                 <button id="login-btn">Sign up</button>
-                <p>Have account? ⇒ <a href='/login'>Login</a></p>
+                <p>Have account? ⇒ <a href='/login'>Sign in</a></p>
             </div>
         </div>
     );
