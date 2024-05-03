@@ -1,7 +1,7 @@
 import './../Style/userpage.css'
 
 function UserPage(){
-
+    
     return(
         <div className="userpage-container">
     <h2>User page</h2>
