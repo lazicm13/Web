@@ -4,6 +4,6 @@
     <ApplicationUrl />
     <LastServiceLocation />
     <IsStartupProjectCheckComplete>true</IsStartupProjectCheckComplete>
-    <LaunchTarget>[UseApplicationUrl]</LaunchTarget>
+    <LaunchTarget>..\AuthenticationService\AuthenticationService.csproj</LaunchTarget>
   </PropertyGroup>
 </Project>

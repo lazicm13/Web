@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 130vh;
 }
 
 /* Container styling */
@@ -17,6 +17,7 @@ body {
     padding: 40px;
     width: 350px;
     text-align: center;
+    
 }
 
 /* Title styling */
@@ -75,5 +76,52 @@ button {
 /* Button hover */
 button:hover {
     background-color: #45a049;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px; /* Add some spacing between input and other elements */
+}
+
+.input-login[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.file-input-btn {
+    padding: 10px 20px;
+    background-color: lightskyblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style for the selected image container */
+.selected-image {
+    margin-left: 16px; /* Add some spacing between the input button and the image */
+}
+
+.selected-image img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Make the image circular */
+    
+}
+
+.login-container #home{
+    color: black;
+    float: right;
+    margin-top: -20px;
+}
+
+.login-container #home:hover{
+    text-decoration: underline;
+    color: darkmagenta;
+}
+
+#signup{
+    padding: 20px;
 }
 

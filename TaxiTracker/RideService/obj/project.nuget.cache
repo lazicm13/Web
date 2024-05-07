@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZeFujhncwTHgRwc+Mepbr++8Zj3Mqxw8vC++OfTrY+OsWDEJ8TBntqzRdh4qQwfZkrSiXT5CTYvQYW//HCKDCA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP EliteBook 840-G2\\Desktop\\Faks\\4. GODINA\\Primena Web programiranja\\Project\\Web\\TaxiTracker\\RideService\\RideService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.servicefabric\\10.1.1951\\microsoft.servicefabric.10.1.1951.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.servicefabric.aspnetcore.abstractions\\7.1.1951\\microsoft.servicefabric.aspnetcore.abstractions.7.1.1951.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.servicefabric.aspnetcore.kestrel\\7.1.1951\\microsoft.servicefabric.aspnetcore.kestrel.7.1.1951.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.servicefabric.data\\7.1.1951\\microsoft.servicefabric.data.7.1.1951.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.servicefabric.data.extensions\\7.1.1951\\microsoft.servicefabric.data.extensions.7.1.1951.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.servicefabric.data.interfaces\\7.1.1951\\microsoft.servicefabric.data.interfaces.7.1.1951.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.servicefabric.diagnostics.internal\\7.1.1951\\microsoft.servicefabric.diagnostics.internal.7.1.1951.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.servicefabric.services\\7.1.1951\\microsoft.servicefabric.services.7.1.1951.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.0\\microsoft.netcore.app.runtime.win-x64.5.0.0.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.0\\microsoft.aspnetcore.app.runtime.win-x64.5.0.0.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840-G2\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.0\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

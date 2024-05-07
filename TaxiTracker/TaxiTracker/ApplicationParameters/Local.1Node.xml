@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application Name="fabric:/TaxiTracker" xmlns="http://schemas.microsoft.com/2011/01/fabric" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/TaxiTracker" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
+    <Parameter Name="RideService_PartitionCount" Value="1" />
+    <Parameter Name="RideService_MinReplicaSetSize" Value="1" />
+    <Parameter Name="RideService_TargetReplicaSetSize" Value="1" />
+    <Parameter Name="RideService_ASPNETCORE_ENVIRONMENT" Value="Development" />
+    <Parameter Name="AuthenticationService_InstanceCount" Value="1" />
+    <Parameter Name="AuthenticationService_ASPNETCORE_ENVIRONMENT" Value="Development" />
+    <Parameter Name="UserService_InstanceCount" Value="1" />
   </Parameters>
 </Application>

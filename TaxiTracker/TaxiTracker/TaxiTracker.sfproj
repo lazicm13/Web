@@ -2,9 +2,9 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.props" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>621c2a2f-640c-4124-b722-180d88f2d4a4</ProjectGuid>
+    <ProjectGuid>8d301d7d-8611-4e8f-a571-68a3ba9b6c9a</ProjectGuid>
     <ProjectVersion>2.6</ProjectVersion>
-    <MinToolsVersion>16.10</MinToolsVersion>
+    <MinToolsVersion>16.5</MinToolsVersion>
     <SupportedMSBuildNuGetPackageVersion>1.7.6</SupportedMSBuildNuGetPackageVersion>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
@@ -27,15 +27,15 @@
     <None Include="PublishProfiles\Local.1Node.xml" />
     <None Include="PublishProfiles\Local.5Node.xml" />
     <None Include="Scripts\Deploy-FabricApplication.ps1" />
-    <None Include="StartupServiceParameters\Cloud.xml" />
-    <None Include="StartupServiceParameters\Local.1Node.xml" />
-    <None Include="StartupServiceParameters\Local.5Node.xml" />
-    <None Include="StartupServices.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AuthenticationService\AuthenticationService.csproj">
+      <ServiceLaunchUrl>http://localhost:{ServicePort}/swagger</ServiceLaunchUrl>
+    </ProjectReference>
+    <ProjectReference Include="..\RideService\RideService.csproj" />
     <ProjectReference Include="..\UserService\UserService.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
