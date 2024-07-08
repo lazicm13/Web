@@ -45,7 +45,7 @@ Overwrite Behavior if an application exists in the cluster with the same name. A
 Switch signaling whether the package should be validated or not before deployment.
 
 .PARAMETER SecurityToken
-A security token for authentication to cluster management endpoints. Used for silent authentication to clusters that are protected by Azure Active Directory.
+A security token for authentication to cluster management endpoints. Used for silent authentication to clusters that are protected by Microsoft Entra ID (formerly known as Azure Active Directory).
 
 .PARAMETER CopyPackageTimeoutSec
 Timeout in seconds for copying application package to image store.
@@ -127,7 +127,15 @@ function Read-XmlElementAsHashtable
                     $hashtable[$_.Name] = $boolVal
                 }
                 else {
-                    $hashtable[$_.Name] = $_.Value
+                    # ServerCertThumbprints is special cased to handle parsing of comma separated thumbprints
+                    if ($_.Name -eq "ServerCertThumbprint")
+                    {
+                        $hashtable[$_.Name] = $_.Value.Split(@([char]','))
+                    }
+                    else
+                    {
+                        $hashtable[$_.Name] = $_.Value
+                    }
                 }
             }
     }

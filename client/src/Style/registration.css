@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 130vh;
+    height: 70vh;
 }
 
 /* Container styling */
@@ -17,7 +17,6 @@ body {
     padding: 40px;
     width: 350px;
     text-align: center;
-    
 }
 
 /* Title styling */
@@ -100,12 +99,12 @@ button:hover {
 
 /* Style for the selected image container */
 .selected-image {
-    margin-left: 16px; /* Add some spacing between the input button and the image */
+    margin-left: 36px; /* Add some spacing between the input button and the image */
 }
 
 .selected-image img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%; /* Make the image circular */
     
 }
@@ -125,3 +124,11 @@ button:hover {
     padding: 20px;
 }
 
+/* index.css ili globalni CSS fajl */
+.google-login-button {
+    background-color: #fff;
+    color: #333;
+    padding: 17px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

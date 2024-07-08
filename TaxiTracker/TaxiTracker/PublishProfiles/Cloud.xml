@@ -15,12 +15,13 @@
                                     StoreLocation="CurrentUser"
                                     StoreName="My" />
 
-       Example showing parameters for a cluster that uses Azure Active Directory (AAD) security:
+       Example showing parameters for a cluster that uses Microsoft Entra ID (formerly known as Azure Active Directory) security:
        <ClusterConnectionParameters ConnectionEndpoint="mycluster.westus.cloudapp.azure.com:19000"
                                     AzureActiveDirectory="true"
                                     ServerCertThumbprint="0123456789012345678901234567890123456789" />
   -->
   <ClusterConnectionParameters ConnectionEndpoint="" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
+  <StartupServiceParameterFile Path="..\StartupServiceParameters\Cloud.xml" />
   <CopyPackageParameters CompressPackage="true" />
 </PublishProfile>
