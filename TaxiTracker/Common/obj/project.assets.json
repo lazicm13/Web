@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\Common\\Common.csproj",
+      "projectPath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Common.csproj",
       "packagesPath": "C:\\Users\\Marko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\Common\\obj\\",
+      "outputPath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

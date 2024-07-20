@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CIsCHV3p2wY=",
+  "dgSpecHash": "/YdntyaFQso=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\AuthenticationService.csproj",
+  "projectFilePath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

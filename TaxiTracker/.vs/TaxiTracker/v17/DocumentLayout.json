@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\",
+  "WorkspaceRootPath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\project\\taxitracker\\common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\project\\taxitracker\\authenticationservice\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\project\\taxitracker\\authenticationservice\\serviceeventsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\serviceeventsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\serviceeventsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\project\\taxitracker\\authenticationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\project\\taxitracker\\authenticationservice\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,67 +42,106 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Services\\AuthService.cs",
+              "RelativeToolTip": "AuthenticationService\\Services\\AuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T15:50:36.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Services\\IAuthService.cs",
+              "RelativeToolTip": "AuthenticationService\\Services\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T15:49:24.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "AuthenticationService\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T15:41:36.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.cs",
+              "RelativeToolTip": "AuthenticationService\\AuthenticationService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T15:38:57.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\Controllers\\WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "AuthenticationService\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-06T11:05:33.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\Common\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
               "RelativeDocumentMoniker": "Common\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\Common\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
               "RelativeToolTip": "Common\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCYAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-06T11:04:03.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "AuthenticationService\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\WeatherForecast.cs",
-              "RelativeToolTip": "AuthenticationService\\WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T11:02:22.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ServiceEventSource.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\ServiceEventSource.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\ServiceEventSource.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\ServiceEventSource.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\ServiceEventSource.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\ServiceEventSource.cs",
               "RelativeToolTip": "AuthenticationService\\ServiceEventSource.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-06T11:02:21.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Program.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Program.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\Project\\TaxiTracker\\AuthenticationService\\Program.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Program.cs",
               "RelativeToolTip": "AuthenticationService\\Program.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -49,7 +49,7 @@ function Registration(){
     const [registrationStatus, setRegistrationStatus] = useState('');
 
     const validateInputs = () => {
-        const { fullName, address, username , birthDate, imgSource,  email, password } = registrationData;
+        const { fullName, address, username , imgSource,  email, password } = registrationData;
 
         if (!fullName || !address || !username || !imgSource || !email || !password) {
             setRegistrationStatus('Please fill in all fields.');
@@ -60,9 +60,9 @@ function Registration(){
     }
 
     const handleRegistration = async () =>{
-        // if(!validateInputs()){
-        //     return;
-        // }
+        if(!validateInputs()){
+            return;
+        }
         
         try{
             const response = await fetch('http://localhost:8260/auth/registration', {
