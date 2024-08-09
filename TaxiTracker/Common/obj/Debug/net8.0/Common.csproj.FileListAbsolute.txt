@@ -9,3 +9,16 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\Project\TaxiTrac
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\Project\TaxiTracker\Common\obj\Debug\net8.0\refint\Common.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\Project\TaxiTracker\Common\obj\Debug\net8.0\Common.pdb
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\Project\TaxiTracker\Common\obj\Debug\net8.0\ref\Common.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\bin\Debug\net8.0\Common.deps.json
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\bin\Debug\net8.0\Common.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\bin\Debug\net8.0\Common.pdb
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\Common.csproj.AssemblyReference.cache
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\Common.AssemblyInfoInputs.cache
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\Common.AssemblyInfo.cs
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\Common.sourcelink.json
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\Common.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\refint\Common.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\Common.pdb
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\Common\obj\Debug\net8.0\ref\Common.dll

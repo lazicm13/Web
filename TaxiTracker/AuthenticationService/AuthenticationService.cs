@@ -14,52 +14,66 @@ using Microsoft.ServiceFabric.Data;
 
 namespace AuthenticationService
 {
-    /// <summary>
-    /// The FabricRuntime creates an instance of this class for each service type instance.
-    /// </summary>
     internal sealed class AuthenticationService : StatelessService
     {
         public AuthenticationService(StatelessServiceContext context)
             : base(context)
         { }
 
-        /// <summary>
-        /// Optional override to create listeners (like tcp, http) for this service instance.
-        /// </summary>
-        /// <returns>The collection of listeners.</returns>
         protected override IEnumerable<ServiceInstanceListener> CreateServiceInstanceListeners()
         {
             return new ServiceInstanceListener[]
             {
-                new ServiceInstanceListener(serviceContext =>
-                    new KestrelCommunicationListener(serviceContext, "ServiceEndpoint", (url, listener) =>
-                    {
-                        ServiceEventSource.Current.ServiceMessage(serviceContext, $"Starting Kestrel on {url}");
+        new ServiceInstanceListener(serviceContext =>
+            new KestrelCommunicationListener(serviceContext, "ServiceEndpoint", (url, listener) =>
+            {
+                ServiceEventSource.Current.ServiceMessage(serviceContext, $"Starting Kestrel on {url}");
 
-                        var builder = WebApplication.CreateBuilder();
+                var builder = WebApplication.CreateBuilder();
 
-                        builder.Services.AddSingleton<StatelessServiceContext>(serviceContext);
-                        builder.WebHost
-                                    .UseKestrel()
-                                    .UseContentRoot(Directory.GetCurrentDirectory())
-                                    .UseServiceFabricIntegration(listener, ServiceFabricIntegrationOptions.None)
-                                    .UseUrls(url);
-                        builder.Services.AddControllers();
-                        builder.Services.AddEndpointsApiExplorer();
-                        builder.Services.AddSwaggerGen();
-                        var app = builder.Build();
-                        if (app.Environment.IsDevelopment())
+                builder.Services.AddSingleton<StatelessServiceContext>(serviceContext);
+
+                // Add CORS services with specific origin
+                builder.Services.AddCors(options =>
+                {
+                    options.AddPolicy("AllowSpecificOrigin",
+                        policy =>
                         {
-                        app.UseSwagger();
-                        app.UseSwaggerUI();
-                        }
-                        app.UseAuthorization();
-                        app.MapControllers();
-                        
-                        return app;
+                            policy.WithOrigins("http://localhost:5173") 
+                                  .AllowAnyMethod()
+                                  .AllowAnyHeader()
+                                  .AllowCredentials();
+                        });
+                });
 
-                    }))
+                builder.WebHost
+                    .UseKestrel()
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseServiceFabricIntegration(listener, ServiceFabricIntegrationOptions.None)
+                    .UseUrls(url);
+
+                builder.Services.AddControllers();
+                builder.Services.AddEndpointsApiExplorer();
+                builder.Services.AddSwaggerGen();
+
+                var app = builder.Build();
+
+                if (app.Environment.IsDevelopment())
+                {
+                    app.UseSwagger();
+                    app.UseSwaggerUI();
+                }
+
+                // Use CORS policy
+                app.UseCors("AllowSpecificOrigin");
+
+                app.UseAuthorization();
+                app.MapControllers();
+
+                return app;
+            }))
             };
         }
+
     }
 }
