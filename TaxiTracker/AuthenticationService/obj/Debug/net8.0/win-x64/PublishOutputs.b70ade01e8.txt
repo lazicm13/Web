@@ -335,10 +335,17 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProje
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Azure.Storage.Common.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Azure.Storage.Files.Shares.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Azure.Storage.Queues.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.Extensions.Azure.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.Identity.Client.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.OpenApi.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.ServiceFabric.Internal.Strings.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.ServiceFabric.Internal.dll
@@ -359,6 +366,7 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProje
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\System.ClientModel.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\System.IO.Hashing.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\System.Memory.Data.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll

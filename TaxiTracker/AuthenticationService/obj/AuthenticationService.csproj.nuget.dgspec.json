@@ -60,7 +60,7 @@
             },
             "Azure.Storage.Blobs": {
               "target": "Package",
-              "version": "[12.13.1, )"
+              "version": "[12.21.2, )"
             },
             "Azure.Storage.Files.Shares": {
               "target": "Package",
@@ -69,6 +69,10 @@
             "Azure.Storage.Queues": {
               "target": "Package",
               "version": "[12.11.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             },
             "Microsoft.Extensions.Azure": {
               "target": "Package",
@@ -175,9 +179,17 @@
               "target": "Package",
               "version": "[12.9.0, )"
             },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.21.2, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [

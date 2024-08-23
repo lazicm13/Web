@@ -7,7 +7,7 @@ namespace Common.Models
 {
     public class User : ITableEntity
     {
-        public string PartitionKey { get; set; } = "User";  //radilo sa upitnikom
+        public string PartitionKey { get; set; } = "User";
         public string? RowKey { get; set; }
         public DateTimeOffset? Timestamp { get; set; }
         public ETag ETag { get; set; }
@@ -18,9 +18,11 @@ namespace Common.Models
         public string Password { get; set; }
         public string FullName { get; set; }
         public string Address { get; set; }
+        public string BirthDate { get; set; }
+        public string? Image { get; set; }
 
 
-        public User(string username, string emailAddress, string password, string fullName, string address)
+        public User(string username, string emailAddress, string password, string fullName, string address, string birthDate, string image)
         {
             RowKey = emailAddress;
             Username = username;
@@ -28,6 +30,8 @@ namespace Common.Models
             Password = password;
             FullName = fullName;
             Address = address;
+            BirthDate = birthDate;
+            Image = image;
         }
 
         public User() { }

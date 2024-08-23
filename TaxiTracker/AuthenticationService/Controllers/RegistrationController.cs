@@ -1,4 +1,6 @@
-﻿using Common.Models;
+﻿using Azure.Storage.Blobs.Models;
+using Azure.Storage.Blobs;
+using Common.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,13 +12,22 @@ namespace AuthenticationService.Controllers
     public class RegistrationController : ControllerBase
     {
         private readonly UserDataRepository repo = new UserDataRepository();
+        private readonly string connectionString = "DataConnectionString";
+
+        private readonly ILogger<RegistrationController> _logger;
+
+        public RegistrationController(ILogger<RegistrationController> logger)
+        {
+            _logger = logger;
+        }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] User user)
         {
             try
-            {
+                {
                 string rowKey = user.EmailAddress;
+
                 var userExists = await repo.ExistsAsync(rowKey);
                 if (userExists)
                 {
@@ -30,12 +41,12 @@ namespace AuthenticationService.Controllers
                     EmailAddress = user.EmailAddress,
                     FullName = user.FullName,
                     Address = user.Address,
+                    BirthDate = user.BirthDate,
+                    Image = user.Image,
                     RowKey = rowKey
                 };
 
                 await repo.AddUserAsync(userData);
-
-                await Task.CompletedTask;
 
                 return Ok(new { message = "Registration successful." });
             }
@@ -50,5 +61,7 @@ namespace AuthenticationService.Controllers
             // Implementirajte stvarnu hash funkciju 
             return password; // Placeholder
         }
+
+        
     }
 }

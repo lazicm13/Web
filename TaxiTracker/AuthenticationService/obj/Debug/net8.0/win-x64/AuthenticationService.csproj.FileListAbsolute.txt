@@ -756,3 +756,11 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProje
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\AuthenticationService.pdb
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\AuthenticationService.genruntimeconfig.cache
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\ref\AuthenticationService.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\bin\Debug\net8.0\win-x64\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\bin\Debug\net8.0\win-x64\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\bin\Debug\net8.0\win-x64\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\bin\Debug\net8.0\win-x64\Microsoft.IdentityModel.Logging.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\bin\Debug\net8.0\win-x64\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\bin\Debug\net8.0\win-x64\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\bin\Debug\net8.0\win-x64\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\bin\Debug\net8.0\win-x64\System.IdentityModel.Tokens.Jwt.dll

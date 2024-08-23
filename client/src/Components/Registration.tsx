@@ -7,6 +7,8 @@ interface RegistrationData {
     Password: string;
     FullName: string;
     Address: string;
+    BirthDate: string;
+    ImgSource?: string;
 }
 
 function Registration() {
@@ -15,19 +17,27 @@ function Registration() {
         EmailAddress: '',
         Password: '',
         FullName: '',
-        Address: '',    
+        Address: '',
+        BirthDate: ''
     });
 
-    // const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     const file = event.target.files?.[0];
-    //     if (file) {
-    //         const reader = new FileReader();
-    //         reader.onloadend = () => {
-    //             setRegistrationData({ ...registrationData, imgSource: reader.result as string });
-    //         };
-    //         reader.readAsDataURL(file);
-    //     }
-    // };
+    // Separate state variable for ConfirmPassword
+    const [confirmPassword, setConfirmPassword] = useState('');
+
+    const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const base64String = reader.result as string;
+                setRegistrationData(prevData => ({
+                    ...prevData,
+                    ImgSource: base64String
+                }));
+            };
+            reader.readAsDataURL(file);
+        }
+    };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -37,58 +47,44 @@ function Registration() {
         }));
     };
 
+    const handleConfirmPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setConfirmPassword(e.target.value);
+    };
+
     const navigate = useNavigate();
     const [registrationStatus, setRegistrationStatus] = useState('');
 
     const validateInputs = () => {
         const { FullName, Address, Username, EmailAddress, Password } = registrationData;
 
-        if (!FullName || !Address || !Username  || !EmailAddress || !Password) {
+        // Check if all required fields are filled
+        if (!FullName || !Address || !Username || !EmailAddress || !Password || !confirmPassword) {
             setRegistrationStatus('Please fill in all fields.');
+            return false;
+        }
+
+        // Check if passwords match
+        if (Password !== confirmPassword) {
+            setRegistrationStatus('Passwords do not match.');
+            return false;
+        }
+
+        // Check if password has at least 8 characters and includes at least one number
+        const passwordRegex = /^(?=.*\d).{8,}$/;
+        if (!passwordRegex.test(Password)) {
+            setRegistrationStatus('Password must be at least 8 characters long and contain at least one number.');
+            return false;
+        }
+
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(EmailAddress)) {
+            setRegistrationStatus('Please enter a valid email address.');
             return false;
         }
 
         return true;
     };
-
-    // const handleRegistration = async () => {
-    //     if (!validateInputs()) {
-    //         return;
-    //     }
-
-    
-    //     const formData = new FormData();
-    //     formData.append('username', registrationData.username);
-    //     formData.append('emailAddress', registrationData.emailAddress);
-    //     formData.append('password', registrationData.password);
-    //     formData.append('fullName', registrationData.fullName);
-    //     formData.append('address', registrationData.address);
-    //     // if (registrationData.imgSource) {
-    //     //     formData.append('imgSource', registrationData.imgSource);
-    //     // }
-    
-    //     try {
-    //         const response = await fetch('http://localhost:8850/auth/registration', {
-    //             method: 'POST',
-    //             body: formData,
-    //             credentials: 'include',
-    //         });
-    
-    //         console.log('Sending registration data:', registrationData);
-    //         const data = await response.json();
-    
-    //         if (response.ok) {
-    //             console.log('Registration successful: ', data.message);
-    //             navigate('/login');
-    //         } else {
-    //             console.error('Registration failed: ', data.message);
-    //             setRegistrationStatus(data.message || 'Registration failed.');
-    //         }
-    //     } catch (error) {
-    //         console.error('Error during registration: ', error);
-    //         setRegistrationStatus('An error occurred during registration.');
-    //     }
-    // };
 
     async function handleRegistration() {
         try {
@@ -101,12 +97,13 @@ function Registration() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(registrationData),
+                credentials: 'include' // Include credentials (cookies) in the request
             });
             
             console.log('Sending registration data:', registrationData);
 
             if (response.ok) {
-                alert('Registration successfull!');
+                alert('Registration successful!');
                 const data = await response.json();
                 console.log(data.message);
                 navigate('/login');
@@ -117,7 +114,7 @@ function Registration() {
             }
         } catch (error) {
             console.error('Request failed', error);
-            alert('An error occured, please try again later!');
+            alert('An error occurred, please try again later!');
         }
     }
 
@@ -151,7 +148,14 @@ function Registration() {
                     value={registrationData.EmailAddress}
                     onChange={handleInputChange}
                 />
-                
+                <input
+                    className="input-login"
+                    type="date"
+                    name="BirthDate"
+                    placeholder="Birth Date"
+                    value={registrationData.BirthDate}
+                    onChange={handleInputChange}
+                />
                 <input
                     className="input-login"
                     type="text"
@@ -173,6 +177,8 @@ function Registration() {
                     type="password"
                     name="ConfirmPassword"
                     placeholder="Password confirm"
+                    value={confirmPassword}
+                    onChange={handleConfirmPasswordChange}
                 />
                 <div className="image">
                     <label htmlFor="file-input" className="file-input-btn">Choose Image</label>
@@ -182,13 +188,13 @@ function Registration() {
                         type="file"
                         accept="image/*"
                         name="imgSource"
-                        // onChange={handleImageChange}
+                        onChange={handleImageChange}
                     />
-                    {/* {registrationData.imgSource && (
+                    {registrationData.ImgSource && (
                         <div className="selected-image">
-                            <img src={registrationData.imgSource} alt="Selected" />
+                            <img src={registrationData.ImgSource} alt="Selected" />
                         </div>
-                    )} */}
+                    )}
                 </div>
             </form>
             <button id="login-btn" onClick={handleRegistration}>Sign up</button>
