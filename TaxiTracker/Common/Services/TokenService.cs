@@ -78,5 +78,26 @@ namespace Common.Services
 
             return null;
         }
+
+        public bool IsUserLoggedIn(string token)
+        {
+            // Proveri da li je token prazan ili null
+            if (string.IsNullOrEmpty(token))
+                return false;
+
+            // Pokušaj da validiraš token
+            var principal = ValidateToken(token);
+            return principal != null; 
+        }
+
+        public string GetUsernameFromToken(string token)
+        {
+            var principal = ValidateToken(token);
+            if (principal != null)
+            {
+                return principal.Identity.Name;
+            }
+            return null;
+        }
     }
 }

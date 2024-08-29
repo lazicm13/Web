@@ -2,6 +2,7 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import { CredentialResponse } from '@react-oauth/google';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 
 interface LoginData {
     emailAddress: string;
@@ -12,6 +13,33 @@ interface LoginData {
 function Login() {
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const checkLoginStatus = async () => {
+            try {
+                const response = await fetch('http://localhost:8850/auth/login/status', {
+                    method: 'GET',
+                    credentials: 'include', // Obezbeđuje slanje kolačića u zahtevima
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.isLoggedIn) {
+                        // Korisnik je već ulogovan, preusmeri ga na početnu stranicu
+                        alert(data.username);
+                        navigate('/'); // Prilagodi URL
+                    }
+                    else
+                        console.log("User is not logged in!");
+                }
+            } catch (error) {
+                console.error('Failed to check login status:', error);
+            }
+        };
+
+        checkLoginStatus();
+    }, [navigate]);
+
 
     const [loginData, setLoginData] = useState<LoginData>({
         emailAddress: '',
@@ -35,6 +63,7 @@ function Login() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(loginData),
+                credentials: 'include',
             });
 
             console.log(loginData);
@@ -42,9 +71,17 @@ function Login() {
             if (response.ok) {
                 alert('Login successful!');
                 const data = await response.json();
+
+                if (data.redirectTo) {
+                    // Preusmerava korisnika na početnu stranicu
+                    navigate(data.redirectTo);
+                    return; 
+                }
                 console.log(data.message);
-                navigate('/')
-            } else {
+                navigate('/');
+            }
+            
+            else {
                 alert('Login failed!');
                 const errorData = await response.json();
                 console.error('Error:', errorData.message);

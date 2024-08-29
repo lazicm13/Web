@@ -80,7 +80,8 @@ namespace AuthenticationService
                             {
                                 OnMessageReceived = context =>
                                 {
-                                    var accessToken = context.Request.Cookies["access_token"];
+                                    var accessToken = context.Request.Cookies["jwt"];
+                                     Console.WriteLine($"JWT Token: {accessToken}"); // za debuging
                                     if (!string.IsNullOrEmpty(accessToken))
                                     {
                                         context.Token = accessToken;

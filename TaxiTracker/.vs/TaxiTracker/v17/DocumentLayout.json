@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\models\\userdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\models\\userdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\userdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\userdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DBC0C12-2916-453E-A55F-9BDEB16FABCD}|TaxiTracker\\TaxiTracker.sfproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\taxitracker\\startupservices.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5DBC0C12-2916-453E-A55F-9BDEB16FABCD}|TaxiTracker\\TaxiTracker.sfproj|solutionrelative:taxitracker\\startupservices.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\authenticationservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\authenticationservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\packageroot\\servicemanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\packageroot\\servicemanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\UserService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\packageroot\\config\\settings.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\UserService.csproj|solutionrelative:authenticationservice\\packageroot\\config\\settings.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,24 +63,8 @@
       "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\serviceeventsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\authenticationservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\authenticationservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\authenticationservice.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -57,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5DBC0C12-2916-453E-A55F-9BDEB16FABCD}|TaxiTracker\\TaxiTracker.sfproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\taxitracker\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{5DBC0C12-2916-453E-A55F-9BDEB16FABCD}|TaxiTracker\\TaxiTracker.sfproj|solutionrelative:taxitracker\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DBC0C12-2916-453E-A55F-9BDEB16FABCD}|TaxiTracker\\TaxiTracker.sfproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\taxitracker\\startupservices.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{5DBC0C12-2916-453E-A55F-9BDEB16FABCD}|TaxiTracker\\TaxiTracker.sfproj|solutionrelative:taxitracker\\startupservices.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
@@ -82,10 +94,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VisualStudio\\v17.0\\Service Fabric Tools\\Microsoft.VisualStudio.Azure.Fabric.ServiceProject.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\packageroot\\servicemanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\packageroot\\servicemanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -95,7 +103,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -143,64 +151,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RegistrationController.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\RegistrationController.cs",
-              "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\RegistrationController.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\RegistrationController.cs",
-              "RelativeToolTip": "AuthenticationService\\Controllers\\RegistrationController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAvwDMAAAANAAAA",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\UserController.cs",
+              "RelativeToolTip": "AuthenticationService\\Controllers\\UserController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAwEMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T16:17:05.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Program.cs",
-              "RelativeDocumentMoniker": "AuthenticationService\\Program.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Program.cs",
-              "RelativeToolTip": "AuthenticationService\\Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAmwCUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T11:02:14.71Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Common\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
-              "RelativeToolTip": "Common\\Models\\User.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAA8wBUAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T11:04:03.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "AuthenticationService\\AuthenticationService.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.cs",
-              "RelativeToolTip": "AuthenticationService\\AuthenticationService.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAAwIEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T15:38:57.637Z",
+              "WhenOpened": "2024-08-29T13:29:53.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Common\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Services\\TokenService.cs",
-              "RelativeToolTip": "Common\\Services\\TokenService.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAqwDwAAAAsAAAA",
+              "DocumentIndex": 11,
+              "Title": "Settings.xml",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\PackageRoot\\Config\\Settings.xml",
+              "RelativeDocumentMoniker": "AuthenticationService\\PackageRoot\\Config\\Settings.xml",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\PackageRoot\\Config\\Settings.xml",
+              "RelativeToolTip": "AuthenticationService\\PackageRoot\\Config\\Settings.xml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-08-29T12:31:37.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDataRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\UserDataRepository.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\UserDataRepository.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\UserDataRepository.cs",
+              "RelativeToolTip": "AuthenticationService\\UserDataRepository.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAADwv0MAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T14:09:15.268Z",
+              "WhenOpened": "2024-08-29T12:29:48.322Z",
               "EditorCaption": ""
             },
             {
@@ -211,7 +196,7 @@
               "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\LoginController.cs",
               "RelativeToolTip": "AuthenticationService\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAuwDcAAABfAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAuwBAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T13:39:48.579Z",
               "EditorCaption": ""
@@ -219,38 +204,93 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserDataRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\UserDataRepository.cs",
-              "RelativeDocumentMoniker": "Common\\Models\\UserDataRepository.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\UserDataRepository.cs",
-              "RelativeToolTip": "Common\\Models\\UserDataRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEIAAAAAAAAA",
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.cs",
+              "RelativeToolTip": "AuthenticationService\\AuthenticationService.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAAwIIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T15:00:53.474Z"
+              "WhenOpened": "2024-07-18T15:38:57.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ServiceEventSource.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\ServiceEventSource.cs",
-              "RelativeDocumentMoniker": "AuthenticationService\\ServiceEventSource.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\ServiceEventSource.cs",
-              "RelativeToolTip": "AuthenticationService\\ServiceEventSource.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAB+AAAA",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\appsettings.json",
+              "RelativeDocumentMoniker": "AuthenticationService\\appsettings.json",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\appsettings.json",
+              "RelativeToolTip": "AuthenticationService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-27T15:59:30.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Common\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Services\\TokenService.cs",
+              "RelativeToolTip": "Common\\Services\\TokenService.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAowGcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T10:49:03.94Z"
+              "WhenOpened": "2024-08-13T14:09:15.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\RegistrationController.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\RegistrationController.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\RegistrationController.cs",
+              "RelativeToolTip": "AuthenticationService\\Controllers\\RegistrationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T16:17:05.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ServiceManifest.xml",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\PackageRoot\\ServiceManifest.xml",
+              "RelativeDocumentMoniker": "AuthenticationService\\PackageRoot\\ServiceManifest.xml",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\PackageRoot\\ServiceManifest.xml",
+              "RelativeToolTip": "AuthenticationService\\PackageRoot\\ServiceManifest.xml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-07-30T13:57:22.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AuthenticationService.http",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.http",
-              "RelativeDocumentMoniker": "AuthenticationService\\AuthenticationService.http",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.http",
-              "RelativeToolTip": "AuthenticationService\\AuthenticationService.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-07-30T13:56:05.306Z"
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Common\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
+              "RelativeToolTip": "Common\\Models\\User.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwBUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T11:04:03.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StartupServices.xml",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\TaxiTracker\\StartupServices.xml",
+              "RelativeDocumentMoniker": "TaxiTracker\\StartupServices.xml",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\TaxiTracker\\StartupServices.xml",
+              "RelativeToolTip": "TaxiTracker\\StartupServices.xml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-08-07T16:10:21.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -260,37 +300,53 @@
               "RelativeDocumentMoniker": "AuthenticationService\\AuthenticationService.csproj",
               "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.csproj",
               "RelativeToolTip": "AuthenticationService\\AuthenticationService.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-07T15:32:42.431Z"
+              "WhenOpened": "2024-08-07T15:32:42.431Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\appsettings.json",
-              "RelativeDocumentMoniker": "AuthenticationService\\appsettings.json",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\appsettings.json",
-              "RelativeToolTip": "AuthenticationService\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-27T15:59:30.907Z"
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Program.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Program.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Program.cs",
+              "RelativeToolTip": "AuthenticationService\\Program.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAmwCUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T11:02:14.71Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "StartupServices.xml",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\TaxiTracker\\StartupServices.xml",
-              "RelativeDocumentMoniker": "TaxiTracker\\StartupServices.xml",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\TaxiTracker\\StartupServices.xml",
-              "RelativeToolTip": "TaxiTracker\\StartupServices.xml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-08-07T16:10:21.647Z"
+              "Title": "ServiceEventSource.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\ServiceEventSource.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\ServiceEventSource.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\ServiceEventSource.cs",
+              "RelativeToolTip": "AuthenticationService\\ServiceEventSource.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAB+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T10:49:03.94Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "AuthenticationService.http",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.http",
+              "RelativeDocumentMoniker": "AuthenticationService\\AuthenticationService.http",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.http",
+              "RelativeToolTip": "AuthenticationService\\AuthenticationService.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-07-30T13:56:05.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\TaxiTracker\\packages.config",
               "RelativeDocumentMoniker": "TaxiTracker\\packages.config",
@@ -298,22 +354,24 @@
               "RelativeToolTip": "TaxiTracker\\packages.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-08-08T15:03:28.106Z"
+              "WhenOpened": "2024-08-08T15:03:28.106Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "AuthenticationService",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.csproj",
               "RelativeDocumentMoniker": "AuthenticationService\\AuthenticationService.csproj",
               "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.csproj",
               "RelativeToolTip": "AuthenticationService\\AuthenticationService.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-07T16:52:11.754Z"
+              "WhenOpened": "2024-08-07T16:52:11.754Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -321,11 +379,12 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AQIAAH8UAAAAAAAAAAAIwJgUAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-07-30T14:03:06.165Z"
+              "WhenOpened": "2024-07-30T14:03:06.165Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Common.csproj",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Common.csproj",
               "RelativeDocumentMoniker": "Common\\Common.csproj",
@@ -333,22 +392,24 @@
               "RelativeToolTip": "Common\\Common.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-07T15:33:02.418Z"
+              "WhenOpened": "2024-08-07T15:33:02.418Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Common",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Common.csproj",
               "RelativeDocumentMoniker": "Common\\Common.csproj",
               "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Common.csproj",
               "RelativeToolTip": "Common\\Common.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-07T16:52:01.794Z"
+              "WhenOpened": "2024-08-07T16:52:01.794Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Microsoft.NET.Sdk.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.targets",
@@ -356,23 +417,12 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.targets",
               "ViewState": "AQIAAAUBAAAAAAAAAAAIwBsBAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-08-07T15:52:43.016Z"
+              "WhenOpened": "2024-08-07T15:52:43.016Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "ServiceManifest.xml",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\PackageRoot\\ServiceManifest.xml",
-              "RelativeDocumentMoniker": "AuthenticationService\\PackageRoot\\ServiceManifest.xml",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\PackageRoot\\ServiceManifest.xml",
-              "RelativeToolTip": "AuthenticationService\\PackageRoot\\ServiceManifest.xml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-07-30T13:57:22.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Services\\AuthService.cs",
@@ -380,11 +430,12 @@
               "RelativeToolTip": "AuthenticationService\\Services\\AuthService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T15:50:36.748Z"
+              "WhenOpened": "2024-07-18T15:50:36.748Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Services\\IAuthService.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Services\\IAuthService.cs",
@@ -392,11 +443,12 @@
               "RelativeToolTip": "AuthenticationService\\Services\\IAuthService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T15:49:24.683Z"
+              "WhenOpened": "2024-07-18T15:49:24.683Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Microsoft.VisualStudio.Azure.Fabric.ServiceProject.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VisualStudio\\v17.0\\Service Fabric Tools\\Microsoft.VisualStudio.Azure.Fabric.ServiceProject.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VisualStudio\\v17.0\\Service Fabric Tools\\Microsoft.VisualStudio.Azure.Fabric.ServiceProject.targets",
@@ -404,7 +456,8 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VisualStudio\\v17.0\\Service Fabric Tools\\Microsoft.VisualStudio.Azure.Fabric.ServiceProject.targets",
               "ViewState": "AQIAAAsAAAAAAAAAAAAIwCUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-07-30T13:44:01.135Z"
+              "WhenOpened": "2024-07-30T13:44:01.135Z",
+              "EditorCaption": ""
             }
           ]
         }

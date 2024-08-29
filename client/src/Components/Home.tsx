@@ -8,7 +8,8 @@ function HomePage() {
                 <h1>Welcome to Taxi Tracker</h1>
                 <nav>
                     <Link to="/login" className="nav-link">Login</Link>
-                    <Link to="/register" className="nav-link">Register</Link>
+                    <Link to="/registration" className="nav-link">Register</Link>
+                    <Link to="/user-page" className="nav-link">User page</Link>
                 </nav>
             </header>
             

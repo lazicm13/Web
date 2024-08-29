@@ -25,17 +25,6 @@ namespace AuthenticationService.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
-            // Provera postojanja validnog JWT tokena u kolačiću
-            var existingToken = Request.Cookies["jwt"];
-            if (!string.IsNullOrEmpty(existingToken))
-            {
-                var principal = _tokenService.ValidateToken(existingToken);
-                if (principal != null)
-                {
-                    // Ako je token validan, korisnik je već ulogovan
-                    return Redirect("/home"); // Zameni "/home" sa URL-om početne stranice
-                }
-            }
 
             // Nastavi sa loginom ako korisnik nije ulogovan
             var user = await _repo.RetrieveUserAsync(loginRequest.EmailAddress);
@@ -79,5 +68,35 @@ namespace AuthenticationService.Controllers
                 Password = password;
             }
         }
+
+        [HttpGet("status")]
+        public IActionResult CheckLoginStatus()
+        {
+            var existingToken = Request.Cookies["jwt"];
+            if (!string.IsNullOrEmpty(existingToken))
+            {
+                // Validiraj token i dobavi principal (korisničke tvrdnje)
+                var principal = _tokenService.ValidateToken(existingToken);
+                if (principal != null)
+                {
+                    // Izvuci korisničko ime iz tvrdnji (claims) tokena
+                    var username = principal.Identity?.Name ?? principal.FindFirst(ClaimTypes.Name)?.Value;
+
+                    // Korisnik je ulogovan, vraćamo i ime
+                    return Ok(new
+                    {
+                        isLoggedIn = true,
+                        username = username // Prosleđivanje imena korisnika
+                    });
+                }
+            }
+
+            // Korisnik nije ulogovan
+            return Ok(new { isLoggedIn = false });
+        }
+
+
+
+
     }
 }
