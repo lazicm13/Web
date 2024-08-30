@@ -3,7 +3,7 @@ using Azure;
 using Common.Models;
 using System.Diagnostics;
 
-namespace AuthenticationService
+namespace AuthenticationService.Services
 {
     public class UserDataRepository
     {

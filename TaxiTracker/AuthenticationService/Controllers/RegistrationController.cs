@@ -4,6 +4,7 @@ using Common.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using AuthenticationService.Services;
 
 namespace AuthenticationService.Controllers
 {

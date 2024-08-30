@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Fabric;
 using System.IO;
 using System.Text;
+using AuthenticationService.Services;
+using Common.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -40,6 +42,7 @@ namespace AuthenticationService
                         builder.Services.AddSingleton<StatelessServiceContext>(serviceContext);
 
                         builder.Services.AddSingleton<UserDataRepository>();
+                        builder.Services.AddSingleton<TokenService>();
 
 
                         // Add CORS services with specific origin

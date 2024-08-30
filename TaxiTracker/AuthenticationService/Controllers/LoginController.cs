@@ -1,4 +1,5 @@
-﻿using Common.Services;
+﻿using AuthenticationService.Services;
+using Common.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;

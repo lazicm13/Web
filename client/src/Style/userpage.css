@@ -91,3 +91,14 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
+hr{
+    background-color: black;
+    width: 380px;
+    margin-left: 3px;
+    height: 1   px;
+}
+
+#home{
+    float: right;
+}
