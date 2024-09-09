@@ -115,6 +115,47 @@ public class UserController : ControllerBase
         }
     }
 
+    [HttpPut("change-password")]
+    [Authorize]
+    public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto changePasswordDto)
+    {
+        var existingToken = Request.Cookies["jwt"];
+        if (string.IsNullOrEmpty(existingToken))
+        {
+            return Unauthorized(new { message = "User not logged in." });
+        }
 
+        var userId = _tokenService.GetUsernameFromToken(existingToken);
+
+        var user = await _repo.RetrieveUserAsync(userId);
+        if (user == null)
+        {
+            return NotFound(new { message = "User not found." });
+        }
+
+        if(user.Password != changePasswordDto.OldPassword)  
+            return StatusCode(403, new { message = "Incorrect old password." });
+
+        user.Password = changePasswordDto.NewPassword;
+
+        try
+        {
+            // Save the updated user information in the database
+            await _repo.UpdateUserAsync(user);
+            return Ok(new { message = "Password changed successfully." });
+        }
+        catch (Exception ex)
+        {
+            // Handle any errors that occur during the update process
+            return StatusCode(500, new { message = "An error occurred while changing the password.", error = ex.Message });
+        }
+    }
+
+
+    public class ChangePasswordDto
+    {
+        public string OldPassword { get; set; }
+        public string NewPassword { get; set; }
+    }
 
 }

@@ -25,8 +25,6 @@ function Login() {
                 if (response.ok) {
                     const data = await response.json();
                     if (data.isLoggedIn) {
-                        // Korisnik je već ulogovan, preusmeri ga na početnu stranicu
-                        alert(data.username);
                         navigate('/'); // Prilagodi URL
                     }
                     else

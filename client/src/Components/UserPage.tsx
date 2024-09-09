@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import './../Style/userpage.css';
 
@@ -36,6 +36,13 @@ function UserPage() {
         birthDate: false,
         address: false
     });
+
+    // Refs for input fields
+    const fullNameRef = useRef<HTMLInputElement>(null);
+    const usernameRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const birthDateRef = useRef<HTMLInputElement>(null);
+    const addressRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -85,6 +92,27 @@ function UserPage() {
             ...prevEditMode,
             [field]: !prevEditMode[field]
         }));
+
+        // Focus on the corresponding input field when edit mode is activated
+        switch (field) {
+            case 'fullName':
+                fullNameRef.current?.focus();
+                break;
+            case 'userName':
+                usernameRef.current?.focus();
+                break;
+            case 'email':
+                emailRef.current?.focus();
+                break;
+            case 'birthDate':
+                birthDateRef.current?.focus();
+                break;
+            case 'address':
+                addressRef.current?.focus();
+                break;
+            default:
+                break;
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>, field: keyof UserData) => {
@@ -94,23 +122,21 @@ function UserPage() {
         });
     };
 
-    // Funkcija za čuvanje promena
     const handleSaveChanges = async () => {
         try {
             if (!validateInputs()) {
                 return;
-            }
-            else{
+            } else {
                 setRegistrationStatus('');
             }
-            // Pozivamo API za čuvanje podataka korisnika
+            // Save user data through the API
             const response = await axios.put('http://localhost:8850/user/update', userData, {
                 withCredentials: true
             });
 
             if (response.status === 200) {
                 alert('Changes saved successfully.');
-                // Ako je potrebno, osveži podatke nakon čuvanja
+                // Refresh data if needed after saving
             } else {
                 alert('Failed to save changes.');
             }
@@ -127,6 +153,7 @@ function UserPage() {
             <form className="userpage-form" onSubmit={(e) => e.preventDefault()}>
                 <div className="input-group">
                     <input
+                        ref={fullNameRef}
                         className="input-userpage"
                         type="text"
                         name="fullName"
@@ -139,6 +166,7 @@ function UserPage() {
                 </div>
                 <div className="input-group">
                     <input
+                        ref={usernameRef}
                         className="input-userpage"
                         type="text"
                         name="username"
@@ -151,6 +179,7 @@ function UserPage() {
                 </div>
                 <div className="input-group">
                     <input
+                        ref={emailRef}
                         className="input-userpage"
                         type="text"
                         name="emailAddress"
@@ -163,6 +192,7 @@ function UserPage() {
                 </div>
                 <div className="input-group">
                     <input
+                        ref={birthDateRef}
                         className="input-userpage"
                         type="date"
                         name="birthDate"
@@ -175,6 +205,7 @@ function UserPage() {
                 </div>
                 <div className="input-group">
                     <input
+                        ref={addressRef}
                         className="input-userpage"
                         type="text"
                         name="address"
@@ -196,3 +227,4 @@ function UserPage() {
 }
 
 export default UserPage;
+    
