@@ -1,4 +1,5 @@
-﻿using AuthenticationService.Services;
+﻿using AuthenticationService.Models;
+using AuthenticationService.Services;
 using Common.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -58,17 +59,6 @@ namespace AuthenticationService.Controllers
             return providedPassword == storedPasswordHash; // Replace with proper hash verification
         }
 
-        public class LoginRequest
-        {
-            public string EmailAddress { get; set; }
-            public string Password { get; set; }
-
-            public LoginRequest(string emailAddress, string password)
-            {
-                EmailAddress = emailAddress;
-                Password = password;
-            }
-        }
 
         [HttpGet("status")]
         public IActionResult CheckLoginStatus()

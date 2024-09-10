@@ -74,7 +74,7 @@ button {
 }
 /* Button hover */
 button:hover {
-    background-color: #45a049;
+    background-color: yellowgreen;
 }
 
 .image {
@@ -135,4 +135,18 @@ button:hover {
 
 .errorMessage{
     color: red;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+select {
+    width: 60%;
+    padding: 8px;
+    font-size: 14px;
 }

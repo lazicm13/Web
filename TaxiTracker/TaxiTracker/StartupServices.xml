@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StartupServicesManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
+    <Parameter Name="RideManagementService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="RideManagementService_PartitionCount" DefaultValue="1" />
+    <Parameter Name="RideManagementService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="RideService_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="NotificationService_InstanceCount" DefaultValue="-1" />
     <Parameter Name="UserService_InstanceCount" DefaultValue="-1" />
     <Parameter Name="AuthenticationService_InstanceCount" DefaultValue="-1" />
   </Parameters>
@@ -10,6 +15,21 @@
          ServiceFabric PowerShell module.
 
          The attribute ServiceTypeName below must match the name defined in the imported ServiceManifest.xml file. -->
+    <Service Name="RideManagementService" ServicePackageActivationMode="ExclusiveProcess">
+      <StatefulService ServiceTypeName="RideManagementServiceType" TargetReplicaSetSize="[RideManagementService_TargetReplicaSetSize]" MinReplicaSetSize="[RideManagementService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[RideManagementService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="RideService" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="RideServiceType" InstanceCount="[RideService_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="NotificationService" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="NotificationServiceType" InstanceCount="[NotificationService_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
     <Service Name="AuthenticationService" ServicePackageActivationMode="ExclusiveProcess">
       <StatelessService ServiceTypeName="AuthenticationServiceType" InstanceCount="[AuthenticationService_InstanceCount]">
         <SingletonPartition />

@@ -1,5 +1,6 @@
 ﻿using Azure;
 using Azure.Data.Tables;
+using Common.Enums;
 using System;
 using System.Text.Json.Serialization;
 
@@ -12,7 +13,6 @@ namespace Common.Models
         public DateTimeOffset? Timestamp { get; set; }
         public ETag ETag { get; set; }
 
-
         public string Username { get; set; }
         public string EmailAddress { get; set; }
         public string Password { get; set; }
@@ -20,9 +20,9 @@ namespace Common.Models
         public string Address { get; set; }
         public string BirthDate { get; set; }
         public string? Image { get; set; }
+        public UserType UserType { get; set; }
 
-
-        public User(string username, string emailAddress, string password, string fullName, string address, string birthDate, string image)
+        public User(string username, string emailAddress, string password, string fullName, string address, string birthDate, string image, UserType userType)
         {
             RowKey = emailAddress;
             Username = username;
@@ -32,8 +32,11 @@ namespace Common.Models
             Address = address;
             BirthDate = birthDate;
             Image = image;
+            UserType = userType;
         }
 
         public User() { }
     }
+
+    
 }

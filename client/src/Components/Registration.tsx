@@ -8,7 +8,8 @@ interface RegistrationData {
     FullName: string;
     Address: string;
     BirthDate: string;
-    ImgSource?: string;
+    Image: string; // Removed the question mark to make it required
+    UserType: 'User' | 'Driver';
 }
 
 function Registration() {
@@ -18,8 +19,17 @@ function Registration() {
         Password: '',
         FullName: '',
         Address: '',
-        BirthDate: ''
+        BirthDate: '',
+        Image: '', // Initialize with an empty string
+        UserType: 'User'
     });
+
+    const handleUserTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setRegistrationData(prevData => ({
+            ...prevData,
+            UserType: e.target.value as 'User' | 'Driver'
+        }));
+    };
 
     // Separate state variable for ConfirmPassword
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -29,19 +39,22 @@ function Registration() {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                const base64String = reader.result as string;
+                const base64String = (reader.result as string).split(',')[1];
+                console.log('Base64 String:', base64String); // Check the output here
                 setRegistrationData(prevData => ({
                     ...prevData,
-                    ImgSource: base64String
+                    Image: base64String
                 }));
             };
             reader.readAsDataURL(file);
         }
     };
+    
+    
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        setRegistrationData((prevData) => ({
+        setRegistrationData(prevData => ({
             ...prevData,
             [name]: value,
         }));
@@ -55,10 +68,10 @@ function Registration() {
     const [registrationStatus, setRegistrationStatus] = useState('');
 
     const validateInputs = () => {
-        const { FullName, Address, Username, EmailAddress, Password } = registrationData;
+        const { FullName, Address, Username, EmailAddress, Password, Image } = registrationData;
 
         // Check if all required fields are filled
-        if (!FullName || !Address || !Username || !EmailAddress || !Password || !confirmPassword) {
+        if (!FullName || !Address || !Username || !EmailAddress || !Password || !confirmPassword || !Image) {
             setRegistrationStatus('Please fill in all fields.');
             return false;
         }
@@ -123,7 +136,7 @@ function Registration() {
             <a id='home' href='/'>🏠</a>
             <p id="naslov">Welcome to Taxi Tracker</p>
             <h2>Sign Up</h2>
-            <form className="login-form">
+            <form className="login-form" onSubmit={(e) => { e.preventDefault(); handleRegistration(); }}>
                 <input
                     className="input-login"
                     type="text"
@@ -180,6 +193,13 @@ function Registration() {
                     value={confirmPassword}
                     onChange={handleConfirmPasswordChange}
                 />
+                <div className="form-group">
+                    <label>Select User Type:</label>
+                    <select id="userType" name="userType" value={registrationData.UserType} onChange={handleUserTypeChange}>
+                        <option value="User">Regular User</option>
+                        <option value="Driver">Driver</option>
+                    </select>
+                </div>
                 <div className="image">
                     <label htmlFor="file-input" className="file-input-btn">Choose Image</label>
                     <input
@@ -187,17 +207,17 @@ function Registration() {
                         className="input-login"
                         type="file"
                         accept="image/*"
-                        name="imgSource"
+                        name="Image"
                         onChange={handleImageChange}
                     />
-                    {registrationData.ImgSource && (
+                    {registrationData.Image && (
                         <div className="selected-image">
-                            <img src={registrationData.ImgSource} alt="Selected" />
+                            <img src={`data:image/jpeg;base64,${registrationData.Image}`} alt="Selected" />
                         </div>
                     )}
                 </div>
+                <button id="login-btn" type="submit">Sign up</button>
             </form>
-            <button id="login-btn" onClick={handleRegistration}>Sign up</button>
             <p>Have an account? ⇒ <a href='/login'>Sign in</a></p>
             <p className="errorMessage">{registrationStatus}</p>
         </div>

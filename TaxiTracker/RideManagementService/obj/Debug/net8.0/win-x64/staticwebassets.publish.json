@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6luGE0eR3XM5PuDLqDzsTABiYpPQIXwcT7+pIPLmUAI=",
+  "Source": "RideManagementService",
+  "BasePath": "_content/RideManagementService",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

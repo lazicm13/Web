@@ -12,7 +12,22 @@ function HomePage() {
                     <Link to="/user-page" className="nav-link">User page</Link>
                 </nav>
             </header>
-            
+            <div className="form-container">
+                <h2>Create new ride</h2>
+                <form id="rideForm">
+                    <div className="form-group">
+                        <label>Start Address:</label>
+                        <input type="text" id="startAddress" name="startAddress" required/>
+                    </div>
+                    <div className="form-group">
+                        <label>End Address:</label>
+                        <input type="text" id="endAddress" name="endAddress" required/>
+                    </div>
+                    <div className="form-group">
+                        <button type="button" id='request-btn'>Request</button>
+                    </div>
+                </form>
+            </div>    
             <section className="home-info">
                 <h2>About Our Service</h2>
                 <p>
