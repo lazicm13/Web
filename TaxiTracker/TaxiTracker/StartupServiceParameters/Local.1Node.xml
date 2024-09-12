@@ -6,7 +6,6 @@
     <Parameter Name="RideManagementService_TargetReplicaSetSize" Value="1" />
     <Parameter Name="RideService_InstanceCount" Value="1" />
     <Parameter Name="NotificationService_InstanceCount" Value="1" />
-    <Parameter Name="UserService_InstanceCount" Value="1" />
     <Parameter Name="AuthenticationService_InstanceCount" Value="1" />
   </Parameters>
 </StartupServices>

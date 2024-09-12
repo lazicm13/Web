@@ -8,6 +8,7 @@ interface UserData {
     emailAddress: string;
     birthDate: string;
     address: string;
+    image: string;  // New field for profile image URL
 }
 
 interface EditMode {
@@ -16,6 +17,7 @@ interface EditMode {
     email: boolean;
     birthDate: boolean;
     address: boolean;
+    profileImage: boolean;  // New field for profile image edit mode
 }
 
 function UserPage() {
@@ -26,7 +28,8 @@ function UserPage() {
         username: '',
         emailAddress: '',
         birthDate: '',
-        address: ''
+        address: '',
+        image: '' // Initialize profile image URL
     });
 
     const [editMode, setEditMode] = useState<EditMode>({
@@ -34,15 +37,16 @@ function UserPage() {
         userName: false,
         email: false,
         birthDate: false,
-        address: false
+        address: false,
+        profileImage: false // Initialize profile image edit mode
     });
 
-    // Refs for input fields
     const fullNameRef = useRef<HTMLInputElement>(null);
     const usernameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
     const birthDateRef = useRef<HTMLInputElement>(null);
     const addressRef = useRef<HTMLInputElement>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null); // Ref for image upload input
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -57,7 +61,8 @@ function UserPage() {
                         username: response.data.username,
                         emailAddress: response.data.emailAddress,
                         birthDate: response.data.birthDate,
-                        address: response.data.address
+                        address: response.data.address,
+                        image: response.data.image // Fetch profile image URL
                     });
                 }
             } catch (error) {
@@ -69,15 +74,14 @@ function UserPage() {
     }, []);
 
     const validateInputs = () => {
-        const { fullName, address, username, birthDate, emailAddress} = userData;
+        const { fullName, address, username, birthDate, emailAddress } = userData;
 
         // Check if all required fields are filled
         if (!fullName || !address || !username || !emailAddress || !birthDate) {
             setRegistrationStatus('Please fill in all fields.');
             return false;
         }
-
-        // Validate email format
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailAddress)) {
             setRegistrationStatus('Please enter a valid email address.');
@@ -110,6 +114,9 @@ function UserPage() {
             case 'address':
                 addressRef.current?.focus();
                 break;
+            case 'profileImage':
+                fileInputRef.current?.click(); // Trigger file input click when editing profile image
+                break;
             default:
                 break;
         }
@@ -120,6 +127,34 @@ function UserPage() {
             ...userData,
             [field]: e.target.value
         });
+    };
+
+    const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('image', file);
+
+        try {
+            // Upload the image to the server
+            const response = await axios.post('http://localhost:8850/user/upload-image', formData, {
+                withCredentials: true,
+                headers: { 'Content-Type': 'multipart/form-data' }
+            });
+
+            if (response.data.imageUrl) {
+                // Update the profile image URL in the state
+                setUserData((prevData) => ({
+                    ...prevData,
+                    image: response.data.imageUrl
+                }));
+                alert('Profile image updated successfully.');
+            }
+        } catch (error) {
+            console.error('Error uploading image:', error);
+            alert('Failed to upload image.');
+        }
     };
 
     const handleSaveChanges = async () => {
@@ -216,6 +251,24 @@ function UserPage() {
                     />
                     <span className="edit-icon" title="Edit address" onClick={() => handleEditClick('address')}>✏️</span>
                 </div>
+                {/* Display profile image */}
+                <div className="profile-image-container">
+                    <img
+                        src={userData.image} 
+                        alt="Profile"
+                        className="profile-image"
+                    />
+                    <button type="button" onClick={() => handleEditClick('profileImage')}>
+                        Change Profile Image
+                    </button>
+                    <input
+                        ref={fileInputRef}
+                        type="file"
+                        style={{ display: 'none' }}
+                        accept="image/*"
+                        onChange={handleImageUpload}
+                    />
+                </div>
                 <a href='/change-password'>Change password</a>
             </form>
             <div className="button-container">
@@ -227,4 +280,3 @@ function UserPage() {
 }
 
 export default UserPage;
-    

@@ -1,6 +1,7 @@
 ﻿using AuthenticationService.Models;
 using AuthenticationService.Services;
 using Common.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -86,6 +87,20 @@ namespace AuthenticationService.Controllers
             return Ok(new { isLoggedIn = false });
         }
 
+        [HttpGet("check")]
+        [Authorize]
+        public IActionResult CheckAuthentication()
+        {
+            return Ok(new { message = "User is authenticated." });
+        }
+
+        [HttpPost("logout")]
+        [Authorize]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("jwt");
+            return Ok(new { message = "Logged out successfully." });
+        }
 
 
 

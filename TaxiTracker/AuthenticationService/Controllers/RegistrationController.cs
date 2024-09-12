@@ -70,7 +70,6 @@ public class RegistrationController : ControllerBase
 
     private string HashPassword(string password)
     {
-        // Implement your actual hashing logic here
-        return password; // Placeholder
+        return password; 
     }
 }

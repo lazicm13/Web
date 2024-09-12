@@ -12,9 +12,17 @@ function ChangePassword() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [statusMessage, setStatusMessage] = useState('');
 
+    const Validate = () =>{
+
+        const passwordRegex = /^(?=.*\d).{8,}$/;
+        if (!passwordRegex.test(newPassword)) {
+            setStatusMessage('Password must be at least 8 characters long and contain at least one number.');
+            return false;
+        }
+    }
     const handlePasswordChange = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-
+        
         // Validation checks
         if (!oldPassword || !newPassword || !confirmPassword) {
             setStatusMessage('Please fill in all fields.');
@@ -28,6 +36,10 @@ function ChangePassword() {
 
         if (newPassword.length < 8) {
             setStatusMessage('New password must be at least 8 characters long.');
+            return;
+        }
+
+        if (!Validate()) {
             return;
         }
 

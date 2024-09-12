@@ -102,3 +102,7 @@ hr{
 #home{
     float: right;
 }
+
+.status-message{
+    color:red;
+}

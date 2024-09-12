@@ -65,7 +65,8 @@ public class UserController : ControllerBase
             username = user.Username,
             emailAddress = user.EmailAddress,
             birthDate = user.BirthDate,
-            address = user.Address
+            address = user.Address,
+            image = user.Image
         });
     }
 
@@ -79,7 +80,6 @@ public class UserController : ControllerBase
             return Unauthorized(new { message = "User not logged in." });
         }
 
-        // Pretpostavljamo da imate servis koji može da dešifruje JWT token i vrati korisnika
         var userId = _tokenService.GetUsernameFromToken(existingToken);
         if (userId == null)
         {
@@ -151,11 +151,6 @@ public class UserController : ControllerBase
         }
     }
 
-
-    public class ChangePasswordDto
-    {
-        public string OldPassword { get; set; }
-        public string NewPassword { get; set; }
-    }
+    
 
 }
