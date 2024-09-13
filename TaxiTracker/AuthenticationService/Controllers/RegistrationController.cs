@@ -12,14 +12,15 @@ public class RegistrationController : ControllerBase
     private readonly BlobStorageService _blobStorageService;
     private readonly ILogger<RegistrationController> _logger;
 
-    public RegistrationController(ILogger<RegistrationController> logger)
+    public RegistrationController(ILogger<RegistrationController> logger, BlobStorageService blobStorageService)
     {
         _logger = logger;
-        _repo = new UserDataRepository();
-        _blobStorageService = new BlobStorageService();
+        _repo = new UserDataRepository(); 
+        _blobStorageService = blobStorageService;
     }
 
     [HttpPost("register")]
+    
     public async Task<IActionResult> Register([FromBody] RegisterRequest user)
     {
         try
@@ -40,7 +41,7 @@ public class RegistrationController : ControllerBase
             string imageUrl = null;
             if (!string.IsNullOrEmpty(user.Image))
             {
-                string fileName = $"{Guid.NewGuid()}.png"; 
+                string fileName = $"{Guid.NewGuid()}.png";
                 imageUrl = await _blobStorageService.UploadImageAsync(user.Image, fileName);
             }
 
@@ -70,6 +71,6 @@ public class RegistrationController : ControllerBase
 
     private string HashPassword(string password)
     {
-        return password; 
+        return password; // Implement password hashing
     }
 }

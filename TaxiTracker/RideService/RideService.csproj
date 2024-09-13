@@ -8,6 +8,7 @@
     <ServerGarbageCollection>True</ServerGarbageCollection>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <SelfContained>True</SelfContained>
+    <UserSecretsId>6a8887a0-b54d-410f-8828-d1ed185952cb</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

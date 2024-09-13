@@ -17,18 +17,24 @@ namespace Common.Models
 
 
         public Guid Id { get; set; }
-        public string StartAddress {  get; set; }
-        public string EndAddress { get; set; }
+        public string UserId { get; set; }
+        public string? StartAddress {  get; set; }
+        public string? EndAddress { get; set; }
         public double Price { get; set; }
         public double Distance {  get; set; }
-        public string WaitingTime {  get; set; }
+        public string? WaitingTime {  get; set; }
         
-        public Ride() { }
+        public Ride() 
+        {
+            Id = Guid.NewGuid();
+            RowKey = Id.ToString();
+        }
 
-        public Ride(string startAdress, string endAddress, double price, double distance, string waitingTime)
+        public Ride(string userId, string startAdress, string endAddress, double price, double distance, string waitingTime)
         {
             Id = Guid.NewGuid(); 
             RowKey = Id.ToString();
+            UserId = userId;
             StartAddress = startAdress;
             EndAddress = endAddress;
             Price = price;

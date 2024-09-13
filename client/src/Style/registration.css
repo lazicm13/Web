@@ -150,3 +150,7 @@ select {
     padding: 8px;
     font-size: 14px;
 }
+
+.error-message{
+    color:red;
+}

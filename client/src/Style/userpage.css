@@ -106,3 +106,22 @@ hr{
 .status-message{
     color:red;
 }
+
+.profile-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float:left;
+}
+
+.image-change-btn{
+    width: 150px;
+    margin-top: 50px;
+    background-color: yellowgreen;
+}
+
+.profile-image-container{
+    border: 1px solid gray;
+    padding: 10px;
+    background-color: lightyellow;
+}

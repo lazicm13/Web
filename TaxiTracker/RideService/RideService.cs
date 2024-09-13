@@ -4,6 +4,7 @@ using System.Fabric;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using Common.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -41,6 +42,7 @@ namespace RideService
                         // Register StatelessServiceContext for dependency injection
                         builder.Services.AddSingleton<StatelessServiceContext>(serviceContext);
                         builder.Services.AddSingleton<RideDataRepository>();
+                        builder.Services.AddSingleton<TokenService>();
 
                         // Add CORS services with specific origin
                         builder.Services.AddCors(options =>

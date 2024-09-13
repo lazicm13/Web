@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6a8887a0-b54d-410f-8828-d1ed185952cb")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("RideService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23d37e463d88d387f0f4e1df96a2bf36241a205b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cf078c5af115993b159e295d7c1c94c933f6df8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RideService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RideService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

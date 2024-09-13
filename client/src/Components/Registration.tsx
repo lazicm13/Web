@@ -1,5 +1,8 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// src/components/Registration.tsx
+
+import React, { useState, FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { validateRegistrationData, register } from '../Services/registrationService';
 
 interface RegistrationData {
     Username: string;
@@ -8,7 +11,7 @@ interface RegistrationData {
     FullName: string;
     Address: string;
     BirthDate: string;
-    Image: string; // Removed the question mark to make it required
+    Image: string;
     UserType: 'User' | 'Driver';
 }
 
@@ -24,15 +27,16 @@ function Registration() {
         UserType: 'User'
     });
 
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [registrationStatus, setRegistrationStatus] = useState('');
+    const navigate = useNavigate();
+
     const handleUserTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setRegistrationData(prevData => ({
             ...prevData,
             UserType: e.target.value as 'User' | 'Driver'
         }));
     };
-
-    // Separate state variable for ConfirmPassword
-    const [confirmPassword, setConfirmPassword] = useState('');
 
     const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
@@ -49,14 +53,12 @@ function Registration() {
             reader.readAsDataURL(file);
         }
     };
-    
-    
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setRegistrationData(prevData => ({
             ...prevData,
-            [name]: value,
+            [name]: value
         }));
     };
 
@@ -64,79 +66,30 @@ function Registration() {
         setConfirmPassword(e.target.value);
     };
 
-    const navigate = useNavigate();
-    const [registrationStatus, setRegistrationStatus] = useState('');
-
-    const validateInputs = () => {
-        const { FullName, Address, Username, EmailAddress, Password, Image } = registrationData;
-
-        // Check if all required fields are filled
-        if (!FullName || !Address || !Username || !EmailAddress || !Password || !confirmPassword || !Image) {
-            setRegistrationStatus('Please fill in all fields.');
-            return false;
+    const handleRegistration = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        
+        const validationError = validateRegistrationData(registrationData, confirmPassword);
+        if (validationError) {
+            setRegistrationStatus(validationError);
+            return;
         }
 
-        // Check if passwords match
-        if (Password !== confirmPassword) {
-            setRegistrationStatus('Passwords do not match.');
-            return false;
-        }
-
-        // Check if password has at least 8 characters and includes at least one number
-        const passwordRegex = /^(?=.*\d).{8,}$/;
-        if (!passwordRegex.test(Password)) {
-            setRegistrationStatus('Password must be at least 8 characters long and contain at least one number.');
-            return false;
-        }
-
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(EmailAddress)) {
-            setRegistrationStatus('Please enter a valid email address.');
-            return false;
-        }
-
-        return true;
-    };
-
-    async function handleRegistration() {
         try {
-            if (!validateInputs()) {
-                return;
-            }
-            const response = await fetch('http://localhost:8850/auth/registration/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(registrationData),
-                credentials: 'include' // Include credentials (cookies) in the request
-            });
-            
-            console.log('Sending registration data:', registrationData);
-
-            if (response.ok) {
-                alert('Registration successful!');
-                const data = await response.json();
-                console.log(data.message);
-                navigate('/login');
-            } else {
-                alert('Registration failed!');
-                const errorData = await response.json();
-                console.error('Error:', errorData.message);
-            }
+            await register(registrationData);
+            alert('Registration successful!');
+            navigate('/login');
         } catch (error) {
-            console.error('Request failed', error);
-            alert('An error occurred, please try again later!');
+            setRegistrationStatus('An error occurred, please try again later!');
         }
-    }
+    };
 
     return (
         <div className="login-container">
             <a id='home' href='/'>🏠</a>
             <p id="naslov">Welcome to Taxi Tracker</p>
             <h2>Sign Up</h2>
-            <form className="login-form" onSubmit={(e) => { e.preventDefault(); handleRegistration(); }}>
+            <form className="login-form" onSubmit={handleRegistration}>
                 <input
                     className="input-login"
                     type="text"
@@ -195,7 +148,7 @@ function Registration() {
                 />
                 <div className="form-group">
                     <label>Select User Type:</label>
-                    <select id="userType" name="userType" value={registrationData.UserType} onChange={handleUserTypeChange}>
+                    <select id="userType" name="UserType" value={registrationData.UserType} onChange={handleUserTypeChange}>
                         <option value="User">Regular User</option>
                         <option value="Driver">Driver</option>
                     </select>

@@ -43,6 +43,7 @@ namespace AuthenticationService
 
                         builder.Services.AddSingleton<UserDataRepository>();
                         builder.Services.AddSingleton<TokenService>();
+                        builder.Services.AddSingleton<BlobStorageService>();
 
 
                         // Add CORS services with specific origin

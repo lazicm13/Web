@@ -4,7 +4,9 @@ using AuthenticationService.Services;
 using Common.Models;
 using Common.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -14,11 +16,13 @@ public class UserController : ControllerBase
 {
     private readonly UserDataRepository _repo;
     private readonly TokenService _tokenService;
+    private readonly BlobStorageService _blobStorageService; // Inject BlobStorageService
 
-    public UserController(TokenService tokenService, UserDataRepository userDataRepository)
+    public UserController(TokenService tokenService, UserDataRepository userDataRepository, BlobStorageService blobStorageService)
     {
-        _tokenService = tokenService; 
+        _tokenService = tokenService;
         _repo = userDataRepository;
+        _blobStorageService = blobStorageService;
     }
 
     [HttpGet("current")]
@@ -72,7 +76,7 @@ public class UserController : ControllerBase
 
     [HttpPut("update")]
     [Authorize]
-    public async Task<IActionResult> UpdateUser([FromBody] UpdateUser updateUserDto) // izmeniti model tako da prima samo podatke koji su mu potrebni
+    public async Task<IActionResult> UpdateUser([FromBody] UpdateUser updateUserDto)
     {
         var existingToken = Request.Cookies["jwt"];
         if (string.IsNullOrEmpty(existingToken))
@@ -86,31 +90,31 @@ public class UserController : ControllerBase
             return Unauthorized(new { message = "Invalid token." });
         }
 
-        // Dohvati korisnika iz baze
+        // Retrieve user from the database
         var user = await _repo.RetrieveUserAsync(userId);
         if (user == null)
         {
             return NotFound(new { message = "User not found." });
         }
 
-        // Ažuriraj korisničke podatke sa podacima iz DTO
         user.FullName = updateUserDto.FullName ?? user.FullName;
         user.Username = updateUserDto.Username ?? user.Username;
         user.EmailAddress = updateUserDto.EmailAddress ?? user.EmailAddress;
         user.BirthDate = updateUserDto.BirthDate ?? user.BirthDate;
         user.Address = updateUserDto.Address ?? user.Address;
+        user.Image = updateUserDto.Image ?? user.Image;
 
         try
         {
-            // Sačuvaj promene u bazi
+            // Save changes to the database
             await _repo.UpdateUserAsync(user);
 
-            // Vrati uspešan odgovor
+            // Return successful response
             return Ok(new { message = "User updated successfully." });
         }
         catch (Exception ex)
         {
-            // U slučaju greške vrati odgovarajuću poruku
+            // In case of error, return an appropriate message
             return StatusCode(500, new { message = "An error occurred while updating the user.", error = ex.Message });
         }
     }
@@ -133,7 +137,7 @@ public class UserController : ControllerBase
             return NotFound(new { message = "User not found." });
         }
 
-        if(user.Password != changePasswordDto.OldPassword)  
+        if (user.Password != changePasswordDto.OldPassword)
             return StatusCode(403, new { message = "Incorrect old password." });
 
         user.Password = changePasswordDto.NewPassword;
@@ -151,6 +155,56 @@ public class UserController : ControllerBase
         }
     }
 
+    [HttpPost("upload-image")]
+    [Authorize]
+    public async Task<IActionResult> UploadImage(IFormFile image)
+    {
+        var existingToken = Request.Cookies["jwt"];
+        if (string.IsNullOrEmpty(existingToken))
+        {
+            return Unauthorized(new { message = "User not logged in." });
+        }
     
+        var userId = _tokenService.GetUsernameFromToken(existingToken);
+        if (userId == null)
+        {
+            return Unauthorized(new { message = "Invalid token." });
+        }
+    
+        if (image == null || image.Length == 0)
+        {
+            return BadRequest(new { message = "Invalid image file." });
+        }
+    
+        try
+        {
+            string base64Image;
+            using (var memoryStream = new MemoryStream())
+            {
+                await image.CopyToAsync(memoryStream);
+                base64Image = Convert.ToBase64String(memoryStream.ToArray());
+            }
+
+            string fileName = $"{Guid.NewGuid()}.png";
+            string imageUrl = await _blobStorageService.UploadImageAsync(base64Image, fileName);
+    
+            
+            var user = await _repo.RetrieveUserAsync(userId);
+            if (user == null)
+            {
+                return NotFound(new { message = "User not found." });
+            }
+    
+            user.Image = imageUrl;
+            await _repo.UpdateUserAsync(user);
+    
+            return Ok(new { message = "Image uploaded successfully.", imageUrl = imageUrl });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "An error occurred while uploading the image.", error = ex.Message });
+        }
+    }
+
 
 }

@@ -1,5 +1,6 @@
 ﻿using Common.Enums;
 using Common.Models;
+using Common.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RideService.Models;
@@ -15,15 +16,16 @@ namespace RideService.Controllers
     public class RideController : ControllerBase
     {
         private readonly RideGenerator rideGenerator = new RideGenerator();
-        private readonly RideDataRepository rideRepo = new RideDataRepository();
+        private readonly RideDataRepository rideRepo;
+        private readonly TokenService tokenService;
         //private readonly IConfiguration _configuration;
         //private readonly TokenService _tokenService;
 
-        //public RideController(IConfiguration configuration)
-        //{
-        //    _configuration = configuration;
-        //    _tokenService = new TokenService(configuration);
-        //}
+        public RideController(RideDataRepository _rideRepo, TokenService _tokenService)
+        {
+            tokenService = _tokenService;
+            rideRepo = _rideRepo;
+        }
 
 
         // POST api/ride/create 
@@ -58,35 +60,33 @@ namespace RideService.Controllers
         {
             try
             {
-                //var existingToken = Request.Cookies["jwt"];
-                //if (string.IsNullOrEmpty(existingToken))
-                //{
-                //    return Unauthorized(new { message = "User not logged in." });
-                //}
+                var existingToken = Request.Cookies["jwt"];
+                if (string.IsNullOrEmpty(existingToken))
+                {
+                    return Unauthorized(new { message = "User not logged in." });
+                }
 
+                ClaimsPrincipal principal;
+                try
+                {
+                    principal = tokenService.ValidateToken(existingToken);
+                }
+                catch (Exception ex)
+                {
+                    return Unauthorized(new { message = "Invalid token.", details = ex.Message });
+                }
 
-                //ClaimsPrincipal principal;
-                //try
-                //{
-                //    principal = _tokenService.ValidateToken(existingToken);
-                //}
-                //catch (Exception ex)
-                //{
-                //    // If token 
-                //    return Unauthorized(new { message = "Invalid token.", details = ex.Message });
-                //}
+                var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
 
-                //var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+                if (userId == null)
+                {
+                    return Unauthorized(new { message = "Invalid user information in token." });
+                }
 
-                //if (userId == null)
-                //{
-                //    return Unauthorized(new { message = "Invalid user information in token." });
-                //}
-
-                //Debug.WriteLine(userId);
 
                 var rideData = new Ride
                 {
+                    UserId = userId,
                     StartAddress = rideDto.StartAddress,
                     EndAddress = rideDto.EndAddress,
                     Distance = rideDto.Distance,
@@ -95,7 +95,7 @@ namespace RideService.Controllers
                 };
 
                 Debug.WriteLine(rideData);
-                Console.WriteLine(rideData);
+                ServiceEventSource.Current.Message($"Ride data: {rideData}");
 
                 await rideRepo.AddRideAsync(rideData);
 

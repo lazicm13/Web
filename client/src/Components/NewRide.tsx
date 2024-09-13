@@ -10,9 +10,10 @@ interface RideData {
 
 interface NewRideProps {
     rideData: RideData; 
+    onWithdraw: () => void; // Add this prop
 }
 
-function NewRide({ rideData }: NewRideProps) {
+function NewRide({ rideData, onWithdraw }: NewRideProps) {
     if (!rideData) {
         return <p>No ride data available</p>;
     }
@@ -30,16 +31,15 @@ function NewRide({ rideData }: NewRideProps) {
     
         try {
             const response = await axios.post('http://localhost:8149/api/ride/save', {
-                startAddress: rideData.startAddress,
-                endAddress: rideData.endAddress,
-                distance: rideData.distance,
-                price: rideData.price,
-                waitingTime: rideData.waitingTime
+                StartAddress: rideData.startAddress,
+                EndAddress: rideData.endAddress,
+                Distance: rideData.distance,
+                Price: rideData.price,
+                WaitingTime: rideData.waitingTime
             }, { withCredentials: true });
     
             if (response.status === 200) {
                 console.log('Ride data saved successfully:', response.data);
-                // Optionally, provide feedback to the user
                 alert('Ride data saved successfully!');
             } else {
                 console.error('Failed to save ride data. Status:', response.status);
@@ -48,32 +48,27 @@ function NewRide({ rideData }: NewRideProps) {
             console.error('Failed to save ride:', error);
         }
     };
-    
 
     return (
         <div className="form-container">
             <h2>New Ride Details</h2>
             <div className="form-group">
-                <label>Start Address:</label>
-                <p>{rideData.startAddress || 'N/A'}</p> 
+                <label>{rideData.startAddress || 'N/A'} ⇒ {rideData.endAddress || 'N/A'}</label>
+                <label></label>
             </div>
             <div className="form-group">
-                <label>End Address:</label>
-                <p>{rideData.endAddress || 'N/A'}</p>
+                <label>Distance: {distance.toFixed(2)} km</label>
             </div>
             <div className="form-group">
-                <label>Distance:</label>
-                <p>{distance.toFixed(2)} km</p>
+                <label>Expected Waiting Time: {rideData.waitingTime || 'N/A'} minutes</label>
             </div>
             <div className="form-group">
-                <label>Expected Waiting Time:</label>
-                <p>{rideData.waitingTime || 'N/A'} minutes</p>
+                <label>Price: {price.toFixed(2)} USD</label>
             </div>
             <div className="form-group">
-                <label>Price:</label>
-                <p>{price.toFixed(2)} USD</p>
-            </div>
-            <div className="form-group">
+                <button type="button" id="request-btn" onClick={onWithdraw}>
+                    Withdraw
+                </button>
                 <button type="button" id="request-btn" onClick={handleConfirmClick}>
                     Confirm
                 </button>
@@ -83,3 +78,4 @@ function NewRide({ rideData }: NewRideProps) {
 }
 
 export default NewRide;
+    

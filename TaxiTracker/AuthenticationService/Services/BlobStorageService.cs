@@ -1,31 +1,29 @@
 ﻿using Azure.Storage.Blobs;
-using System;
-using System.IO;
-using System.Threading.Tasks;
 
 public class BlobStorageService
 {
     private readonly BlobServiceClient _blobServiceClient;
-    private readonly string _containerName = "user-images";
+    private readonly string _connectionString = "UseDevelopmentStorage=true;";
 
     public BlobStorageService()
     {
-        string connectionString = "UseDevelopmentStorage=true;";
-        _blobServiceClient = new BlobServiceClient(connectionString);
+        _blobServiceClient = new BlobServiceClient(_connectionString);
     }
 
     public async Task<string> UploadImageAsync(string base64Image, string fileName)
     {
-        var containerClient = _blobServiceClient.GetBlobContainerClient(_containerName);
+        var containerClient = _blobServiceClient.GetBlobContainerClient("images");
         await containerClient.CreateIfNotExistsAsync();
-
         var blobClient = containerClient.GetBlobClient(fileName);
 
-        using (var stream = new MemoryStream(Convert.FromBase64String(base64Image)))
+        // Convert base64 string to byte array
+        byte[] imageBytes = Convert.FromBase64String(base64Image);
+
+        using (var stream = new MemoryStream(imageBytes))
         {
             await blobClient.UploadAsync(stream, overwrite: true);
         }
 
-        return blobClient.Uri.ToString();
+        return blobClient.Uri.AbsoluteUri; // Return URL to the uploaded image
     }
 }

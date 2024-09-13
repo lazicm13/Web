@@ -10,15 +10,13 @@ function UserDashboard() {
 
     const handleRequestClick = async () => {
         try {
-            // Send the start and end addresses to the server
             const response = await axios.post('http://localhost:8149/api/ride/create', {
                 startAddress,
                 endAddress,
             }, { withCredentials: true });
 
             if (response.status === 200) {
-                console.log('Received ride data:', response.data); // Log the response data
-                // Set the ride data and show the NewRide form
+                console.log('Received ride data:', response.data); 
                 setRideData(response.data);
                 setShowNewRide(true);
             }
@@ -27,13 +25,18 @@ function UserDashboard() {
         }
     };
 
+    const handleWithdraw = () => {
+        setShowNewRide(false);
+        setRideData(null);
+    };
+
     return (
         <div className="form-container">
             {showNewRide ? (
                 rideData ? (
-                    <NewRide rideData={rideData} />
+                    <NewRide rideData={rideData} onWithdraw={handleWithdraw} />
                 ) : (
-                    <p>Loading ride data...</p> // Handle the case where rideData is null
+                    <p>Loading ride data...</p>
                 )
             ) : (
                 <>

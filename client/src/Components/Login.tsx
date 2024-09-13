@@ -1,48 +1,39 @@
+// src/components/Login.tsx
+
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import { CredentialResponse } from '@react-oauth/google';
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import { useEffect } from 'react';
+import { checkLoginStatus, login } from  '../Services/loginService';
 
 interface LoginData {
     emailAddress: string;
     password: string;
 }
 
-
 function Login() {
 
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const checkLoginStatus = async () => {
-            try {
-                const response = await fetch('http://localhost:8850/auth/login/status', {
-                    method: 'GET',
-                    credentials: 'include', // Obezbeđuje slanje kolačića u zahtevima
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.isLoggedIn) {
-                        navigate('/'); // Prilagodi URL
-                    }
-                    else
-                        console.log("User is not logged in!");
-                }
-            } catch (error) {
-                console.error('Failed to check login status:', error);
-            }
-        };
-
-        checkLoginStatus();
-    }, [navigate]);
-
-
     const [loginData, setLoginData] = useState<LoginData>({
         emailAddress: '',
         password: ''
     });
+    const [error, setError] = useState<string>('');
+
+    useEffect(() => {
+        const verifyLoginStatus = async () => {
+            try {
+                const { isLoggedIn } = await checkLoginStatus();
+                if (isLoggedIn) {
+                    navigate('/'); // Adjust URL
+                }
+            } catch {
+                console.log("User is not logged in!");
+            }
+        };
+
+        verifyLoginStatus();
+    }, [navigate]);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
         const { name, value } = e.target;
@@ -54,39 +45,22 @@ function Login() {
 
     const handleLogin = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault();
+        setError(''); // Clear previous errors
         try {
-            const response = await fetch('http://localhost:8850/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(loginData),
-                credentials: 'include',
-            });
-
-            console.log(loginData);
-
-            if (response.ok) {
-                alert('Login successful!');
-                const data = await response.json();
-
-                if (data.redirectTo) {
-                    // Preusmerava korisnika na početnu stranicu
-                    navigate(data.redirectTo);
-                    return; 
-                }
-                console.log(data.message);
+            const data = await login(loginData);
+            alert('Login successful!');
+            if (data.redirectTo) {
+                navigate(data.redirectTo);
+            } else {
                 navigate('/');
             }
-            
-            else {
-                alert('Login failed!');
-                const errorData = await response.json();
-                console.error('Error:', errorData.message);
-            }
         } catch (error) {
-            console.error('Request failed', error);
-            alert('An error occurred, please try again later!');
+            console.error('Error during login:', error);
+            if (error instanceof Error) {
+                setError(error.message);
+            } else {
+                setError('An unexpected error occurred.');
+            }
         }
     };
 
@@ -100,7 +74,7 @@ function Login() {
                 <a id='home' href='/'>🏠</a>
                 <p id="naslov">Welcome to Taxi Tracker</p>
                 <h2>Sign in</h2>
-                <br/>
+                <br />
                 <form className="login-form" onSubmit={handleLogin}>
                     <input
                         className="input-login"
@@ -118,8 +92,9 @@ function Login() {
                         onChange={handleChange}
                         placeholder="Password"
                     />
-                <button id='loginBtn' type='submit'>Sign in</button>
+                    <button id='loginBtn' type='submit'>Sign in</button>
                 </form>
+                {error && <p className="error-message">{error}</p>}
                 {/* <GoogleLogin 
                     onSuccess={responseGoogle}
                     onError={() => {

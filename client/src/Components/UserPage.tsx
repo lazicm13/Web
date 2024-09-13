@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import axios from 'axios';
+import { getUserData, updateUser, uploadImage } from './../Services/userService';  // Import the service
 import './../Style/userpage.css';
 
 interface UserData {
@@ -8,7 +8,7 @@ interface UserData {
     emailAddress: string;
     birthDate: string;
     address: string;
-    image: string;  // New field for profile image URL
+    image: string;
 }
 
 interface EditMode {
@@ -17,56 +17,53 @@ interface EditMode {
     email: boolean;
     birthDate: boolean;
     address: boolean;
-    profileImage: boolean;  // New field for profile image edit mode
+    profileImage: boolean;
 }
 
 function UserPage() {
     const [registrationStatus, setRegistrationStatus] = useState('');
-
     const [userData, setUserData] = useState<UserData>({
         fullName: '',
         username: '',
         emailAddress: '',
         birthDate: '',
         address: '',
-        image: '' // Initialize profile image URL
+        image: ''
     });
-
     const [editMode, setEditMode] = useState<EditMode>({
         fullName: false,
         userName: false,
         email: false,
         birthDate: false,
         address: false,
-        profileImage: false // Initialize profile image edit mode
+        profileImage: false
     });
-
+    const [newImageFile, setNewImageFile] = useState<File | null>(null);
     const fullNameRef = useRef<HTMLInputElement>(null);
     const usernameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
     const birthDateRef = useRef<HTMLInputElement>(null);
     const addressRef = useRef<HTMLInputElement>(null);
-    const fileInputRef = useRef<HTMLInputElement>(null); // Ref for image upload input
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.get('http://localhost:8850/user/current', {
-                    withCredentials: true
+                const data = await getUserData();
+                setUserData({
+                    fullName: data.fullName,
+                    username: data.username,
+                    emailAddress: data.emailAddress,
+                    birthDate: data.birthDate,
+                    address: data.address,
+                    image: data.image
                 });
-
-                if (response.data) {
-                    setUserData({
-                        fullName: response.data.fullName,
-                        username: response.data.username,
-                        emailAddress: response.data.emailAddress,
-                        birthDate: response.data.birthDate,
-                        address: response.data.address,
-                        image: response.data.image // Fetch profile image URL
-                    });
-                }
             } catch (error) {
-                console.error('Failed to fetch user data:', error);
+                if (error instanceof Error) {
+                    console.error('An error occurred:', error.message);
+                } else {
+                    console.error('An unknown error occurred.');
+                }
             }
         };
 
@@ -76,7 +73,6 @@ function UserPage() {
     const validateInputs = () => {
         const { fullName, address, username, birthDate, emailAddress } = userData;
 
-        // Check if all required fields are filled
         if (!fullName || !address || !username || !emailAddress || !birthDate) {
             setRegistrationStatus('Please fill in all fields.');
             return false;
@@ -97,7 +93,6 @@ function UserPage() {
             [field]: !prevEditMode[field]
         }));
 
-        // Focus on the corresponding input field when edit mode is activated
         switch (field) {
             case 'fullName':
                 fullNameRef.current?.focus();
@@ -115,7 +110,7 @@ function UserPage() {
                 addressRef.current?.focus();
                 break;
             case 'profileImage':
-                fileInputRef.current?.click(); // Trigger file input click when editing profile image
+                fileInputRef.current?.click();
                 break;
             default:
                 break;
@@ -129,31 +124,20 @@ function UserPage() {
         });
     };
 
-    const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
+    const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            setNewImageFile(file);
 
-        const formData = new FormData();
-        formData.append('image', file);
-
-        try {
-            // Upload the image to the server
-            const response = await axios.post('http://localhost:8850/user/upload-image', formData, {
-                withCredentials: true,
-                headers: { 'Content-Type': 'multipart/form-data' }
-            });
-
-            if (response.data.imageUrl) {
-                // Update the profile image URL in the state
-                setUserData((prevData) => ({
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const base64String = (reader.result as string).split(',')[1];
+                setUserData(prevData => ({
                     ...prevData,
-                    image: response.data.imageUrl
+                    image: base64String
                 }));
-                alert('Profile image updated successfully.');
-            }
-        } catch (error) {
-            console.error('Error uploading image:', error);
-            alert('Failed to upload image.');
+            };
+            reader.readAsDataURL(file);
         }
     };
 
@@ -164,20 +148,23 @@ function UserPage() {
             } else {
                 setRegistrationStatus('');
             }
-            // Save user data through the API
-            const response = await axios.put('http://localhost:8850/user/update', userData, {
-                withCredentials: true
-            });
 
-            if (response.status === 200) {
-                alert('Changes saved successfully.');
-                // Refresh data if needed after saving
-            } else {
-                alert('Failed to save changes.');
+            const updatedUserData = { ...userData };
+
+            if (newImageFile) {
+                const imageUrl = await uploadImage(newImageFile);
+                updatedUserData.image = imageUrl;
             }
+
+            await updateUser(updatedUserData);
+            alert('Changes saved successfully.');
         } catch (error) {
-            console.error('Error saving changes:', error);
-            alert('An error occurred while saving changes.');
+            if (error instanceof Error) {
+                console.error('An error occurred:', error.message);
+                alert('An error occurred while saving changes.');
+            } else {
+                console.error('An unknown error occurred.');
+            }
         }
     };
 
@@ -251,30 +238,27 @@ function UserPage() {
                     />
                     <span className="edit-icon" title="Edit address" onClick={() => handleEditClick('address')}>✏️</span>
                 </div>
-                {/* Display profile image */}
                 <div className="profile-image-container">
-                    <img
-                        src={userData.image} 
-                        alt="Profile"
-                        className="profile-image"
-                    />
-                    <button type="button" onClick={() => handleEditClick('profileImage')}>
-                        Change Profile Image
-                    </button>
+                    {userData.image && (
+                        <div className="selected-image">
+                            <img src={`data:image/jpeg;base64,${userData.image}`} alt="Selected" />
+                        </div>
+                    )}
                     <input
-                        ref={fileInputRef}
                         type="file"
+                        ref={fileInputRef}
+                        className="input-userpage"
                         style={{ display: 'none' }}
+                        onChange={handleImageChange}
                         accept="image/*"
-                        onChange={handleImageUpload}
                     />
+                    <button className="image-change-btn" onClick={() => handleEditClick('profileImage')}>Change profile image</button>
                 </div>
-                <a href='/change-password'>Change password</a>
+                <div className="button-group">
+                    <button type="button" className="btn-save" onClick={handleSaveChanges}>Save Changes</button>
+                    <span className="status-message">{registrationStatus}</span>
+                </div>
             </form>
-            <div className="button-container">
-                <button id="userpage-btn" onClick={handleSaveChanges}>Save changes</button>
-            </div>
-            <p className="errorMessage">{registrationStatus}</p>
         </div>
     );
 }
