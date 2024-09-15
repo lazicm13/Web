@@ -7,6 +7,7 @@ import ChangePassword from './Components/ChangePassword';
 import UserPage from './Components/UserPage';
 import './Style/registration.css';
 import './Style/homepage.css';
+import RidePage from './Components/RidePage';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/user-page/' element={<UserPage/>}/>
         <Route path='/change-password' element={<ChangePassword/>}/>
+        <Route path='/ride-page' element={<RidePage/>}/>
       </Routes>
     </Router>
   )

@@ -1,0 +1,54 @@
+.ride-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adds some space between the <p> label and the gears */
+  }
+  
+  .gear {
+    width: 100px;
+    height: 100px;
+  }
+  
+  #gear1 {
+    animation: rotate-clockwise 4s linear infinite;
+  }
+  
+  #gear2 {
+    animation: rotate-counterclockwise 4s linear infinite;
+  }
+  
+  .gear img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(92%) saturate(3154%) hue-rotate(353deg) brightness(101%) contrast(101%);
+  }
+  
+  /* Clockwise rotation */
+  @keyframes rotate-clockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Counterclockwise rotation */
+  @keyframes rotate-counterclockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  

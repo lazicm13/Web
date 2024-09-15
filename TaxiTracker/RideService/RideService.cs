@@ -10,10 +10,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.ServiceFabric.Services.Client;
 using Microsoft.ServiceFabric.Services.Communication.AspNetCore;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
+using Microsoft.ServiceFabric.Services.Remoting.Client;
 using Microsoft.ServiceFabric.Services.Runtime;
 using RideService.Services;
+using RideTrackingService.Interfaces;
 
 namespace RideService
 {
@@ -43,6 +46,10 @@ namespace RideService
                         builder.Services.AddSingleton<StatelessServiceContext>(serviceContext);
                         builder.Services.AddSingleton<RideDataRepository>();
                         builder.Services.AddSingleton<TokenService>();
+                        builder.Services.AddSingleton<IRideTrackingService>(provider =>
+                        ServiceProxy.Create<IRideTrackingService>(
+                            new Uri("fabric:/TaxiTracker/RideTrackingService"),
+                            new ServicePartitionKey(0)));
 
                         // Add CORS services with specific origin
                         builder.Services.AddCors(options =>

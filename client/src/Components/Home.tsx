@@ -1,20 +1,25 @@
 import { Link } from 'react-router-dom';
 import UserDashboard from './Dashboards/UserDashboard';
+import DriverDashboard from './Dashboards/DriverDashboard';
+import AdminDashboard from './Dashboards/AdminDashboard';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function HomePage() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [userRole, setUserRole] = useState(''); // State to track user role
 
     useEffect(() => {
         const checkAuthStatus = async () => {
             try {
-                const response = await axios.get('http://localhost:8850/auth/login/check', { withCredentials: true });
-                if (response.status === 200) {
+                const response = await axios.get('http://localhost:8850/auth/login/status', { withCredentials: true });
+                if (response.status === 200 && response.data.isLoggedIn) {
                     setIsAuthenticated(true);
+                    setUserRole(response.data.role); // Set user role from response
                 }
             } catch (error) {
                 setIsAuthenticated(false);
+                setUserRole(''); // Reset role if unauthenticated
             }
         };
 
@@ -25,9 +30,23 @@ function HomePage() {
         try {
             await axios.post('http://localhost:8850/auth/login/logout', {}, { withCredentials: true });
             setIsAuthenticated(false);
+            setUserRole('');
             alert('You are successfully logged out!');
         } catch (error) {
             console.error('Logout failed', error);
+        }
+    };
+
+    const renderDashboard = () => {
+        switch (userRole) {
+            case 'Admin':
+                return <AdminDashboard />;
+            case 'Driver':
+                return <DriverDashboard />;
+            case 'User':
+                return <UserDashboard />;
+            default:
+                return <p>Please log in to see your dashboard.</p>;
         }
     };
 
@@ -47,7 +66,10 @@ function HomePage() {
                     <Link to="/user-page" className="nav-link">User page</Link>
                 </nav>
             </header>
-            <UserDashboard></UserDashboard>
+
+            {/* Display the appropriate dashboard based on user role */}
+            {isAuthenticated ? renderDashboard() : <p>Please log in to access the dashboard.</p>}
+
             <section className="home-info">
                 <h2>About Our Service</h2>
                 <p>

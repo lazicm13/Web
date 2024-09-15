@@ -23,14 +23,15 @@ namespace Common.Services
             _audience = configuration["Jwt:Audience"];
         }
 
-        public string GenerateJwtToken(string emailAddress, IConfiguration _configuration)
+        public string GenerateJwtToken(string emailAddress, string role, IConfiguration _configuration)
         {
             var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                    new Claim(ClaimTypes.Name, emailAddress)
+                    new Claim(ClaimTypes.Name, emailAddress),
+                    new Claim(ClaimTypes.Role, role) 
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
@@ -98,6 +99,17 @@ namespace Common.Services
                 return principal.Identity.Name;
             }
             return null;
+        }
+
+        public bool IsUserInRole(string token, string requiredRole)
+        {
+            var principal = ValidateToken(token);
+            if (principal != null)
+            {
+                var roleClaim = principal.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+                return roleClaim == requiredRole;
+            }
+            return false;
         }
     }
 }

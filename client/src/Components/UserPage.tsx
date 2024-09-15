@@ -124,6 +124,16 @@ function UserPage() {
         });
     };
 
+    const handleImageSource = (image: string) => {
+        // Proveravamo da li string sadrži prefiks 'data:image'
+        if (image.startsWith('http') || image.startsWith('https')) {
+            return image; // Ako je URL, vrati ga direktno
+        } else {
+            // Ako je base64 string, dodajemo prefiks 'data:image/jpeg;base64,' ako ga nema
+            return `data:image/jpeg;base64,${image}`;
+        }
+    };
+
     const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
         if (file) {
@@ -240,9 +250,7 @@ function UserPage() {
                 </div>
                 <div className="profile-image-container">
                     {userData.image && (
-                        <div className="selected-image">
-                            <img src={`data:image/jpeg;base64,${userData.image}`} alt="Selected" />
-                        </div>
+                            <img className="selected-image" src={handleImageSource(userData.image)} alt="Selected" />
                     )}
                     <input
                         type="file"

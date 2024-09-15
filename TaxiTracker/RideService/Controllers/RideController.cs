@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RideService.Models;
 using RideService.Services;
+using RideTrackingService.Interfaces;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
@@ -18,13 +19,15 @@ namespace RideService.Controllers
         private readonly RideGenerator rideGenerator = new RideGenerator();
         private readonly RideDataRepository rideRepo;
         private readonly TokenService tokenService;
+        private readonly IRideTrackingService _rideTrackingService;
         //private readonly IConfiguration _configuration;
         //private readonly TokenService _tokenService;
 
-        public RideController(RideDataRepository _rideRepo, TokenService _tokenService)
+        public RideController(RideDataRepository _rideRepo, TokenService _tokenService, IRideTrackingService rideTrackingService)
         {
             tokenService = _tokenService;
             rideRepo = _rideRepo;
+            _rideTrackingService = rideTrackingService;
         }
 
 
@@ -93,6 +96,8 @@ namespace RideService.Controllers
                     Price = rideDto.Price,
                     WaitingTime = rideDto.WaitingTime
                 };
+
+                await _rideTrackingService.AddOrUpdateRideAsync(rideData);
 
                 Debug.WriteLine(rideData);
                 ServiceEventSource.Current.Message($"Ride data: {rideData}");

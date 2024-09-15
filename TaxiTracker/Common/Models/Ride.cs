@@ -1,5 +1,6 @@
 ﻿using Azure;
 using Azure.Data.Tables;
+using Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,11 +24,13 @@ namespace Common.Models
         public double Price { get; set; }
         public double Distance {  get; set; }
         public string? WaitingTime {  get; set; }
+        public RideStatus Status { get; set; }
         
         public Ride() 
         {
             Id = Guid.NewGuid();
             RowKey = Id.ToString();
+            Status = RideStatus.Active;
         }
 
         public Ride(string userId, string startAdress, string endAddress, double price, double distance, string waitingTime)
@@ -40,6 +43,7 @@ namespace Common.Models
             Price = price;
             Distance = distance;
             WaitingTime = waitingTime;
+            Status = RideStatus.Active;
         }
         
 

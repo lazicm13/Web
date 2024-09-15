@@ -38,7 +38,7 @@ namespace AuthenticationService.Controllers
             }
             
             
-            var token = _tokenService.GenerateJwtToken(loginRequest.EmailAddress, _configuration);
+            var token = _tokenService.GenerateJwtToken(loginRequest.EmailAddress, user.UserType.ToString(), _configuration);
 
             // Store the token in an HttpOnly cookie
             var cookieOptions = new CookieOptions
@@ -67,23 +67,21 @@ namespace AuthenticationService.Controllers
             var existingToken = Request.Cookies["jwt"];
             if (!string.IsNullOrEmpty(existingToken))
             {
-                // Validiraj token i dobavi principal (korisničke tvrdnje)
                 var principal = _tokenService.ValidateToken(existingToken);
                 if (principal != null)
                 {
-                    // Izvuci korisničko ime iz tvrdnji (claims) tokena
                     var username = principal.Identity?.Name ?? principal.FindFirst(ClaimTypes.Name)?.Value;
+                    var role = principal.FindFirst(ClaimTypes.Role)?.Value;
 
-                    // Korisnik je ulogovan, vraćamo i ime
                     return Ok(new
                     {
                         isLoggedIn = true,
-                        username = username // Prosleđivanje imena korisnika
+                        username = username,
+                        role = role // Dodaj i rolu u odgovor
                     });
                 }
             }
 
-            // Korisnik nije ulogovan
             return Ok(new { isLoggedIn = false });
         }
 

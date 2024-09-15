@@ -55,7 +55,8 @@ public class RegistrationController : ControllerBase
                 BirthDate = user.BirthDate,
                 Image = imageUrl,
                 RowKey = rowKey,
-                UserType = user.UserType.Equals("Driver") ? UserType.Driver : UserType.User
+                UserType = user.UserType.Equals("Driver") ? UserType.Driver : UserType.User,
+                UserState = user.UserType.Equals("Driver") ? UserState.Created : UserState.Verified
             };
 
             await _repo.AddUserAsync(userData);

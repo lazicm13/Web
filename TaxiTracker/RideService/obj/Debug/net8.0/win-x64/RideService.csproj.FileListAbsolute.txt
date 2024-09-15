@@ -1,3 +1,6 @@
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\RideTrackingService.deps.json
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\RideTrackingService.runtimeconfig.json
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\RideTrackingService.exe
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\appsettings.Development.json
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\appsettings.json
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\RideService.exe
@@ -32,7 +35,10 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProje
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Microsoft.ServiceFabric.ReliableCollection.Interop.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Microsoft.ServiceFabric.Data.Interfaces.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Microsoft.ServiceFabric.Diagnostics.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Microsoft.ServiceFabric.FabricTransport.V2.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Microsoft.ServiceFabric.FabricTransport.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Microsoft.ServiceFabric.Services.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Microsoft.ServiceFabric.Services.Remoting.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -364,7 +370,9 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProje
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\msquic.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\aspnetcorev2_inprocess.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Common.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\RideTrackingService.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\Common.pdb
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\bin\Debug\net8.0\win-x64\RideTrackingService.pdb
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\obj\Debug\net8.0\win-x64\RideService.csproj.AssemblyReference.cache
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\obj\Debug\net8.0\win-x64\RideService.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\RideService\obj\Debug\net8.0\win-x64\RideService.AssemblyInfoInputs.cache

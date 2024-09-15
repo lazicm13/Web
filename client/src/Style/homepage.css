@@ -30,7 +30,7 @@
 
 .home-info {
   max-width: 800px;
-  margin-bottom: 50px;
+  
 }
 
 .home-footer {
@@ -45,6 +45,7 @@
 .form-container{
   border: 2px solid black;
   width: 100%;
+  background-color: lightyellow;
 }
 
 #request-btn{

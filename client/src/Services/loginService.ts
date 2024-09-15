@@ -1,56 +1,35 @@
-// src/services/authService.ts
+// src/services/loginService.ts
 
-interface LoginData {
-    emailAddress: string;
-    password: string;
+import axios from 'axios';
+
+interface ErrorResponse {
+    message: string;
 }
 
-interface LoginStatusResponse {
-    isLoggedIn: boolean;
-}
-
-interface LoginResponse {
-    redirectTo?: string;
-    message?: string;
-}
-
-export const checkLoginStatus = async (): Promise<LoginStatusResponse> => {
+export const checkLoginStatus = async (): Promise<{ isLoggedIn: boolean }> => {
     try {
-        const response = await fetch('http://localhost:8850/auth/login/status', {
-            method: 'GET',
-            credentials: 'include', // Obezbeđuje slanje kolačića u zahtevima
-        });
-
-        if (response.ok) {
-            return await response.json();
-        } else {
-            throw new Error('Failed to fetch login status');
-        }
+        const response = await axios.get('http://localhost:8850/auth/login/status', { withCredentials: true });
+        return { isLoggedIn: response.status === 200 }; // Ako je 200, korisnik je ulogovan
     } catch (error) {
         console.error('Failed to check login status:', error);
-        throw error;
+        return { isLoggedIn: false }; // U slučaju greške, korisnik nije prijavljen
     }
 };
 
-export const login = async (loginData: LoginData): Promise<LoginResponse> => {
-    try {
-        const response = await fetch('http://localhost:8850/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(loginData),
-            credentials: 'include',
-        });
 
-        if (response.ok) {
-            return await response.json();
-        } else {
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Login failed');
-        }
+export const login = async (loginData: { emailAddress: string; password: string }): Promise<{ redirectTo?: string }> => {
+    try {
+        const response = await axios.post('http://localhost:8850/auth/login', loginData, { withCredentials: true });
+        return response.data;
     } catch (error) {
-        console.error('Request failed', error);
-        throw error;
+        console.error('Login failed:', error);
+
+        // Type guard for axios error
+        if (axios.isAxiosError(error)) {
+            const errorResponse: ErrorResponse = error.response?.data || { message: 'An error occurred during login.' };
+            throw new Error(errorResponse.message);
+        } else {
+            throw new Error('An unexpected error occurred.');
+        }
     }
 };

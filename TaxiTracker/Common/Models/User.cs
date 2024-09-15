@@ -21,19 +21,7 @@ namespace Common.Models
         public string BirthDate { get; set; }
         public string? Image { get; set; }
         public UserType UserType { get; set; }
-
-        public User(string username, string emailAddress, string password, string fullName, string address, string birthDate, string image, UserType userType)
-        {
-            RowKey = emailAddress;
-            Username = username;
-            EmailAddress = emailAddress;
-            Password = password;
-            FullName = fullName;
-            Address = address;
-            BirthDate = birthDate;
-            Image = image;
-            UserType = userType;
-        }
+        public UserState? UserState { get; set; }
 
         public User() { }
     }

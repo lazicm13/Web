@@ -1,6 +1,7 @@
 ﻿using AuthenticationService;
 using AuthenticationService.Models;
 using AuthenticationService.Services;
+using Common.Enums;
 using Common.Models;
 using Common.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -203,6 +204,22 @@ public class UserController : ControllerBase
         catch (Exception ex)
         {
             return StatusCode(500, new { message = "An error occurred while uploading the image.", error = ex.Message });
+        }
+
+
+    }
+
+    [HttpGet("new-drivers")]
+    public async Task<IActionResult> GetNewDrivers()
+    {
+        try
+        {
+            var drivers = await _repo.RetrieveUsersByStatusAsync(UserState.Created);
+            return Ok(drivers);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "An error occurred while fetching new drivers.", error = ex.Message });
         }
     }
 

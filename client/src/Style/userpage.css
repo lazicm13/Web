@@ -107,21 +107,44 @@ hr{
     color:red;
 }
 
-.profile-image{
-    width: 150px;
-    height: 150px;
+.selected-image {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    float:left;
+    object-fit: cover;  /* Ensures the image fits nicely in the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow for depth */
+    margin-right: 20px;  /* Adds spacing between the image and the button */
+    transition: transform 0.3s ease-in-out;  /* Adds hover effect transition */
 }
 
-.image-change-btn{
-    width: 150px;
-    margin-top: 50px;
-    background-color: yellowgreen;
+.selected-image:hover {
+    transform: scale(1.1);  /* Enlarges the image slightly on hover */
 }
 
-.profile-image-container{
-    border: 1px solid gray;
+.image-change-btn {
+    width: 160px;
+    background-color: #4CAF50;  /* Better green tone */
+    color: white;
     padding: 10px;
-    background-color: lightyellow;
+    border: none;
+    border-radius: 8px;  /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;  /* Smooth transition for hover */
+}
+
+.image-change-btn:hover {
+    background-color: #45a049;  /* Slightly darker on hover */
+    transform: scale(1.05);  /* Slightly enlarges button on hover */
+}
+
+.profile-image-container {
+    display: flex;  /* Aligns the image and button horizontally */
+    align-items: center;  /* Centers the image and button vertically */
+    border: 1px solid #ddd;
+    border-radius: 10px;  /* Slightly rounded container edges */
+    padding: 20px;
+    background-color: #f9f9f9;  /* Light background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);  /* Soft shadow for the entire container */
+    max-width: 400px;  /* Limits the width of the container */
+    margin: 20px auto;  /* Centers the container */
 }
