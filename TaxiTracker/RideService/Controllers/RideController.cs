@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using RideService.Models;
 using RideService.Services;
 using RideTrackingService.Interfaces;
+using System.ComponentModel.Design.Serialization;
 using System.Diagnostics;
+using System.Fabric.Query;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
 
@@ -90,6 +92,7 @@ namespace RideService.Controllers
                 var rideData = new Ride
                 {
                     UserId = userId,
+                    RowKey = userId,
                     StartAddress = rideDto.StartAddress,
                     EndAddress = rideDto.EndAddress,
                     Distance = rideDto.Distance,
@@ -111,5 +114,92 @@ namespace RideService.Controllers
                 return BadRequest(new { ex.Message });
             }
         }
+
+        [HttpGet("ride-details")]
+        [Authorize]
+        public async Task<IActionResult> GetRideInfo()
+        {
+            var existingToken = Request.Cookies["jwt"];
+            if (string.IsNullOrEmpty(existingToken))
+            {
+                return Unauthorized(new { message = "User not logged in." });
+            }
+
+            ClaimsPrincipal principal;
+            try
+            {
+                principal = tokenService.ValidateToken(existingToken);
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(new { message = "Invalid token.", details = ex.Message });
+            }
+
+            var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+
+            if (userId == null)
+            {
+                return Unauthorized(new { message = "Invalid user information in token." });
+            }
+
+            var ride = await rideRepo.RetrieveRideAsync(userId);
+
+            if (ride == null)
+            {
+                return NotFound(new { message = "Ride not found." });
+            }
+
+            var status = await _rideTrackingService.GetRideStatusAsync(ride.UserId);
+
+            ride.Status = status ?? RideStatus.Active;
+
+            return Ok(new { ride});
+        }
+
+        [HttpGet("ride-status")]
+        [Authorize]
+        public async Task<IActionResult> GetRideStatus()
+        {
+            var existingToken = Request.Cookies["jwt"];
+            if (string.IsNullOrEmpty(existingToken))
+            {
+                return Unauthorized(new { message = "User not logged in." });
+            }
+
+            ClaimsPrincipal principal;
+            try
+            {
+                principal = tokenService.ValidateToken(existingToken);
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(new { message = "Invalid token.", details = ex.Message });
+            }
+
+            var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+
+            if (userId == null)
+            {
+                return Unauthorized(new { message = "Invalid user information in token." });
+            }
+
+            var ride = await rideRepo.RetrieveRideAsync(userId);
+
+            if (ride == null)
+            {
+                return NotFound(new { message = "Ride not found." });
+            }
+
+            var status = await _rideTrackingService.GetRideStatusAsync(ride.UserId);
+
+            var rideStatus = status.ToString();
+
+            ride.Status = status ?? RideStatus.Active;
+
+            return Ok(new { status = rideStatus });
+        }
+
+
+
     }
 }

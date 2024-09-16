@@ -58,7 +58,6 @@ public class RegistrationController : ControllerBase
                 UserType = user.UserType.Equals("Driver") ? UserType.Driver : UserType.User,
                 UserState = user.UserType.Equals("Driver") ? UserState.Created : UserState.Verified
             };
-
             await _repo.AddUserAsync(userData);
 
             return Ok(new { message = "Registration successful." });

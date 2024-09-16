@@ -1,54 +1,106 @@
 .ride-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  padding: 0 20px; /* Add some padding to avoid content touching edges on small screens */
+  text-align: center; /* Center align text */
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px; /* Adds space below the title */
+}
+
+.status-message {
+  font-size: 1.5rem;
+  margin-bottom: 20px; /* Adds space below the status message */
+}
+
+.ride-details {
+  margin-bottom: 20px; /* Adds space below the ride details */
+}
+
+.countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff0000; /* Red color for visibility */
+  margin-bottom: 20px; /* Adds space below the countdown */
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adds some space between the <p> label and the gears */
+}
+
+.gear {
+  width: 80px; /* Adjust size for better proportion */
+  height: 80px;
+  margin: 0 10px; /* Adds space between the gears */
+}
+
+#gear1 {
+  animation: rotate-clockwise 4s linear infinite;
+}
+
+#gear2 {
+  animation: rotate-counterclockwise 4s linear infinite;
+}
+
+.gear img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) saturate(100%) invert(44%) sepia(92%) saturate(3154%) hue-rotate(353deg) brightness(101%) contrast(101%);
+}
+
+/* Clockwise rotation */
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .loader-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Adds some space between the <p> label and the gears */
+  to {
+    transform: rotate(360deg);
   }
-  
-  .gear {
-    width: 100px;
-    height: 100px;
+}
+
+/* Counterclockwise rotation */
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
   }
-  
-  #gear1 {
-    animation: rotate-clockwise 4s linear infinite;
+  to {
+    transform: rotate(-360deg);
   }
-  
-  #gear2 {
-    animation: rotate-counterclockwise 4s linear infinite;
+}
+/* Container for the animation */
+.car-container {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+/* Animation */
+.car {
+  position: absolute;
+  width: 200px; /* Adjust to the size of your car image */
+  height: 120px; /* Adjust to the size of your car image */
+  background-image: url('https://pngimg.com/d/taxi_PNG22.png'); /* Replace with the URL of your car image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: move-car 10s linear infinite;
+}
+
+/* Keyframes for car movement */
+@keyframes move-car {
+  0% {
+    transform: translateX(-100px); /* Start position, move the car off-screen to the left */
   }
-  
-  .gear img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(0) saturate(100%) invert(44%) sepia(92%) saturate(3154%) hue-rotate(353deg) brightness(101%) contrast(101%);
+  100% {
+    transform: translateX(100vw); /* End position, move the car off-screen to the right */
   }
-  
-  /* Clockwise rotation */
-  @keyframes rotate-clockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* Counterclockwise rotation */
-  @keyframes rotate-counterclockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg);
-    }
-  }
-  
+}

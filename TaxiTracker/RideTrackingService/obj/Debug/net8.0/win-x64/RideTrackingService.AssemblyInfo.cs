@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RideTrackingService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cba53c9b47a85a3929f7dde7052fde59f1a50a2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15692f1a8348230874dcda2b91ec010e35509fe5")]
 [assembly: System.Reflection.AssemblyProductAttribute("RideTrackingService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RideTrackingService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

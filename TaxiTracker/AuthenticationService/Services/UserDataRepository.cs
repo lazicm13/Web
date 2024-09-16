@@ -18,7 +18,6 @@ namespace AuthenticationService.Services
             _tableClient.CreateIfNotExists();
         }
 
-
         public async Task<bool> ExistsAsync(string userNo)
         {
             var user = await RetrieveUserAsync(userNo);
@@ -72,7 +71,6 @@ namespace AuthenticationService.Services
             // Retrieve all users and filter in-memory by UserState
             await foreach (var user in _tableClient.QueryAsync<User>(u => u.PartitionKey == "User"))
             {
-                // Check if UserState is not null and does not match the given status
                 if (user.UserState != null && user.UserState == status)
                 {
                     users.Add(user);
@@ -82,11 +80,6 @@ namespace AuthenticationService.Services
             return users;
         }
 
-
-
-
-
-
-
+       
     }
 }

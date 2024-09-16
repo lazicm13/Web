@@ -1,4 +1,5 @@
-﻿using Common.Models;
+﻿using Common.Enums;
+using Common.Models;
 using Microsoft.ServiceFabric.Services.Remoting;
 using System.Collections.Generic;
 using System.Fabric.Query;
@@ -10,5 +11,8 @@ namespace RideTrackingService.Interfaces
     {
         Task<IEnumerable<Ride>> GetActiveRidesAsync();
         Task AddOrUpdateRideAsync(Ride ride);
+        public Task<IEnumerable<Ride>> GetRidesByStatusAsync(RideStatus status);
+        public Task UpdateRideStatusAsync(string rideId, RideStatus newStatus);
+        public Task<RideStatus?> GetRideStatusAsync(string rideId);
     }
 }

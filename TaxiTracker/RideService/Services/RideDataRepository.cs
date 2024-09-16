@@ -62,5 +62,20 @@ namespace RideService.Services
         {
             await _tableClient.UpdateEntityAsync(ride, ride.ETag, TableUpdateMode.Replace);
         }
+
+        public async Task<bool> CheckUserAsync(string username)
+        {
+            var query = _tableClient.QueryAsync<Ride>(ride => ride.UserId == username || ride.DriverId == username);
+
+            await foreach (var ride in query)
+            {
+                if (ride != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

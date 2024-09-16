@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 interface RideData {
     startAddress: string;
@@ -14,6 +15,7 @@ interface NewRideProps {
 }
 
 function NewRide({ rideData, onWithdraw }: NewRideProps) {
+    const navigate = useNavigate();
     if (!rideData) {
         return <p>No ride data available</p>;
     }
@@ -41,9 +43,11 @@ function NewRide({ rideData, onWithdraw }: NewRideProps) {
             if (response.status === 200) {
                 console.log('Ride data saved successfully:', response.data);
                 alert('Ride data saved successfully!');
+                navigate('ride-page');
             } else {
                 console.error('Failed to save ride data. Status:', response.status);
             }
+            
         } catch (error) {
             console.error('Failed to save ride:', error);
         }

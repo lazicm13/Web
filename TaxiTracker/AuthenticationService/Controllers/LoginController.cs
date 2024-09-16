@@ -1,5 +1,6 @@
 ﻿using AuthenticationService.Models;
 using AuthenticationService.Services;
+using Common.Enums;
 using Common.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -37,7 +38,11 @@ namespace AuthenticationService.Controllers
                 return Unauthorized(new { message = "Invalid email or password." });
             }
             
-            
+            if(user.UserState == UserState.Rejected)
+            {
+                return Unauthorized(new { message = "You cannot login! Your profile is rejected by Administrator!" });
+            }
+
             var token = _tokenService.GenerateJwtToken(loginRequest.EmailAddress, user.UserType.ToString(), _configuration);
 
             // Store the token in an HttpOnly cookie

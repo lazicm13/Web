@@ -15,20 +15,49 @@ function DriverDashboard() {
   useEffect(() => {
     const fetchRides = async () => {
       try {
-        const response = await fetch('http://localhost:8149/api/driver/active-rides'); // Update the URL as needed
+        const response = await fetch('http://localhost:8149/api/driver/active-rides', {
+          method: 'GET',
+          credentials: 'include', // Include HttpOnly cookies in the request
+        });
+  
         if (!response.ok) {
-          const errorMessage = await response.text(); // Dobijanje teksta greške iz odgovora
+          const errorMessage = await response.text();
           throw new Error(`Failed to fetch active rides: ${response.status} ${response.statusText} - ${errorMessage}`);
         }
+  
         const data: Ride[] = await response.json();
         setRides(data);
       } catch (error) {
         console.error('Error fetching rides:', error);
       }
     };
-
+  
     fetchRides();
   }, []);
+  
+
+  const acceptRide = async (rideId: string) => {
+    try {
+      const response = await fetch(`http://localhost:8149/api/driver/accept-ride/${rideId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include', // Include HttpOnly cookies in the request
+      });
+  
+      if (!response.ok) {
+        const errorMessage = await response.text();
+        throw new Error(`Failed to accept ride: ${response.status} ${response.statusText} - ${errorMessage}`);
+      }
+  
+      // Optionally, you can update the state to reflect the change
+      setRides((prevRides) => prevRides.filter((ride) => ride.userId !== rideId));
+    } catch (error) {
+      console.error('Error accepting ride:', error);
+    }
+  };
+  
 
   return (
     <div className="driver-dashboard">
@@ -44,7 +73,12 @@ function DriverDashboard() {
                 <p><strong>Distance:</strong> {ride.distance.toFixed(2)} km</p>
               </div>
               <div className="button-container">
-                <button className='accept-btn'>Accept ride</button>
+                <button 
+                  className='accept-btn' 
+                  onClick={() => acceptRide(ride.userId)}
+                >
+                  Accept ride
+                </button>
               </div>
             </li>
           ))}

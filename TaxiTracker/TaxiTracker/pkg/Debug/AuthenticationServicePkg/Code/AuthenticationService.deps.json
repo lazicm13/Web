@@ -16,7 +16,8 @@
           "Common": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.7",
           "Microsoft.Extensions.Azure": "1.5.0",
-          "Microsoft.ServiceFabric.AspNetCore.Kestrel": "7.1.2175",
+          "Microsoft.ServiceFabric.AspNetCore.Kestrel": "7.1.2338",
+          "RideTrackingService": "1.0.0",
           "Swashbuckle.AspNetCore": "6.7.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "8.0.5",
           "runtimepack.Microsoft.AspNetCore.App.Runtime.win-x64": "8.0.5"
@@ -1565,7 +1566,7 @@
           }
         }
       },
-      "Microsoft.ServiceFabric/10.1.2175": {
+      "Microsoft.ServiceFabric/10.1.2338": {
         "dependencies": {
           "System.Memory": "4.5.4"
         },
@@ -1600,9 +1601,9 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.AspNetCore.Abstractions/7.1.2175": {
+      "Microsoft.ServiceFabric.AspNetCore.Abstractions/7.1.2338": {
         "dependencies": {
-          "Microsoft.ServiceFabric.Services": "7.1.2175"
+          "Microsoft.ServiceFabric.Services": "7.1.2338"
         },
         "runtime": {
           "lib/net8.0/Microsoft.ServiceFabric.AspNetCore.dll": {
@@ -1611,9 +1612,9 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.AspNetCore.Kestrel/7.1.2175": {
+      "Microsoft.ServiceFabric.AspNetCore.Kestrel/7.1.2338": {
         "dependencies": {
-          "Microsoft.ServiceFabric.AspNetCore.Abstractions": "7.1.2175"
+          "Microsoft.ServiceFabric.AspNetCore.Abstractions": "7.1.2338"
         },
         "runtime": {
           "lib/net8.0/Microsoft.ServiceFabric.AspNetCore.Kestrel.dll": {
@@ -1622,11 +1623,11 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Data/7.1.2175": {
+      "Microsoft.ServiceFabric.Data/7.1.2338": {
         "dependencies": {
-          "Microsoft.ServiceFabric": "10.1.2175",
-          "Microsoft.ServiceFabric.Data.Extensions": "7.1.2175",
-          "Microsoft.ServiceFabric.Data.Interfaces": "7.1.2175"
+          "Microsoft.ServiceFabric": "10.1.2338",
+          "Microsoft.ServiceFabric.Data.Extensions": "7.1.2338",
+          "Microsoft.ServiceFabric.Data.Interfaces": "7.1.2338"
         },
         "runtime": {
           "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.Data.dll": {
@@ -1635,10 +1636,10 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Data.Extensions/7.1.2175": {
+      "Microsoft.ServiceFabric.Data.Extensions/7.1.2338": {
         "dependencies": {
-          "Microsoft.ServiceFabric": "10.1.2175",
-          "Microsoft.ServiceFabric.Data.Interfaces": "7.1.2175"
+          "Microsoft.ServiceFabric": "10.1.2338",
+          "Microsoft.ServiceFabric.Data.Interfaces": "7.1.2338"
         },
         "runtime": {
           "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.Data.Extensions.dll": {
@@ -1651,9 +1652,9 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Data.Interfaces/7.1.2175": {
+      "Microsoft.ServiceFabric.Data.Interfaces/7.1.2338": {
         "dependencies": {
-          "Microsoft.ServiceFabric": "10.1.2175"
+          "Microsoft.ServiceFabric": "10.1.2338"
         },
         "runtime": {
           "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.Data.Interfaces.dll": {
@@ -1662,9 +1663,9 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Diagnostics.Internal/7.1.2175": {
+      "Microsoft.ServiceFabric.Diagnostics.Internal/7.1.2338": {
         "dependencies": {
-          "Microsoft.ServiceFabric": "10.1.2175"
+          "Microsoft.ServiceFabric": "10.1.2338"
         },
         "runtime": {
           "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.Diagnostics.dll": {
@@ -1673,15 +1674,43 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Services/7.1.2175": {
+      "Microsoft.ServiceFabric.FabricTransport.Internal/7.1.2338": {
         "dependencies": {
-          "Microsoft.ServiceFabric.Data": "7.1.2175",
-          "Microsoft.ServiceFabric.Diagnostics.Internal": "7.1.2175"
+          "Microsoft.ServiceFabric": "10.1.2338"
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.V2.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          },
+          "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
+      "Microsoft.ServiceFabric.Services/7.1.2338": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Data": "7.1.2338",
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "7.1.2338"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.ServiceFabric.Services.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "7.1.3.0"
+            "fileVersion": "7.1.4.0"
+          }
+        }
+      },
+      "Microsoft.ServiceFabric.Services.Remoting/7.1.2338": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "7.1.2338",
+          "Microsoft.ServiceFabric.FabricTransport.Internal": "7.1.2338",
+          "Microsoft.ServiceFabric.Services": "7.1.2338"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ServiceFabric.Services.Remoting.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "7.1.4.0"
           }
         }
       },
@@ -1795,6 +1824,17 @@
         },
         "runtime": {
           "Common.dll": {}
+        }
+      },
+      "RideTrackingService/1.0.0": {
+        "dependencies": {
+          "Common": "1.0.0",
+          "Microsoft.ServiceFabric": "10.1.2338",
+          "Microsoft.ServiceFabric.Services": "7.1.2338",
+          "Microsoft.ServiceFabric.Services.Remoting": "7.1.2338"
+        },
+        "runtime": {
+          "RideTrackingService.dll": {}
         }
       }
     }
@@ -2004,61 +2044,75 @@
       "path": "microsoft.openapi/1.6.14",
       "hashPath": "microsoft.openapi.1.6.14.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric/10.1.2175": {
+    "Microsoft.ServiceFabric/10.1.2338": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PW0y3jafWg/crUq2NWL24Avy4j2q/oF5Ad/2HzvhczW/7X9Sbsy33zi3mSvMeVD+9dW7NLP5sDXjn3JX+VjWiw==",
-      "path": "microsoft.servicefabric/10.1.2175",
-      "hashPath": "microsoft.servicefabric.10.1.2175.nupkg.sha512"
+      "sha512": "sha512-t9Ol7pNBzzkQullSTCjm2DXCcHeOq86FWTuEZ9NxAUgCqom4tRZni1Hapb6eB38YpK6K+0gzCXnMD2k9z/ZWMg==",
+      "path": "microsoft.servicefabric/10.1.2338",
+      "hashPath": "microsoft.servicefabric.10.1.2338.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.AspNetCore.Abstractions/7.1.2175": {
+    "Microsoft.ServiceFabric.AspNetCore.Abstractions/7.1.2338": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-g2TURGHYNrHzCU3/QRptV9oC/1Gzf8XcTdzYHCTDyb1e15DjvhAVQ4AgjqpFPsegHhLRcd1ZX336talARumqEw==",
-      "path": "microsoft.servicefabric.aspnetcore.abstractions/7.1.2175",
-      "hashPath": "microsoft.servicefabric.aspnetcore.abstractions.7.1.2175.nupkg.sha512"
+      "sha512": "sha512-ZGdACXRLocyIJ67TzPVhmfgOmAMlNMOHmHBUlZcfcJpiFC8wH8DojvDlQ+i8Ztx5AbVyv8iezwtaDi5hvvevLw==",
+      "path": "microsoft.servicefabric.aspnetcore.abstractions/7.1.2338",
+      "hashPath": "microsoft.servicefabric.aspnetcore.abstractions.7.1.2338.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.AspNetCore.Kestrel/7.1.2175": {
+    "Microsoft.ServiceFabric.AspNetCore.Kestrel/7.1.2338": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jnTd4Z2vav6DIIMwoYur+GWQhFLWJWqWfyF6QJpKdrWRpCH42o0e+UvvLkTTxyfSYGz1/9wBv/Ft6tNgctKYmg==",
-      "path": "microsoft.servicefabric.aspnetcore.kestrel/7.1.2175",
-      "hashPath": "microsoft.servicefabric.aspnetcore.kestrel.7.1.2175.nupkg.sha512"
+      "sha512": "sha512-6o11sDQZdhS0UlswrsEdfhLiogqouFMmSlpdpvw0UI5iFTcjGAiskhW/KcclUqc75OiQoRG3tPfToRH48DfdiQ==",
+      "path": "microsoft.servicefabric.aspnetcore.kestrel/7.1.2338",
+      "hashPath": "microsoft.servicefabric.aspnetcore.kestrel.7.1.2338.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.Data/7.1.2175": {
+    "Microsoft.ServiceFabric.Data/7.1.2338": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fRfUQl1/FCaXwB0tDbkI3iqzKYfufhSs5fO+JWWeMPqCCqMz2iavqaM5EKn8SjToicb4dIGcXR2CgPo2ABmTJw==",
-      "path": "microsoft.servicefabric.data/7.1.2175",
-      "hashPath": "microsoft.servicefabric.data.7.1.2175.nupkg.sha512"
+      "sha512": "sha512-rkd8oB6rYbgSe27TBvLX/bbWHQgeq/8g3lxL0Zx8wG1PEGb5fRnhBHCCGDVDRBN95jwlj8GfwACD4J8auzgvFQ==",
+      "path": "microsoft.servicefabric.data/7.1.2338",
+      "hashPath": "microsoft.servicefabric.data.7.1.2338.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.Data.Extensions/7.1.2175": {
+    "Microsoft.ServiceFabric.Data.Extensions/7.1.2338": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QnsNNozQMhFeHmShqbFgilkS7KpsXvJ6vlrW7D1EdQ1loAsYs1ZLdg3CjOfvKBWMM4m1Ccj0UKWbuLs82xhAUQ==",
-      "path": "microsoft.servicefabric.data.extensions/7.1.2175",
-      "hashPath": "microsoft.servicefabric.data.extensions.7.1.2175.nupkg.sha512"
+      "sha512": "sha512-7uyuDRseIj19dqd6znV4ASdfuppHxZs0JdcvWMjG4kAszK4VR9i4/T+EW8dXthnKJntaYWGjmaBBrBF8FwCONg==",
+      "path": "microsoft.servicefabric.data.extensions/7.1.2338",
+      "hashPath": "microsoft.servicefabric.data.extensions.7.1.2338.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.Data.Interfaces/7.1.2175": {
+    "Microsoft.ServiceFabric.Data.Interfaces/7.1.2338": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+2ZrwyyWtDxfpsfo6JG71Joz4MAmRldWWiiYOlTaKhFu3t/nf98byH1S4+/JNQEUiVXkzCu9s+R6TLGg30htIg==",
-      "path": "microsoft.servicefabric.data.interfaces/7.1.2175",
-      "hashPath": "microsoft.servicefabric.data.interfaces.7.1.2175.nupkg.sha512"
+      "sha512": "sha512-AnoYGSNxCAE+5sRUHrhWtLaCSiUz9u8lNqrmPsXqsoms0Bgcr1gKM8N6rFUa5221fDaP7XSifNCabmLwE8dnOA==",
+      "path": "microsoft.servicefabric.data.interfaces/7.1.2338",
+      "hashPath": "microsoft.servicefabric.data.interfaces.7.1.2338.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.Diagnostics.Internal/7.1.2175": {
+    "Microsoft.ServiceFabric.Diagnostics.Internal/7.1.2338": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6ec3cHlic3OReG2CAAspFMzBc5AJOsVL7K6unvpN3PEOxB8Bj9CwerOrBYaN5IpavTp4nWSaD2egCyFoQA+rBg==",
-      "path": "microsoft.servicefabric.diagnostics.internal/7.1.2175",
-      "hashPath": "microsoft.servicefabric.diagnostics.internal.7.1.2175.nupkg.sha512"
+      "sha512": "sha512-8kHrJNxLjSzaL6dJmKPR0w/vtjxkI24DgRS9FVjlJSWWNVkto/iYvgONQ+k5JexJRqlhnFGj5s/D1c9BMHC2ag==",
+      "path": "microsoft.servicefabric.diagnostics.internal/7.1.2338",
+      "hashPath": "microsoft.servicefabric.diagnostics.internal.7.1.2338.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.Services/7.1.2175": {
+    "Microsoft.ServiceFabric.FabricTransport.Internal/7.1.2338": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YwJKiMsH2lMfh6pwmuOzs1clQfp0VY544f6Ws1k3wfIv22Pq8oQcYP02Xa+cmgxJqMnJ8yYnn0DU1ptL7SslYA==",
-      "path": "microsoft.servicefabric.services/7.1.2175",
-      "hashPath": "microsoft.servicefabric.services.7.1.2175.nupkg.sha512"
+      "sha512": "sha512-ZuP4kCPwHyFiU1K4/Td+w59QpHQdiGDkctjSGLizZVXHULxOOV7piDQbAXTqfmMfmEl3fGTRNxIRlE8t2WRQfQ==",
+      "path": "microsoft.servicefabric.fabrictransport.internal/7.1.2338",
+      "hashPath": "microsoft.servicefabric.fabrictransport.internal.7.1.2338.nupkg.sha512"
+    },
+    "Microsoft.ServiceFabric.Services/7.1.2338": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P97h7IaKxjpVzWBeMqZzl593H75/8POahSSXB6DI7kNvjVKc97Cel94Hrm/AEbeKDlnqClRuNoqCHO6u+XRHKg==",
+      "path": "microsoft.servicefabric.services/7.1.2338",
+      "hashPath": "microsoft.servicefabric.services.7.1.2338.nupkg.sha512"
+    },
+    "Microsoft.ServiceFabric.Services.Remoting/7.1.2338": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+BodRlpRaRQaCf+UNWw93sMm6G7p5k4evK1OiV96Wo1+SMYXIlBDBG9ZJ4eHXL/rcB+JYhH85C7LBTMhCrg0SA==",
+      "path": "microsoft.servicefabric.services.remoting/7.1.2338",
+      "hashPath": "microsoft.servicefabric.services.remoting.7.1.2338.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.7.0": {
       "type": "package",
@@ -2173,6 +2227,11 @@
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
     "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RideTrackingService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

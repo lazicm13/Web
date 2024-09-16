@@ -7,6 +7,7 @@ using Common.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RideTrackingService.Interfaces;
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ public class UserController : ControllerBase
 {
     private readonly UserDataRepository _repo;
     private readonly TokenService _tokenService;
-    private readonly BlobStorageService _blobStorageService; // Inject BlobStorageService
+    private readonly BlobStorageService _blobStorageService;
 
     public UserController(TokenService tokenService, UserDataRepository userDataRepository, BlobStorageService blobStorageService)
     {
@@ -222,6 +223,11 @@ public class UserController : ControllerBase
             return StatusCode(500, new { message = "An error occurred while fetching new drivers.", error = ex.Message });
         }
     }
+
+    
+
+
+
 
 
 }
