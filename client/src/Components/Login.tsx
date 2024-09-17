@@ -75,13 +75,18 @@ function Login() {
                     navigate(data.redirectTo);
                     return; 
                 }
+                if(data.isDriver === true)
+                {
+                    alert("this person is driver and is not verified.");
+                    navigate('/verification-page')
+                }else
+                    navigate('/');
                 console.log(data.message);
-                navigate('/');
             }
             
             else {
-                alert('Login failed!');
                 const errorData = await response.json();
+                alert(errorData.message);
                 console.error('Error:', errorData.message);
             }
         } catch (error) {

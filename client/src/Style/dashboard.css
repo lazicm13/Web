@@ -1,141 +1,104 @@
 /* General container style */
 .driver-dashboard {
     padding: 20px;
-    max-width: 1200px; /* Povećaj maksimalnu širinu ako je potrebno */
-    margin: auto;
-    margin-bottom: 150px;
-  }
-  
-  /* Title style */
-  .title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* List style */
-  .ride-list {
-    display: flex;
-    flex-wrap: wrap; /* Omogućava prelazak u novi red ako ne stane u trenutni */
-    gap: 20px; /* Razmak između stavki */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
- /* Ride item style */
-.ride-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 20px); /* Širina kartice, tri u redu sa razmakom */
-    box-sizing: border-box; /* Uključuje border i padding u ukupnu širinu */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Postavlja sadržaj kartice tako da se raspodeli */
-  }
-  
-  /* Ride details style */
-  .ride-details {
-    flex: 1; /* Omogućava da se sadržaj širi da zauzme raspoloživi prostor */
-  }
-  
-  .admin-dashboard {
-    padding: 20px;
     max-width: 1200px;
-    margin: auto;
-    margin-top: 150px;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px);
 }
 
 /* Title style */
 .title {
-    font-size: 20px; /* Smanjena veličina naslova */
-    margin-bottom: 10px; /* Manji razmak ispod naslova */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
     text-align: center;
+    color: #333;
 }
 
-/* List style */
-.driver-list {
+/* Ride list style */
+.ride-list {
     display: flex;
-    flex-wrap: wrap; /* Omogućava prelazak u novi red ako ne stane u trenutni */
-    gap: 10px; /* Manji razmak između stavki */
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Driver item style */
-.driver-item {
-    border: 1px solid #ddd;
-    border-radius: 6px; /* Manji ugao zaobljenja */
-    padding: 10px; /* Manji padding unutar kartice */
-    background-color: #f9f9f9;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Smanjena senka */
-    flex: 1 1 calc(25% - 10px); /* Četiri kartice u redu, sa razmakom */
+/* Ride card style */
+.ride-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 14px; /* Smanjena veličina fonta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Driver details style */
-.driver-details {
-    flex: 1;
-    font-size: 14px; /* Smanjena veličina fonta u detaljima */
+.ride-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons container */
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px; /* Manji razmak iznad dugmića */
+/* Ride info style */
+.ride-info {
+    margin-bottom: 15px;
 }
 
-/* Button styles */
-.accept-btn, .reject-btn {
-    padding: 5px 10px; /* Smanjen padding dugmića */
-    font-size: 14px; /* Smanjena veličina fonta dugmića */
-    border-radius: 4px; /* Manje zaobljenje dugmića */
-    cursor: pointer;
+.ride-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.ride-info strong {
+    color: #333;
+}
+
+/* Ride actions */
+.ride-actions {
+    text-align: center;
 }
 
 .accept-btn {
     background-color: #4CAF50;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.reject-btn {
-    background-color: #f44336;
-    color: white;
+.accept-btn:hover {
+    background-color: #45a049;
 }
 
-  .home-header {
-    background-color: #f8f8f8; /* Pozadina zaglavlja */
-    padding: 20px; /* Unutrašnji razmak da se tekst ne zalepi za ivice */
-    text-align: center; /* Centriranje teksta */
-    position: sticky; /* Drži zaglavlje na vrhu pri skrolovanju, ako želite */
-    top: 0; /* Osigurava da zaglavlje ostane na vrhu */
-    z-index: 1000; /* Postavlja zaglavlje iznad drugih elemenata */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lagana senka ispod zaglavlja */
+/* No rides message */
+.no-rides {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
 }
 
-.nav-link {
-    margin: 0 10px; /* Razmak između linkova u navigaciji */
-    text-decoration: none; /* Uklanja podvlačenje linkova */
-    color: #333; /* Boja teksta linkova */
-}
-
-.home-info {
-    padding: 40px 20px; /* Dovoljno prostora između sekcija */
-}
-
+/* Footer styling */
 .home-footer {
     padding: 20px;
     text-align: center;
     background-color: #f1f1f1;
-    margin-top: 20px;
     position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky header styling */
+.home-header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

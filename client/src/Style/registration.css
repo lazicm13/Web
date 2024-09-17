@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    min-height: 100vh;
 }
 
 /* Container styling */
@@ -99,14 +99,14 @@ button:hover {
 
 /* Style for the selected image container */
 .selected-image {
+    object-fit: cover;
     margin-left: 36px; /* Add some spacing between the input button and the image */
 }
 
 .selected-image img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%; /* Make the image circular */
-    
 }
 
 .login-container #home{

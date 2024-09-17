@@ -15,6 +15,7 @@ using Microsoft.ServiceFabric.Services.Communication.AspNetCore;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Remoting.Client;
 using Microsoft.ServiceFabric.Services.Runtime;
+using NotificationService.Interfaces;
 using RideTrackingService.Interfaces;
 
 namespace AuthenticationService
@@ -47,6 +48,10 @@ namespace AuthenticationService
                         builder.Services.AddSingleton<UserDataRepository>();
                         builder.Services.AddSingleton<TokenService>();
                         builder.Services.AddSingleton<BlobStorageService>();
+                        builder.Services.AddSingleton<INotificationService>(provider =>
+                        ServiceProxy.Create<INotificationService>(
+                            new Uri("fabric:/TaxiTracker/NotificationService"),
+                            new ServicePartitionKey(0)));
 
 
                         // Add CORS services with specific origin

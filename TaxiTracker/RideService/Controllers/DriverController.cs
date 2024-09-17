@@ -82,6 +82,7 @@ namespace RideService.Controllers
             {
                 return Unauthorized(new { message = "Invalid user information in token." });
             }
+            
 
             ride.DriverId = rideId;
             ride.Status = RideStatus.InProgress;
@@ -111,5 +112,7 @@ namespace RideService.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        
     }
 }

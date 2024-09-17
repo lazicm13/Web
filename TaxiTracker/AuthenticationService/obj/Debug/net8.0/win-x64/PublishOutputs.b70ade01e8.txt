@@ -1,5 +1,8 @@
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\NotificationService.exe
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\RideTrackingService.exe
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\AuthenticationService.exe
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\NotificationService.deps.json
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\NotificationService.runtimeconfig.json
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\RideTrackingService.deps.json
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\RideTrackingService.runtimeconfig.json
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\appsettings.Development.json
@@ -338,6 +341,7 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProje
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Azure.Storage.Common.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Azure.Storage.Files.Shares.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Azure.Storage.Queues.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\BCrypt.Net-Next.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.Extensions.Azure.dll
@@ -377,6 +381,8 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProje
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\System.Memory.Data.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Common.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\NotificationService.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\RideTrackingService.dll
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\Common.pdb
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\NotificationService.pdb
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\PubTmp\Out\RideTrackingService.pdb

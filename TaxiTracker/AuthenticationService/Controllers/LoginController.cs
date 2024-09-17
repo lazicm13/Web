@@ -29,16 +29,15 @@ namespace AuthenticationService.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
-
             // Nastavi sa loginom ako korisnik nije ulogovan
             var user = await _repo.RetrieveUserAsync(loginRequest.EmailAddress);
 
-            if (user == null || !VerifyPassword(loginRequest.Password, user.Password))
+            if (user == null || !_repo.VerifyPassword(loginRequest.Password, user.Password))
             {
                 return Unauthorized(new { message = "Invalid email or password." });
             }
-            
-            if(user.UserState == UserState.Rejected)
+
+            if (user.UserState == UserState.Rejected)
             {
                 return Unauthorized(new { message = "You cannot login! Your profile is rejected by Administrator!" });
             }
@@ -56,16 +55,20 @@ namespace AuthenticationService.Controllers
 
             Response.Cookies.Append("jwt", token, cookieOptions);
 
-            return Ok(new { message = "Login successful." });
+            bool isDriver = false;
+            if(user.UserType == UserType.Driver && user.UserState == UserState.Created)
+                isDriver = true;
+
+            return Ok(new
+            {
+                message = "Login successful.",
+                isDriver = isDriver
+            });
         }
 
-        private bool VerifyPassword(string providedPassword, string storedPasswordHash)
-        {
-            // Implement a secure password hashing mechanism like bcrypt or PBKDF2
-            return providedPassword == storedPasswordHash; // Replace with proper hash verification
-        }
 
 
+            
         [HttpGet("status")]
         public IActionResult CheckLoginStatus()
         {
@@ -104,7 +107,6 @@ namespace AuthenticationService.Controllers
             Response.Cookies.Delete("jwt");
             return Ok(new { message = "Logged out successfully." });
         }
-
 
 
     }

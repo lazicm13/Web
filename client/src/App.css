@@ -1,5 +1,6 @@
 body{
   background-color: yellow;
+  min-height: 100vh;
 }
 
 @keyframes logo-spin {

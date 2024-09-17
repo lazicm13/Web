@@ -13,10 +13,12 @@
           "Azure.Storage.Blobs": "12.21.2",
           "Azure.Storage.Files.Shares": "12.1.0",
           "Azure.Storage.Queues": "12.11.1",
+          "BCrypt.Net-Next": "4.0.3",
           "Common": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.7",
           "Microsoft.Extensions.Azure": "1.5.0",
           "Microsoft.ServiceFabric.AspNetCore.Kestrel": "7.1.2338",
+          "NotificationService": "1.0.0",
           "RideTrackingService": "1.0.0",
           "Swashbuckle.AspNetCore": "6.7.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "8.0.5",
@@ -1412,6 +1414,14 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.7": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.1.2"
@@ -1826,6 +1836,17 @@
           "Common.dll": {}
         }
       },
+      "NotificationService/1.0.0": {
+        "dependencies": {
+          "Common": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.ServiceFabric.Services": "7.1.2338",
+          "Microsoft.ServiceFabric.Services.Remoting": "7.1.2338"
+        },
+        "runtime": {
+          "NotificationService.dll": {}
+        }
+      },
       "RideTrackingService/1.0.0": {
         "dependencies": {
           "Common": "1.0.0",
@@ -1903,6 +1924,13 @@
       "sha512": "sha512-bvVjNP136ZukujHczlAqTyoknWcr6JNb/qpWPjTOV2wYtjRDYPuhPRWcAYrHWsr6BDLtgofg4cFg+knqoOBXNg==",
       "path": "azure.storage.queues/12.11.1",
       "hashPath": "azure.storage.queues.12.11.1.nupkg.sha512"
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.7": {
       "type": "package",
@@ -2227,6 +2255,11 @@
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
     "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NotificationService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

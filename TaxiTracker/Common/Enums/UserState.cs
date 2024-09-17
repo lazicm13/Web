@@ -11,6 +11,5 @@ namespace Common.Enums
         Created,
         Verified,
         Rejected,
-        Blocked
     }
 }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
-  <!-- Add your custom configuration sections and parameters here -->
-  <!--
-  <Section Name="MyConfigSection">
-    <Parameter Name="MyParameter" Value="Value1" />
+  <Section Name="NotificationServiceSettings">
+    <Parameter Name="SmtpServer" Value="smtp.gmail.com" />
+    <Parameter Name="Port" Value="587" />
+    <Parameter Name="SmtpUsername" Value="mojgmailnalog@gmail.com" />
+    <Parameter Name="SmtpPassword" Value="mojagmaillozinka" />
+    <Parameter Name="FromEmail" Value="mojgmailnalog@gmail.com" />
   </Section>
-  -->
 </Settings>

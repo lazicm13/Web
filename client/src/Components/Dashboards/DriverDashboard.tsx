@@ -63,16 +63,17 @@ function DriverDashboard() {
     <div className="driver-dashboard">
       <h2 className="title">Available Rides</h2>
       {rides.length > 0 ? (
-        <ul className="ride-list">
+        <div className="ride-list">
           {rides.map((ride) => (
-            <li key={ride.userId} className="ride-item">
-              <div className="ride-details">
+            <div key={ride.userId} className="ride-card">
+              <div className="ride-info">
                 <p><strong>User ID:</strong> {ride.userId}</p>
-                <label>{ride.startAddress || 'N/A'} ⇒ {ride.endAddress || 'N/A'}</label>
+                <p><strong>From:</strong> {ride.startAddress || 'N/A'}</p>
+                <p><strong>To:</strong> {ride.endAddress || 'N/A'}</p>
                 <p><strong>Price:</strong> ${ride.price.toFixed(2)}</p>
                 <p><strong>Distance:</strong> {ride.distance.toFixed(2)} km</p>
               </div>
-              <div className="button-container">
+              <div className="ride-actions">
                 <button 
                   className='accept-btn' 
                   onClick={() => acceptRide(ride.userId)}
@@ -80,9 +81,9 @@ function DriverDashboard() {
                   Accept ride
                 </button>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       ) : (
         <p className="no-rides">No active rides available.</p>
       )}

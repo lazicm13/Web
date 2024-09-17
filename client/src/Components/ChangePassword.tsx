@@ -19,6 +19,7 @@ function ChangePassword() {
             setStatusMessage('Password must be at least 8 characters long and contain at least one number.');
             return false;
         }
+        return true;
     }
     const handlePasswordChange = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -28,21 +29,21 @@ function ChangePassword() {
             setStatusMessage('Please fill in all fields.');
             return;
         }
-
+    
         if (newPassword !== confirmPassword) {
             setStatusMessage('New passwords do not match.');
             return;
         }
-
+    
         if (newPassword.length < 8) {
             setStatusMessage('New password must be at least 8 characters long.');
             return;
         }
-
+    
         if (!Validate()) {
             return;
         }
-
+    
         try {
             // API call to change password
             const response = await axios.put(
@@ -55,7 +56,7 @@ function ChangePassword() {
                     withCredentials: true,
                 }
             );
-
+    
             if (response.status === 200) {
                 setStatusMessage('Password changed successfully.');
                 setOldPassword('');
@@ -64,13 +65,18 @@ function ChangePassword() {
                 alert('Password changed successfully.');
                 navigate('/user-page');
             } else {
-                setStatusMessage('Failed to change password.');
+                setStatusMessage('Failed to change password');
             }
-        } catch (error) {
-            console.error('Failed to change password: ', error);
-            setStatusMessage('An error occurred while changing the password.');
+        } catch (error: any) {
+            // Check if the error contains a response and display the error message from the server
+            if (error.response && error.response.data && error.response.data.message) {
+                setStatusMessage(error.response.data.message); // Display the error message from the server
+            } else {
+                setStatusMessage('An error occurred while changing the password.');
+            }
         }
     };
+    
 
     return (
         <div className="userpage-container">

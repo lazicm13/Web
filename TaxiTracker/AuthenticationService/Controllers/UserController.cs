@@ -133,29 +133,36 @@ public class UserController : ControllerBase
 
         var userId = _tokenService.GetUsernameFromToken(existingToken);
 
+        // Dohvatiti korisnika iz baze
         var user = await _repo.RetrieveUserAsync(userId);
         if (user == null)
         {
             return NotFound(new { message = "User not found." });
         }
 
-        if (user.Password != changePasswordDto.OldPassword)
+        // Proveriti da li je stara lozinka tačna (proveravamo hash)
+        bool isOldPasswordCorrect = _repo.VerifyPassword(changePasswordDto.OldPassword, user.Password);
+        if (!isOldPasswordCorrect)
+        {
             return StatusCode(403, new { message = "Incorrect old password." });
+        }
 
-        user.Password = changePasswordDto.NewPassword;
+        // Hashovati novu lozinku
+        user.Password = _repo.HashPassword(changePasswordDto.NewPassword);
 
         try
         {
-            // Save the updated user information in the database
+            // Sačuvati ažuriranog korisnika u bazi
             await _repo.UpdateUserAsync(user);
             return Ok(new { message = "Password changed successfully." });
         }
         catch (Exception ex)
         {
-            // Handle any errors that occur during the update process
+            // Obrađivanje grešaka
             return StatusCode(500, new { message = "An error occurred while changing the password.", error = ex.Message });
         }
     }
+
 
     [HttpPost("upload-image")]
     [Authorize]
@@ -206,28 +213,43 @@ public class UserController : ControllerBase
         {
             return StatusCode(500, new { message = "An error occurred while uploading the image.", error = ex.Message });
         }
-
-
     }
 
-    [HttpGet("new-drivers")]
-    public async Task<IActionResult> GetNewDrivers()
+    [HttpGet("driver-status")]
+    public async Task<IActionResult> GetDriverStatus()
     {
+        var existingToken = Request.Cookies["jwt"];
+        if (string.IsNullOrEmpty(existingToken))
+        {
+            return Unauthorized(new { message = "User not logged in." });
+        }
+
+        ClaimsPrincipal principal;
         try
         {
-            var drivers = await _repo.RetrieveUsersByStatusAsync(UserState.Created);
-            return Ok(drivers);
+            principal = _tokenService.ValidateToken(existingToken);
         }
         catch (Exception ex)
         {
-            return StatusCode(500, new { message = "An error occurred while fetching new drivers.", error = ex.Message });
+            return Unauthorized(new { message = "Invalid token.", details = ex.Message });
         }
+
+        var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+
+        if (userId == null)
+        {
+            return Unauthorized(new { message = "Invalid user information in token." });
+        }
+
+        var user = await _repo.RetrieveUserAsync(userId);
+
+        if (user == null)
+        {
+            return Unauthorized(new { message = "User with this id does not exist." });
+        }
+        var state = user.UserState;
+        var userState = state.ToString();
+
+        return Ok(new { status = userState });
     }
-
-    
-
-
-
-
-
 }

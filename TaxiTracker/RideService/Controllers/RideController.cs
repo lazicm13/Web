@@ -32,8 +32,6 @@ namespace RideService.Controllers
             _rideTrackingService = rideTrackingService;
         }
 
-
-        // POST api/ride/create 
         [HttpPost("create")]
         [Authorize]
         public IActionResult CreateRide([FromBody] RideRequestDto rideRequest)
@@ -194,7 +192,7 @@ namespace RideService.Controllers
 
             var rideStatus = status.ToString();
 
-            ride.Status = status ?? RideStatus.Active;
+            ride.Status = status ?? RideStatus.Active;  
 
             return Ok(new { status = rideStatus });
         }

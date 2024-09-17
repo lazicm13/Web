@@ -248,6 +248,9 @@ function UserPage() {
                     />
                     <span className="edit-icon" title="Edit address" onClick={() => handleEditClick('address')}>✏️</span>
                 </div>
+                <div>
+                    <a href='/change-password'><u>Change password</u></a>
+                </div>
                 <div className="profile-image-container">
                     {userData.image && (
                             <img className="selected-image" src={handleImageSource(userData.image)} alt="Selected" />

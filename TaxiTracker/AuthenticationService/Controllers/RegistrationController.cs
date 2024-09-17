@@ -3,6 +3,7 @@ using AuthenticationService.Services;
 using Common.Enums;
 using Common.Models;
 using Microsoft.AspNetCore.Mvc;
+using BCrypt.Net;
 
 [Route("auth/[controller]")]
 [ApiController]
@@ -48,7 +49,7 @@ public class RegistrationController : ControllerBase
             var userData = new User
             {
                 Username = user.Username,
-                Password = HashPassword(user.Password),
+                Password = _repo.HashPassword(user.Password),
                 EmailAddress = user.EmailAddress,
                 FullName = user.FullName,
                 Address = user.Address,
@@ -69,8 +70,5 @@ public class RegistrationController : ControllerBase
         }
     }
 
-    private string HashPassword(string password)
-    {
-        return password; // Implement password hashing
-    }
+    
 }

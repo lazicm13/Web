@@ -98,7 +98,7 @@ namespace Common.Services
             {
                 return principal.Identity.Name;
             }
-            return null;
+            return null;    
         }
 
         public bool IsUserInRole(string token, string requiredRole)
@@ -111,5 +111,6 @@ namespace Common.Services
             }
             return false;
         }
+
     }
 }

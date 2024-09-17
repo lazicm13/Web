@@ -20,6 +20,8 @@ namespace Common.Models
         public string Address { get; set; }
         public string BirthDate { get; set; }
         public string? Image { get; set; }
+        public double Rating { get; set; } = 0;
+        public bool IsBlocked { get; set; } = false;
         public UserType UserType { get; set; }
         public UserState? UserState { get; set; }
 

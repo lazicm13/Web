@@ -3,6 +3,7 @@
 import React, { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateRegistrationData, register } from '../Services/registrationService';
+import { useEffect } from 'react';
 
 interface RegistrationData {
     Username: string;
@@ -38,13 +39,36 @@ function Registration() {
         }));
     };
 
+    useEffect(() => {
+        const checkLoginStatus = async () => {
+            try {
+                const response = await fetch('http://localhost:8850/auth/login/status', {
+                    method: 'GET',
+                    credentials: 'include',
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.isLoggedIn) {
+                        navigate('/'); 
+                    }
+                    else
+                        console.log("User is not logged in!");
+                }
+            } catch (error) {
+                console.error('Failed to check login status:', error);
+            }
+        };
+
+        checkLoginStatus();
+    }, [navigate]);
+
     const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
                 const base64String = (reader.result as string).split(',')[1];
-                console.log('Base64 String:', base64String); // Check the output here
                 setRegistrationData(prevData => ({
                     ...prevData,
                     Image: base64String
