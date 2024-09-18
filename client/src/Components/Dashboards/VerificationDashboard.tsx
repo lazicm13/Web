@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../Style/ride.css';
+import '../../Style/ride.css';
 import axios from 'axios';
 
 function VerificationPage() {
@@ -43,9 +43,10 @@ function VerificationPage() {
     // Effect to redirect after the status is "Verified"
     useEffect(() => {
         if (status === 'Verified') {
+            alert('Congratulations! You are verified!');
             const timer = setTimeout(() => {
-                navigate('/'); // Redirect to the homepage
-            }, 3000); // Wait for 3 seconds
+                navigate('/');
+            }, 3000); 
 
             return () => clearTimeout(timer); // Cleanup the timer if component unmounts
         }
@@ -54,13 +55,13 @@ function VerificationPage() {
     const renderStatusMessage = () => {
         switch (status) {
             case 'Created':
-                return <div><h1>Your application is being processed.</h1></div>;
+                return <div><h2>Your application is being processed.</h2></div>;
             case 'Verified':
-                return <div><h1>Congratulations! Your application has been accepted.</h1></div>;
+                return <div><h2>Congratulations! Your application has been accepted.</h2></div>;
             case 'Rejected':
-                return <div><h1>Your application has been rejected.</h1></div>;
+                return <div><h2>Your application has been rejected.</h2></div>;
             default:
-                return <div><h1>Loading...</h1></div>;
+                return <div><h2>Loading...</h2></div>;
         }
     };
 

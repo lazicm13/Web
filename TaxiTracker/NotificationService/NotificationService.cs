@@ -83,24 +83,52 @@ namespace NotificationService
         {
             try
             {
-                string subject = $"Driver Account Has Been Verified For User {emailData.EmailAddress}";
+                string subject = string.Empty;
+                string htmlContent = string.Empty;
+                string plainTextContent = string.Empty;
 
-                string htmlContent = $@"
-                <html>
-                <body>
-                    <h1>Account Verified</h1>
-                    <p>Dear {emailData.FullName},</p>
-                    <p>Your driver account has been verified successfully.</p>
-                    <p>Best regards,<br/>Taxi Service Team</p>
-                </body>
-                </html>";
+                if (accepted)
+                {
+                    subject = $"Your application is accepted, Welcome {emailData.EmailAddress}";
 
-                string plainTextContent = $@"
-                Account Verified
-                Dear {emailData.FullName},
-                Your driver account has been verified successfully.
-                Best regards,
-                Taxi Service Team";
+                    htmlContent = $@"
+                    <html>
+                    <body>
+                        <h1>Account Verified</h1>
+                        <p>Dear {emailData.FullName},</p>
+                        <p>Your driver account has been verified successfully.</p>
+                        <p>Best regards,<br/>Taxi Service Team</p>
+                    </body>
+                    </html>";
+
+                    plainTextContent = $@"
+                    Account Verified
+                    Dear {emailData.FullName},
+                    Your driver account has been verified successfully.
+                    Best regards,
+                    Taxi Service Team";
+                }
+                else
+                {
+                    subject = $"{emailData.EmailAddress}, Your application is rejected";
+
+                    htmlContent = $@"
+                    <html>
+                    <body>
+                        <h1>Account rejected</h1>
+                        <p>Dear {emailData.FullName},</p>
+                        <p>Your driver account has been rejected</p>
+                        <p>Best regards,<br/>Taxi Service Team</p>
+                    </body>
+                    </html>";
+
+                    plainTextContent = $@"
+                    Account Rejected
+                    Dear {emailData.FullName},
+                    Your driver account has been rejected!
+                    Best regards,
+                    Taxi Service Team";
+                }
 
                 using (var client = new SmtpClient(smtpServer, port))
                 {
@@ -123,7 +151,7 @@ namespace NotificationService
             }
             catch (Exception ex)
             {
-                Trace.TraceError($"Error while sending mail: {ex.Message}");
+                Trace.TraceError($"Error while sending mail: {ex.Message + ex.StackTrace}");
                 return false;
             }
         }

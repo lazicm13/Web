@@ -8,7 +8,7 @@ import UserPage from './Components/UserPage';
 import './Style/registration.css';
 import './Style/homepage.css';
 import RidePage from './Components/RidePage';
-import VerificationPage from './Components/VerificationPage';
+
 
 function App() {
 
@@ -20,8 +20,6 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/user-page/' element={<UserPage/>}/>
         <Route path='/change-password' element={<ChangePassword/>}/>
-        <Route path='/ride-page' element={<RidePage/>}/>
-        <Route path='/verification-page' element={<VerificationPage/>}/>
       </Routes>
     </Router>
   )

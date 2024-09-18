@@ -7,36 +7,64 @@ interface Ride {
   endAddress: string;
   price: number;
   distance: number;
-  status: string; // Status is now a string
-  waitingTime: number; // Time remaining in minutes
+  waitingTime: string;
+  driverStartTime: string;
+  rideStartTime: string;
+  rideEndTime: string;
+  status: string; 
 }
 
 function RidePage() {
   const [ride, setRide] = useState<Ride | null>(null);
   const [status, setStatus] = useState<string>('Waiting for a driver...');
-  const [countdown, setCountdown] = useState<number | null>(null);
+  const [countdownToDriverStart, setCountdownToDriverStart] = useState<number | null>(null);
+  const [countdownToRideEnd, setCountdownToRideEnd] = useState<number | null>(null);
 
-  // Function to fetch the ride details
+  // Fetch the ride details (run once on mount)
   const fetchRide = async () => {
     try {
       const response = await fetch('http://localhost:8149/api/ride/ride-details', {
         method: 'GET',
         credentials: 'include', // Include HttpOnly cookies with the request
       });
-
+  
       if (!response.ok) {
         const errorMessage = await response.text();
         throw new Error(`Failed to fetch ride details: ${response.status} ${response.statusText} - ${errorMessage}`);
       }
-
-      const rideData: Ride = await response.json();
-      setRide(rideData); // Set the ride details
+  
+      const { ride: rideData } = await response.json(); 
+      if (!rideData) {
+        throw new Error('Ride data is missing from the response');
+      }
+      console.log(rideData);
+      setRide(rideData);
+      updateTimers(rideData); // Inicijalizujte tajmere
     } catch (error) {
       console.error('Error fetching ride details:', error);
     }
   };
 
-  // Function to fetch the ride status
+  // Update countdown timers based on the ride data
+  const updateTimers = (rideData: Ride) => {
+    const now = Date.now();
+    
+    const driverStartTime = new Date(rideData.driverStartTime).getTime();
+    const rideStartTime = new Date(rideData.rideStartTime).getTime();
+    const rideEndTime = new Date(rideData.rideEndTime).getTime();
+
+    // Tajmer za dolazak vozača
+    if (driverStartTime > now) {
+      setCountdownToDriverStart(Math.max(Math.floor((driverStartTime - now) / 1000), 0));
+    }
+
+    // Ako je vožnja počela, postavimo tajmer za kraj vožnje
+    if (rideStartTime > now) {
+      setCountdownToRideEnd(Math.max(Math.floor((rideStartTime - now) / 1000), 0));
+    }
+  };
+
+  // Function to fetch the ride status (for interval)
   const fetchRideStatus = async () => {
     try {
       const response = await fetch('http://localhost:8149/api/ride/ride-status', {
@@ -50,12 +78,22 @@ function RidePage() {
       }
 
       const { status: rideStatus }: { status: string } = await response.json();
-      setStatus(rideStatus === 'InProgress' ? 'Your ride is in progress!' : 'Waiting for a driver...');
       
+      if (rideStatus === 'Active') {
+        setStatus('Driver is on your way');
+      } else if (rideStatus === 'InProgress') {
+        setStatus('Ride is in progress!');
+      } else if (rideStatus === 'Completed') {
+        setStatus('Ride is completed!');
+      } else if (rideStatus === 'WaitingForDriver') {
+        setStatus('Waiting for driver to accept your ride!');
+      }
+
       if (rideStatus === 'InProgress' && ride) {
-        setCountdown(ride.waitingTime * 60); // Convert minutes to seconds
+        updateTimers(ride); // Update timers if the ride is in progress
       } else {
-        setCountdown(null); // Reset countdown if not in progress
+        setCountdownToDriverStart(null); // Reset countdown if not in progress
+        setCountdownToRideEnd(null); // Reset countdown if not in progress
       }
 
     } catch (error) {
@@ -63,55 +101,59 @@ function RidePage() {
     }
   };
 
+  // Fetch ride details once when the component mounts
   useEffect(() => {
-    // Fetch ride details initially
     fetchRide();
-    
-    // Fetch ride status every 5 seconds
-    const intervalId = setInterval(fetchRideStatus, 5000);
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(intervalId);
+    fetchRideStatus();
   }, []);
 
+  // Set up the interval to fetch ride status every 5 seconds
   useEffect(() => {
-    // Handle countdown timer
-    let timer: number | null = null;
-    if (countdown !== null && countdown > 0) {
-      timer = window.setInterval(() => {
-        setCountdown(prev => prev !== null ? Math.max(prev - 1, 0) : 0);
-      }, 1000);
-    }
+    const intervalId = setInterval(fetchRideStatus, 5000); // Fetch status every 5 seconds
+    return () => clearInterval(intervalId); // Clean up on unmount
+  }, [ride]);
 
-    return () => {
-      if (timer !== null) clearInterval(timer);
-    };
-  }, [countdown]);
+  // Tajmer za dolazak vozača
+  useEffect(() => {
+    const timerArrival = setInterval(() => {
+      if (countdownToDriverStart !== null && countdownToDriverStart > 0) {
+        setCountdownToDriverStart(prev => prev !== null ? Math.max(prev - 1, 0) : 0);
+      } else if (countdownToDriverStart === 0 && countdownToRideEnd === null && ride) {
+        // Kada vozač stigne, započinjemo odbrojavanje za vožnju
+        const rideStartTime = new Date(ride.rideStartTime).getTime();
+        const rideEndTime = new Date(ride.rideEndTime).getTime();
+        const now = Date.now();
+        setCountdownToRideEnd(Math.max(Math.floor((rideEndTime - now) / 1000), 0));
+      }
+    }, 1000);
+
+    return () => clearInterval(timerArrival);
+  }, [countdownToDriverStart, countdownToRideEnd, ride]);
 
   return (
     <div className="ride-container">
       <h2 className="title">Ride Status</h2>
-      <p className="status-message">{status}</p>
+      <h1 className="status-message">{status}</h1>
       {ride && (
         <div className="ride-details">
           <p><strong>Start Address:</strong> {ride.startAddress}</p>
           <p><strong>End Address:</strong> {ride.endAddress}</p>
-          {/* Safely check if price and distance are defined before calling .toFixed() */}
           <p><strong>Price:</strong> ${ride.price ? ride.price.toFixed(2) : 'N/A'}</p>
           <p><strong>Distance:</strong> {ride.distance ? ride.distance.toFixed(2) : 'N/A'} km</p>
-          <p><strong>Expected waiting time:</strong> {ride.waitingTime} minutes</p>
         </div>
       )}
-      {status === 'Your ride is in progress!' && countdown !== null && (
+      {countdownToDriverStart !== null && countdownToDriverStart > 0 && (
         <div className="countdown">
-          <h3>Countdown:</h3>
-          <p>{Math.floor(countdown / 60)}:{countdown % 60 < 10 ? `0${countdown % 60}` : countdown % 60}</p>
+          <h3>Countdown to Driver Arrival:</h3>
+          <p>{Math.floor(countdownToDriverStart / 60)}:{countdownToDriverStart % 60 < 10 ? `0${countdownToDriverStart % 60}` : countdownToDriverStart % 60}</p>
         </div>
       )}
-      <div className="car-container">
-  <div className="car"></div>
-    </div>
-
+      {countdownToRideEnd !== null && countdownToRideEnd > 0 && (
+        <div className="countdown">
+          <h3>Countdown to Ride End:</h3>
+          <p>{Math.floor(countdownToRideEnd / 60)}:{countdownToRideEnd % 60 < 10 ? `0${countdownToRideEnd % 60}` : countdownToRideEnd % 60}</p>
+        </div>
+      )}
     </div>
   );
 }

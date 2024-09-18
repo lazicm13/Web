@@ -1,0 +1,118 @@
+/* General container for the dashboard */
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Title styling */
+.title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Container for the lists */
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.driver-list, .ride-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Automatski prilagođava broj kolona */
+    gap: 30px; /* Razmak između prozorčića */
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none;
+  }
+/* Driver and ride items styling */
+.driver-item, .ride-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Prozorčići zauzimaju punu širinu u koloni */
+  }
+
+/* Styling for driver/ride details */
+.driver-details, .ride-details {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Styling for the driver/ride details text */
+.driver-details p, .ride-details p {
+  margin: 5px 0;
+}
+
+/* Image styling for the selected driver */
+.selected-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Styling for buttons */
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.accept-btn, .reject-btn, .block-toggle-btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.accept-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.block-toggle-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Message for no drivers or rides */
+.no-drivers, .no-rides {
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .list-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .list-container {
+    grid-template-columns: 1fr; /* Jedan element po redu na malim ekranima */
+  }
+}

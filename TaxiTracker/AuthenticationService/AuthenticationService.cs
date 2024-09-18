@@ -49,9 +49,8 @@ namespace AuthenticationService
                         builder.Services.AddSingleton<TokenService>();
                         builder.Services.AddSingleton<BlobStorageService>();
                         builder.Services.AddSingleton<INotificationService>(provider =>
-                        ServiceProxy.Create<INotificationService>(
-                            new Uri("fabric:/TaxiTracker/NotificationService"),
-                            new ServicePartitionKey(0)));
+    ServiceProxy.Create<INotificationService>(new Uri("fabric:/TaxiTracker/NotificationService")));
+
 
 
                         // Add CORS services with specific origin

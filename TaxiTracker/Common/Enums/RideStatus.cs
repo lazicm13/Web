@@ -8,9 +8,9 @@ namespace Common.Enums
 {
     public enum RideStatus
     {
+        WaitingForDriver,
         Active,
         InProgress,
         Completed,
-        Canceled
     }
 }

@@ -23,12 +23,15 @@ namespace Common.Models
         public double Price { get; set; }
         public double Distance {  get; set; }
         public string? WaitingTime {  get; set; }
+        public DateTime? DriverStartTime {  get; set; }
+        public DateTime? RideStartTime { get; set; }
+        public DateTime? RideEndTime { get; set; }
         public RideStatus Status { get; set; }
         
         public Ride() 
         {
             RowKey = UserId;
-            Status = RideStatus.Active;
+            Status = RideStatus.WaitingForDriver;
         }
         
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './../../Style/dashboard.css'; // Importuj CSS fajl za stilizovanje
+import './../../Style/adminDashboard.css'; // Importuj CSS fajl za stilizovanje
 import { useNavigate } from 'react-router-dom';
 
 interface Driver {
@@ -251,8 +251,7 @@ function AdminDashboard() {
       {rides.length > 0 ? (
         <ul className="ride-list">
           {rides.map((ride) => (
-            <li key={ride.rideId} className="ride-item">
-              <p><strong>Ride ID:</strong> {ride.rideId}</p>
+            <li key={ride.userId} className="ride-item">
               <p><strong>User ID:</strong> {ride.userId}</p>
               <p><strong>Start Address:</strong> {ride.startAddress}</p>
               <p><strong>End Address:</strong> {ride.endAddress}</p>

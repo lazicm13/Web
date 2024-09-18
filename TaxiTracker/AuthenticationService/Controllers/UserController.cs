@@ -98,6 +98,10 @@ public class UserController : ControllerBase
         {
             return NotFound(new { message = "User not found." });
         }
+        if (user.UserState != UserState.Verified)
+        {
+            return BadRequest(new {message = "User is not verified and cannot update user data!"});
+        }
 
         user.FullName = updateUserDto.FullName ?? user.FullName;
         user.Username = updateUserDto.Username ?? user.Username;
@@ -203,7 +207,9 @@ public class UserController : ControllerBase
             {
                 return NotFound(new { message = "User not found." });
             }
-    
+
+            //await _blobStorageService.DeleteImageAsync(oldImage);
+
             user.Image = imageUrl;
             await _repo.UpdateUserAsync(user);
     

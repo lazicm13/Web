@@ -62,7 +62,12 @@ namespace AuthenticationService.Controllers
                 emailData.FullName = driver.FullName;
                 emailData.EmailAddress = emailAddress;
 
-                await _notificationService.SendNotificationAsync(emailData, true);
+                bool notificationSent = await _notificationService.SendNotificationAsync(emailData, true);
+
+                if (!notificationSent)
+                {
+                    return StatusCode(500, new { message = "Failed to send notification email." });
+                }
 
                 return Ok(new { message = "Driver accepted successfully." });
             }

@@ -86,7 +86,6 @@ namespace RideService.Controllers
                     return Unauthorized(new { message = "Invalid user information in token." });
                 }
 
-
                 var rideData = new Ride
                 {
                     UserId = userId,
@@ -140,16 +139,12 @@ namespace RideService.Controllers
                 return Unauthorized(new { message = "Invalid user information in token." });
             }
 
-            var ride = await rideRepo.RetrieveRideAsync(userId);
+            var ride = await _rideTrackingService.GetRideDetailsAsync(userId);
 
             if (ride == null)
             {
                 return NotFound(new { message = "Ride not found." });
             }
-
-            var status = await _rideTrackingService.GetRideStatusAsync(ride.UserId);
-
-            ride.Status = status ?? RideStatus.Active;
 
             return Ok(new { ride});
         }
@@ -192,9 +187,48 @@ namespace RideService.Controllers
 
             var rideStatus = status.ToString();
 
-            ride.Status = status ?? RideStatus.Active;  
+            ride.Status = status ?? RideStatus.WaitingForDriver;  
 
             return Ok(new { status = rideStatus });
+        }
+
+        [HttpGet("current")]
+        [Authorize]
+        public async Task<IActionResult> GetCurrentRide()
+        {
+            try
+            {
+                var existingToken = Request.Cookies["jwt"];
+                if (string.IsNullOrEmpty(existingToken))
+                {
+                    return Unauthorized(new { message = "User not logged in." });
+                }
+
+                ClaimsPrincipal principal;
+                try
+                {
+                    principal = tokenService.ValidateToken(existingToken);
+                }
+                catch (Exception ex)
+                {
+                    return Unauthorized(new { message = "Invalid token.", details = ex.Message });
+                }
+
+                var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+
+                if (userId == null)
+                {
+                    return Unauthorized(new { message = "Invalid user information in token." });
+                }
+
+                var ride = await _rideTrackingService.GetRideDetailsAsync(userId);
+
+                return Ok(new { ride });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new {message = ex.Message + ex.StackTrace});
+            }
         }
 
 

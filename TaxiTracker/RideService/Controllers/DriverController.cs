@@ -30,13 +30,13 @@ namespace RideService.Controllers
         }
 
 
-        [HttpGet("active-rides")]
+        [HttpGet("waiting-rides")]
         [Authorize]
-        public async Task<ActionResult<IEnumerable<Ride>>> GetActiveRides()
+        public async Task<ActionResult<IEnumerable<Ride>>> GetWaitingRides()
         {
             try
             {
-                var activeRides = await _rideTrackingService.GetActiveRidesAsync();
+                var activeRides = await _rideTrackingService.GetWaitingRidesAsync(); // Ovde bi trebalo izvlaciti voznje iz baze jer ce se pri resetovanju obrisati
 
                 if (activeRides == null || !activeRides.Any())
                 {
@@ -58,7 +58,6 @@ namespace RideService.Controllers
         {
             Ride ride = await _rideDataRepository.RetrieveRideAsync(rideId);
 
-            await _rideTrackingService.UpdateRideStatusAsync(rideId, RideStatus.InProgress);
 
             var existingToken = Request.Cookies["jwt"];
             if (string.IsNullOrEmpty(existingToken))
@@ -85,9 +84,10 @@ namespace RideService.Controllers
             
 
             ride.DriverId = rideId;
-            ride.Status = RideStatus.InProgress;
+            ride.Status = RideStatus.Active;
 
             await _rideDataRepository.UpdateRideAsync(ride);
+            await _rideTrackingService.StartRideToUserAsync(rideId, TimeSpan.FromMinutes(Convert.ToDouble(ride.WaitingTime)), ride.Distance);
 
             return Ok(ride);
         }

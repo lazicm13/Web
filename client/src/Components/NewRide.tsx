@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 interface RideData {
     startAddress: string;
@@ -11,16 +10,14 @@ interface RideData {
 
 interface NewRideProps {
     rideData: RideData; 
-    onWithdraw: () => void; // Add this prop
+    onWithdraw: () => void; 
+    onConfirm: () => void; // Add this prop
 }
 
-function NewRide({ rideData, onWithdraw }: NewRideProps) {
-    const navigate = useNavigate();
+function NewRide({ rideData, onWithdraw, onConfirm }: NewRideProps) {
     if (!rideData) {
         return <p>No ride data available</p>;
     }
-
-    console.log('Ride data in NewRide:', rideData);
 
     const distance = typeof rideData.distance === 'number' ? rideData.distance : 0;
     const price = typeof rideData.price === 'number' ? rideData.price : 0;
@@ -43,7 +40,7 @@ function NewRide({ rideData, onWithdraw }: NewRideProps) {
             if (response.status === 200) {
                 console.log('Ride data saved successfully:', response.data);
                 alert('Ride data saved successfully!');
-                navigate('ride-page');
+                onConfirm(); // Trigger the confirm handler
             } else {
                 console.error('Failed to save ride data. Status:', response.status);
             }
@@ -58,7 +55,6 @@ function NewRide({ rideData, onWithdraw }: NewRideProps) {
             <h2>New Ride Details</h2>
             <div className="form-group">
                 <label>{rideData.startAddress || 'N/A'} ⇒ {rideData.endAddress || 'N/A'}</label>
-                <label></label>
             </div>
             <div className="form-group">
                 <label>Distance: {distance.toFixed(2)} km</label>
@@ -82,4 +78,3 @@ function NewRide({ rideData, onWithdraw }: NewRideProps) {
 }
 
 export default NewRide;
-    

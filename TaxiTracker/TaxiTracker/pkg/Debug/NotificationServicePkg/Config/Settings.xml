@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  
   <Section Name="NotificationServiceSettings">
     <Parameter Name="SmtpServer" Value="smtp.gmail.com" />
     <Parameter Name="Port" Value="587" />
-    <Parameter Name="SmtpUsername" Value="mojgmailnalog@gmail.com" />
-    <Parameter Name="SmtpPassword" Value="mojagmaillozinka" />
-    <Parameter Name="FromEmail" Value="mojgmailnalog@gmail.com" />
+    <Parameter Name="SmtpUsername" Value="taxitracker2024@gmail.com" />
+    <Parameter Name="SmtpPassword" Value="glnv wros exix oizo" />
+    <Parameter Name="FromEmail" Value="taxitracker2024@gmail.com" />
   </Section>
 </Settings>

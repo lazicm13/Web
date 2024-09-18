@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full height of the viewport */
+/* Full height of the viewport */
   padding: 0 20px; /* Add some padding to avoid content touching edges on small screens */
   text-align: center; /* Center align text */
 }
@@ -61,7 +61,6 @@
 }
 .status-message {
   margin-top: 20px;
-  font-size: 16px;
   color: #333;
   text-align: center;
 }

@@ -1,4 +1,4 @@
-using Common.Enums;
+﻿using Common.Enums;
 using Common.Models;
 using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
@@ -31,28 +31,8 @@ namespace RideTrackingService
         protected override async Task RunAsync(CancellationToken cancellationToken)
         {
             _rides = await StateManager.GetOrAddAsync<IReliableDictionary<string, Ride>>("rides");
-        }
 
-        public async Task<IEnumerable<Ride>> GetActiveRidesAsync()
-        {
-            var activeRides = new List<Ride>();
 
-            using (var tx = StateManager.CreateTransaction())
-            {
-                var enumerable = await _rides.CreateEnumerableAsync(tx);
-                var enumerator = enumerable.GetAsyncEnumerator();
-
-                while (await enumerator.MoveNextAsync(CancellationToken.None))
-                {
-                    var ride = enumerator.Current.Value;
-                    if (ride.Status == RideStatus.Active)
-                    {
-                        activeRides.Add(ride);
-                    }
-                }
-            }
-
-            return activeRides;
         }
 
         public async Task AddOrUpdateRideAsync(Ride ride)
@@ -64,10 +44,77 @@ namespace RideTrackingService
             }
         }
 
-
-        public async Task<IEnumerable<Ride>> GetRidesByStatusAsync(RideStatus status)
+        public async Task StartRideToUserAsync(string rideId, TimeSpan arrivalTime, double distance)
         {
-            var rides = new List<Ride>();
+            using (var tx = StateManager.CreateTransaction())
+            {
+                var ride = await _rides.GetOrAddAsync(tx, rideId, key => new Ride { UserId = key, Status = RideStatus.WaitingForDriver });
+
+                var now = DateTime.UtcNow;
+
+                
+                ride.DriverStartTime = now;
+                ride.RideStartTime = DateTime.Now.Add(arrivalTime);
+                ride.RideEndTime = ride.RideStartTime + TimeSpan.FromMinutes(distance);
+                // Postavi status da vozač dolazi po korisnika
+                ride.Status = RideStatus.Active;
+                await _rides.SetAsync(tx, rideId, ride);
+                await tx.CommitAsync();
+            }
+        }
+
+
+
+        public async Task DriverArrivedAsync(string rideId, double distance, TimeSpan arrivalTime)
+        {
+            using (var tx = StateManager.CreateTransaction())
+            {
+                var ride = await _rides.TryGetValueAsync(tx, rideId);
+
+                if (ride.HasValue)
+                {
+                    ride.Value.Status = RideStatus.InProgress;
+                    await _rides.SetAsync(tx, rideId, ride.Value);
+                    await tx.CommitAsync();
+                }
+            }
+        }
+
+        public async Task StartRideToDestinationAsync(string rideId, TimeSpan rideDuration)
+        {
+            using (var tx = StateManager.CreateTransaction())
+            {
+                var ride = await _rides.TryGetValueAsync(tx, rideId);
+
+                if (ride.HasValue)
+                {
+                    ride.Value.Status = RideStatus.InProgress;
+                    await _rides.SetAsync(tx, rideId, ride.Value);
+                    await tx.CommitAsync();
+                }
+            }
+        }
+
+
+
+        public async Task RideCompletedAsync(string rideId)
+        {
+            using (var tx = StateManager.CreateTransaction())
+            {
+                var ride = await _rides.TryGetValueAsync(tx, rideId);
+
+                if (ride.HasValue)
+                {
+                    ride.Value.Status = RideStatus.Completed;
+                    
+                    await _rides.SetAsync(tx, rideId, ride.Value);
+                    await tx.CommitAsync();
+                }
+            }
+        }
+        public async Task<IEnumerable<Ride>> GetWaitingRidesAsync()
+        {
+            var activeRides = new List<Ride>();
 
             using (var tx = StateManager.CreateTransaction())
             {
@@ -77,28 +124,14 @@ namespace RideTrackingService
                 while (await enumerator.MoveNextAsync(CancellationToken.None))
                 {
                     var ride = enumerator.Current.Value;
-                    if (ride.Status == status)
+                    if (ride.Status == RideStatus.WaitingForDriver)
                     {
-                        rides.Add(ride);
+                        activeRides.Add(ride);
                     }
                 }
             }
 
-            return rides;
-        }
-
-        public async Task UpdateRideStatusAsync(string rideId, RideStatus newStatus)
-        {
-            using (var tx = StateManager.CreateTransaction())
-            {
-                var ride = await _rides.GetOrAddAsync(tx, rideId, key => new Ride { UserId = key });
-                if (ride != null)
-                {
-                    ride.Status = newStatus;
-                    await _rides.SetAsync(tx, rideId, ride);
-                    await tx.CommitAsync();
-                }
-            }
+            return activeRides;
         }
 
         public async Task<RideStatus?> GetRideStatusAsync(string rideId)
@@ -121,8 +154,21 @@ namespace RideTrackingService
             }
         }
 
-
-
+        public async Task<Ride?> GetRideDetailsAsync(string rideId)
+        {
+            using (var tx = StateManager.CreateTransaction())
+            {
+                var ride = await _rides.TryGetValueAsync(tx, rideId);
+                if (ride.HasValue)
+                {
+                    return ride.Value;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
 
     }
 }

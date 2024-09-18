@@ -78,7 +78,7 @@ function Login() {
                 if(data.isDriver === true)
                 {
                     alert("this person is driver and is not verified.");
-                    navigate('/verification-page')
+                    navigate('/')
                 }else
                     navigate('/');
                 console.log(data.message);
