@@ -55,32 +55,14 @@ namespace RideTrackingService
                 
                 ride.DriverStartTime = now;
                 ride.RideStartTime = DateTime.Now.Add(arrivalTime);
-                ride.RideEndTime = ride.RideStartTime + TimeSpan.FromMinutes(distance);
-                // Postavi status da vozač dolazi po korisnika
+                ride.RideEndTime = ride.RideStartTime + TimeSpan.FromMinutes(1); // namerno postavljeno na minut umesto distance, radi testiranja
                 ride.Status = RideStatus.Active;
                 await _rides.SetAsync(tx, rideId, ride);
                 await tx.CommitAsync();
             }
         }
 
-
-
-        public async Task DriverArrivedAsync(string rideId, double distance, TimeSpan arrivalTime)
-        {
-            using (var tx = StateManager.CreateTransaction())
-            {
-                var ride = await _rides.TryGetValueAsync(tx, rideId);
-
-                if (ride.HasValue)
-                {
-                    ride.Value.Status = RideStatus.InProgress;
-                    await _rides.SetAsync(tx, rideId, ride.Value);
-                    await tx.CommitAsync();
-                }
-            }
-        }
-
-        public async Task StartRideToDestinationAsync(string rideId, TimeSpan rideDuration)
+        public async Task StartRideToDestinationAsync(string rideId)
         {
             using (var tx = StateManager.CreateTransaction())
             {
@@ -106,9 +88,10 @@ namespace RideTrackingService
                 if (ride.HasValue)
                 {
                     ride.Value.Status = RideStatus.Completed;
-                    
                     await _rides.SetAsync(tx, rideId, ride.Value);
                     await tx.CommitAsync();
+
+                    await DeleteRideAsync(rideId);
                 }
             }
         }
@@ -169,6 +152,20 @@ namespace RideTrackingService
                 }
             }
         }
+        public async Task DeleteRideAsync(string rideId)
+        {
+            using (var tx = StateManager.CreateTransaction())
+            {
+                var ride = await _rides.TryGetValueAsync(tx, rideId);
+
+                if (ride.HasValue)
+                {
+                    await _rides.TryRemoveAsync(tx, rideId);
+                    await tx.CommitAsync();
+                }
+            }
+        }
+
 
     }
 }

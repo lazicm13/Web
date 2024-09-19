@@ -3,6 +3,7 @@ import './../../Style/dashboard.css'; // Import CSS file for styling
 import VerificationPage from './VerificationDashboard';
 
 interface Ride {
+  id: string;
   userId: string;
   startAddress: string;
   endAddress: string;

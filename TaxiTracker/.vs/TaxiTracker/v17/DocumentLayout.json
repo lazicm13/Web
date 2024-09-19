@@ -3,28 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\rideservice\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|solutionrelative:rideservice\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\rideservice\\services\\ridedatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|solutionrelative:rideservice\\services\\ridedatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6379AD6A-2D17-4158-B179-87C99329B195}|RideTrackingService\\RideTrackingService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\ridetrackingservice\\ridetrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6379AD6A-2D17-4158-B179-87C99329B195}|RideTrackingService\\RideTrackingService.csproj|solutionrelative:ridetrackingservice\\ridetrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Marko\\AppData\\Local\\SourceServer\\295cae4e294e46c5842e1ae8a22db013a4020fa44fc3f715585270850d80f25b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\CompilerServices\\AsyncTaskMethodBuilderT.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\rideservice\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|solutionrelative:rideservice\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\rideservice\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|solutionrelative:rideservice\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\rideservice\\services\\ridegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|solutionrelative:rideservice\\services\\ridegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6379AD6A-2D17-4158-B179-87C99329B195}|RideTrackingService\\RideTrackingService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\ridetrackingservice\\interfaces\\iridetrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6379AD6A-2D17-4158-B179-87C99329B195}|RideTrackingService\\RideTrackingService.csproj|solutionrelative:ridetrackingservice\\interfaces\\iridetrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0F557CD-64EB-4C7F-8386-46A7C5FD482B}|NotificationService\\NotificationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\notificationservice\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0F557CD-64EB-4C7F-8386-46A7C5FD482B}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\enums\\ridestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\enums\\ridestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0F557CD-64EB-4C7F-8386-46A7C5FD482B}|NotificationService\\NotificationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\notificationservice\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0F557CD-64EB-4C7F-8386-46A7C5FD482B}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\enums\\ridestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\enums\\ridestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0F557CD-64EB-4C7F-8386-46A7C5FD482B}|NotificationService\\NotificationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\notificationservice\\packageroot\\config\\settings.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -35,10 +62,6 @@
       "RelativeMoniker": "D:0:0:{B0F557CD-64EB-4C7F-8386-46A7C5FD482B}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\packageroot\\servicemanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6379AD6A-2D17-4158-B179-87C99329B195}|RideTrackingService\\RideTrackingService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\ridetrackingservice\\interfaces\\iridetrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6379AD6A-2D17-4158-B179-87C99329B195}|RideTrackingService\\RideTrackingService.csproj|solutionrelative:ridetrackingservice\\interfaces\\iridetrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Marko\\AppData\\Local\\SourceServer\\8f2fab212ff2d9101055c80132c3c64b57921e445656f4e59434cb40f415c5f1\\TaxiTracker\\RideTrackingService\\RideTrackingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,28 +69,12 @@
       "RelativeMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|solutionrelative:rideservice\\rideservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\rideservice\\services\\ridedatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|solutionrelative:rideservice\\services\\ridedatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B0F557CD-64EB-4C7F-8386-46A7C5FD482B}|NotificationService\\NotificationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\notificationservice\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0F557CD-64EB-4C7F-8386-46A7C5FD482B}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\rideservice\\services\\ridegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{329968C9-921C-47DF-BA2E-A0C097C4D7B1}|RideService\\RideService.csproj|solutionrelative:rideservice\\services\\ridegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\authenticationservice\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,10 +105,6 @@
       "RelativeMoniker": "D:0:0:{7194AAB8-B949-4D3D-A6AB-1762F43137FA}|AuthenticationService\\AuthenticationService.csproj|solutionrelative:authenticationservice\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|c:\\users\\marko\\desktop\\faks\\4. godina\\primena web programiranja\\taxitrackerproject\\web\\taxitracker\\common\\enums\\userstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{886383BC-B158-4211-A67D-C29A095CD981}|Common\\Common.csproj|solutionrelative:common\\enums\\userstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -117,7 +120,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -165,7 +168,163 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AsyncTaskMethodBuilderT.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\AppData\\Local\\SourceServer\\295cae4e294e46c5842e1ae8a22db013a4020fa44fc3f715585270850d80f25b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\CompilerServices\\AsyncTaskMethodBuilderT.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\295cae4e294e46c5842e1ae8a22db013a4020fa44fc3f715585270850d80f25b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\CompilerServices\\AsyncTaskMethodBuilderT.cs",
+              "ToolTip": "C:\\Users\\Marko\\AppData\\Local\\SourceServer\\295cae4e294e46c5842e1ae8a22db013a4020fa44fc3f715585270850d80f25b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\CompilerServices\\AsyncTaskMethodBuilderT.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\295cae4e294e46c5842e1ae8a22db013a4020fa44fc3f715585270850d80f25b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\CompilerServices\\AsyncTaskMethodBuilderT.cs [Read Only]",
+              "ViewState": "AQIAAEkBAAAAAAAAAAAhwGoBAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T21:22:46.409Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RideTrackingService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideTrackingService\\RideTrackingService.cs",
+              "RelativeDocumentMoniker": "RideTrackingService\\RideTrackingService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideTrackingService\\RideTrackingService.cs",
+              "RelativeToolTip": "RideTrackingService\\RideTrackingService.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAADgv6YAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T10:42:01.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRideTrackingService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideTrackingService\\Interfaces\\IRideTrackingService.cs",
+              "RelativeDocumentMoniker": "RideTrackingService\\Interfaces\\IRideTrackingService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideTrackingService\\Interfaces\\IRideTrackingService.cs",
+              "RelativeToolTip": "RideTrackingService\\Interfaces\\IRideTrackingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T11:16:14.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RideGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Services\\RideGenerator.cs",
+              "RelativeDocumentMoniker": "RideService\\Services\\RideGenerator.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Services\\RideGenerator.cs",
+              "RelativeToolTip": "RideService\\Services\\RideGenerator.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAgwBUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T16:59:07.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Common\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
+              "RelativeToolTip": "Common\\Models\\User.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAkwBcAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T14:39:57.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Common\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Services\\TokenService.cs",
+              "RelativeToolTip": "Common\\Services\\TokenService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAGQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T12:18:26.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RideDataRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Services\\RideDataRepository.cs",
+              "RelativeDocumentMoniker": "RideService\\Services\\RideDataRepository.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Services\\RideDataRepository.cs",
+              "RelativeToolTip": "RideService\\Services\\RideDataRepository.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAASwDAAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T12:02:52.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RideController.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Controllers\\RideController.cs",
+              "RelativeDocumentMoniker": "RideService\\Controllers\\RideController.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Controllers\\RideController.cs",
+              "RelativeToolTip": "RideService\\Controllers\\RideController.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAApwGgAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T11:00:59.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Ride.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\Ride.cs",
+              "RelativeDocumentMoniker": "Common\\Models\\Ride.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\Ride.cs",
+              "RelativeToolTip": "Common\\Models\\Ride.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAmwCEAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T11:21:32.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DriverController.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Controllers\\DriverController.cs",
+              "RelativeDocumentMoniker": "RideService\\Controllers\\DriverController.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Controllers\\DriverController.cs",
+              "RelativeToolTip": "RideService\\Controllers\\DriverController.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAAAFMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T10:36:57.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\UserController.cs",
+              "RelativeToolTip": "AuthenticationService\\Controllers\\UserController.cs",
+              "ViewState": "AQIAANAAAAAAAAAAAAAcwGcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T14:40:51.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\NotificationService\\NotificationService.cs",
+              "RelativeDocumentMoniker": "NotificationService\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\NotificationService\\NotificationService.cs",
+              "RelativeToolTip": "NotificationService\\NotificationService.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAADgv5AAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T17:52:22.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "RideTrackingService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\AppData\\Local\\SourceServer\\8f2fab212ff2d9101055c80132c3c64b57921e445656f4e59434cb40f415c5f1\\TaxiTracker\\RideTrackingService\\RideTrackingService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\8f2fab212ff2d9101055c80132c3c64b57921e445656f4e59434cb40f415c5f1\\TaxiTracker\\RideTrackingService\\RideTrackingService.cs",
@@ -178,111 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RideController.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Controllers\\RideController.cs",
-              "RelativeDocumentMoniker": "RideService\\Controllers\\RideController.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Controllers\\RideController.cs",
-              "RelativeToolTip": "RideService\\Controllers\\RideController.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAiwI8AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T11:00:59.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DriverController.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Controllers\\DriverController.cs",
-              "RelativeDocumentMoniker": "RideService\\Controllers\\DriverController.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Controllers\\DriverController.cs",
-              "RelativeToolTip": "RideService\\Controllers\\DriverController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAUwBUAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T10:36:57.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RideTrackingService.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideTrackingService\\RideTrackingService.cs",
-              "RelativeDocumentMoniker": "RideTrackingService\\RideTrackingService.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideTrackingService\\RideTrackingService.cs",
-              "RelativeToolTip": "RideTrackingService\\RideTrackingService.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAcwFEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T10:42:01.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Ride.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\Ride.cs",
-              "RelativeDocumentMoniker": "Common\\Models\\Ride.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\Ride.cs",
-              "RelativeToolTip": "Common\\Models\\Ride.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAowBkAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T11:21:32.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IRideTrackingService.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideTrackingService\\Interfaces\\IRideTrackingService.cs",
-              "RelativeDocumentMoniker": "RideTrackingService\\Interfaces\\IRideTrackingService.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideTrackingService\\Interfaces\\IRideTrackingService.cs",
-              "RelativeToolTip": "RideTrackingService\\Interfaces\\IRideTrackingService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAawAwAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T11:16:14.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RideGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Services\\RideGenerator.cs",
-              "RelativeDocumentMoniker": "RideService\\Services\\RideGenerator.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Services\\RideGenerator.cs",
-              "RelativeToolTip": "RideService\\Services\\RideGenerator.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwBoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T16:59:07.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RideDataRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Services\\RideDataRepository.cs",
-              "RelativeDocumentMoniker": "RideService\\Services\\RideDataRepository.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\Services\\RideDataRepository.cs",
-              "RelativeToolTip": "RideService\\Services\\RideDataRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T12:02:52.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\NotificationService\\NotificationService.cs",
-              "RelativeDocumentMoniker": "NotificationService\\NotificationService.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\NotificationService\\NotificationService.cs",
-              "RelativeToolTip": "NotificationService\\NotificationService.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAqwFoAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T17:52:22.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "RideStatus.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Enums\\RideStatus.cs",
               "RelativeDocumentMoniker": "Common\\Enums\\RideStatus.cs",
@@ -290,12 +345,11 @@
               "RelativeToolTip": "Common\\Enums\\RideStatus.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T13:28:37.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-15T13:28:37.91Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Settings.xml",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\NotificationService\\PackageRoot\\Config\\Settings.xml",
               "RelativeDocumentMoniker": "NotificationService\\PackageRoot\\Config\\Settings.xml",
@@ -303,12 +357,11 @@
               "RelativeToolTip": "NotificationService\\PackageRoot\\Config\\Settings.xml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-09-17T18:27:56.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T18:27:56.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "ServiceManifest.xml",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\NotificationService\\PackageRoot\\ServiceManifest.xml",
               "RelativeDocumentMoniker": "NotificationService\\PackageRoot\\ServiceManifest.xml",
@@ -316,12 +369,11 @@
               "RelativeToolTip": "NotificationService\\PackageRoot\\ServiceManifest.xml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-09-18T10:40:04.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T10:40:04.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\NotificationService\\Interfaces\\INotificationService.cs",
               "RelativeDocumentMoniker": "NotificationService\\Interfaces\\INotificationService.cs",
@@ -329,25 +381,11 @@
               "RelativeToolTip": "NotificationService\\Interfaces\\INotificationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T17:52:51.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T17:52:51.332Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Common\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\User.cs",
-              "RelativeToolTip": "Common\\Models\\User.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAA8wBcAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T14:39:57.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "RideService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\RideService\\RideService.cs",
               "RelativeDocumentMoniker": "RideService\\RideService.cs",
@@ -355,25 +393,11 @@
               "RelativeToolTip": "RideService\\RideService.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAgwDAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T10:37:17.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-15T10:37:17.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\UserController.cs",
-              "RelativeToolTip": "AuthenticationService\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGYAAABfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T14:40:51.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\AuthenticationService.cs",
@@ -381,12 +405,11 @@
               "RelativeToolTip": "AuthenticationService\\AuthenticationService.cs",
               "ViewState": "AQIAAEYAAAAAAAAAAAAhwDQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T13:17:38.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T13:17:38.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "RegistrationController.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\RegistrationController.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\RegistrationController.cs",
@@ -398,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\AdminController.cs",
@@ -406,25 +429,23 @@
               "RelativeToolTip": "AuthenticationService\\Controllers\\AdminController.cs",
               "ViewState": "AQIAAFkAAAAAAAAAAAAQwDoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T12:30:45.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T12:30:45.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Common",
+              "DocumentIndex": 18,
+              "Title": "Common.csproj",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Common.csproj",
               "RelativeDocumentMoniker": "Common\\Common.csproj",
               "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Common.csproj",
               "RelativeToolTip": "Common\\Common.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-18T12:32:56.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T12:32:56.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "BlobStorageService.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Services\\BlobStorageService.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Services\\BlobStorageService.cs",
@@ -432,12 +453,11 @@
               "RelativeToolTip": "AuthenticationService\\Services\\BlobStorageService.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAA5wDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T15:01:47.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T15:01:47.054Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "UserDataRepository.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Services\\UserDataRepository.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Services\\UserDataRepository.cs",
@@ -445,12 +465,11 @@
               "RelativeToolTip": "AuthenticationService\\Services\\UserDataRepository.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAvwBQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T14:59:05.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-15T14:59:05.766Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "EmailData.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Models\\EmailData.cs",
               "RelativeDocumentMoniker": "Common\\Models\\EmailData.cs",
@@ -462,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\AuthenticationService\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "AuthenticationService\\Controllers\\LoginController.cs",
@@ -474,19 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Common\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Services\\TokenService.cs",
-              "RelativeToolTip": "Common\\Services\\TokenService.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAIwGQAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T12:18:26.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "UserState.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Enums\\UserState.cs",
               "RelativeDocumentMoniker": "Common\\Enums\\UserState.cs",
@@ -498,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "UserType.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\Desktop\\Faks\\4. Godina\\Primena Web Programiranja\\TaxiTrackerProject\\Web\\TaxiTracker\\Common\\Enums\\UserType.cs",
               "RelativeDocumentMoniker": "Common\\Enums\\UserType.cs",

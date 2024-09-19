@@ -19,7 +19,7 @@
         {
             Random random = new Random();
 
-            int minutes = random.Next(0, 10);
+            int minutes = random.Next(1, 5);
 
             string waitTime = $"{minutes:D2}";
 

@@ -36,7 +36,7 @@ namespace RideService.Controllers
         {
             try
             {
-                var activeRides = await _rideTrackingService.GetWaitingRidesAsync(); // Ovde bi trebalo izvlaciti voznje iz baze jer ce se pri resetovanju obrisati
+                var activeRides = await _rideTrackingService.GetWaitingRidesAsync();
 
                 if (activeRides == null || !activeRides.Any())
                 {
@@ -81,9 +81,9 @@ namespace RideService.Controllers
             {
                 return Unauthorized(new { message = "Invalid user information in token." });
             }
-            
 
-            ride.DriverId = rideId;
+
+            ride.DriverId = userId;
             ride.Status = RideStatus.Active;
 
             await _rideDataRepository.UpdateRideAsync(ride);
@@ -113,6 +113,8 @@ namespace RideService.Controllers
             }
         }
 
-        
+
+
+
     }
 }

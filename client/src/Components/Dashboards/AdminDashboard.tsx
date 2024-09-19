@@ -13,7 +13,7 @@ interface Driver {
 }
 
 interface Ride {
-    rideId: string;
+    id: string;
     userId: string;
     startAddress: string;
     endAddress: string;
@@ -251,7 +251,7 @@ function AdminDashboard() {
       {rides.length > 0 ? (
         <ul className="ride-list">
           {rides.map((ride) => (
-            <li key={ride.userId} className="ride-item">
+            <li key={ride.id} className="ride-item">
               <p><strong>User ID:</strong> {ride.userId}</p>
               <p><strong>Start Address:</strong> {ride.startAddress}</p>
               <p><strong>End Address:</strong> {ride.endAddress}</p>

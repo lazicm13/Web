@@ -8,6 +8,7 @@ import UserPage from './Components/UserPage';
 import './Style/registration.css';
 import './Style/homepage.css';
 import RidePage from './Components/RidePage';
+import DriverRating from './Components/DriverRating';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/user-page/' element={<UserPage/>}/>
         <Route path='/change-password' element={<ChangePassword/>}/>
+        <Route path='/driver-rating' element={<DriverRating/>}/>
       </Routes>
     </Router>
   )
