@@ -2,6 +2,17 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import RidePage from './../RidePage'; // Import RidePage
 import NewRide from './../NewRide'; // Import NewRide
+import './../../Style/userDashboard.css';
+
+interface RideData {
+    id: string;
+    startAddress: string;
+    endAddress: string;
+    driverId: string;
+    distance: number;
+    status: string;
+}
+
 
 function UserDashboard() {
     const [showNewRide, setShowNewRide] = useState(false);
@@ -9,8 +20,11 @@ function UserDashboard() {
     const [startAddress, setStartAddress] = useState('');
     const [endAddress, setEndAddress] = useState('');
     const [rideData, setRideData] = useState(null);
-    const [currentRide, setCurrentRide] = useState(null); // State for current ride
+    const [currentRide, setCurrentRide] = useState(null);
+    const [previousRides, setPreviousRides] = useState<RideData[]>([]); 
 
+
+    // Fetch current ride on component mount
     useEffect(() => {
         const fetchCurrentRide = async () => {
             try {
@@ -18,16 +32,15 @@ function UserDashboard() {
                 if (response.status === 200 && response.data && response.data.ride) {
                     const data = response.data.ride;
                     setCurrentRide(data);
-                    setShowRidePage(true); // Prikazuje RidePage samo ako postoji aktivna vožnja
-                    console.log("Ok result!");
+                    setShowRidePage(true); // Show RidePage if there's an active ride
                 } 
             } catch (error) {
                 if (axios.isAxiosError(error)) {
                     if (error.response && error.response.status === 404) {
-                        setShowNewRide(false); // Ako je vožnja not found, prikaži formu za kreiranje nove vožnje
+                        setShowNewRide(false); // No active ride, show new ride form
                     } else {
                         console.error('Error fetching current ride:', error.response?.status, error.message);
-                        setShowNewRide(true); // U slučaju druge greške, prikaži formu za kreiranje nove vožnje
+                        setShowNewRide(true); // For other errors, show new ride form
                     }
                 } else {
                     console.error('Unknown error:', error);
@@ -35,14 +48,21 @@ function UserDashboard() {
                 }
             }
         };
-    
+
+        const fetchPreviousRides = async () => {
+            try {
+                const response = await axios.get('http://localhost:8149/api/ride/previous', { withCredentials: true });
+                if (response.status === 200 && response.data) {
+                    setPreviousRides(response.data); // Save previous rides to state
+                }
+            } catch (error) {
+                console.error('Error fetching previous rides:', error);
+            }
+        };
+
         fetchCurrentRide();
+        fetchPreviousRides(); 
     }, []);
-    
-    
-    
-    
-    
 
     const handleRequestClick = async () => {
         try {
@@ -115,6 +135,22 @@ function UserDashboard() {
                     </form>
                 </>
             )}
+            <div className="previous-rides">
+                <h2>Previous Rides</h2>
+                {previousRides.length > 0 ? (
+                    <ul>
+                        {previousRides.map((ride) => (
+                            <li key={ride.id}>
+                                <p>Ride from {ride.startAddress} to {ride.endAddress} </p>
+                                <p>Driver: {ride.driverId}</p>
+                                <p>Distance: {ride.distance.toFixed(2)} km</p>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>No previous rides found.</p>
+                )}
+            </div>
         </div>
     );
 }

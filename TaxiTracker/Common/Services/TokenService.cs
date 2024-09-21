@@ -7,6 +7,8 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
+using Azure.Core;
+
 
 namespace Common.Services
 {
@@ -93,12 +95,29 @@ namespace Common.Services
 
         public string GetUsernameFromToken(string token)
         {
-            var principal = ValidateToken(token);
-            if (principal != null)
+            if (string.IsNullOrEmpty(token))
             {
-                return principal.Identity.Name;
+                return null;
             }
-            return null;    
+
+            ClaimsPrincipal principal;
+            try
+            {
+                principal = ValidateToken(token);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+            var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+
+            if (userId == null)
+            {
+                return null;
+            }
+
+            return userId;
         }
 
         public bool IsUserInRole(string token, string requiredRole)
@@ -111,6 +130,8 @@ namespace Common.Services
             }
             return false;
         }
+
+
 
     }
 }

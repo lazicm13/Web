@@ -16,7 +16,7 @@ namespace Common.Models
         public DateTimeOffset? Timestamp { get; set; }
         public ETag ETag { get; set; }
 
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string UserId { get; set; }
         public string? DriverId { get; set; }
         public string? StartAddress {  get; set; }
@@ -29,9 +29,8 @@ namespace Common.Models
         public DateTime? RideEndTime { get; set; }
         public RideStatus Status { get; set; }
         
-        public Ride() 
+        public Ride()
         {
-            Id = Guid.NewGuid().ToString();
             RowKey = Id;
             Status = RideStatus.WaitingForDriver;
         }

@@ -1,0 +1,47 @@
+.previous-rides {
+    background-color: #f9f9f9; /* Svetla pozadina */
+    padding: 20px;
+    border-radius: 8px; /* Zaobljeni uglovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka */
+    max-width: 600px; /* Maksimalna širina */
+    margin: 20px auto; /* Centriraj na stranici */
+}
+
+.previous-rides h2 {
+    font-size: 1.5rem; /* Veličina fonta za naslov */
+    color: #333; /* Tamno siva boja */
+    border-bottom: 2px solid #ccc; /* Linija ispod naslova */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.previous-rides ul {
+    list-style-type: none; /* Uklanja default stil liste */
+    padding-left: 0; /* Uklanja padding sa leve strane */
+}
+
+.previous-rides li {
+    background-color: #fff; /* Bela pozadina za svaku vožnju */
+    margin-bottom: 10px; /* Razmak između vožnji */
+    padding: 15px; /* Unutrašnji razmak */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Blaga senka */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Animacija prilikom hover-a */
+}
+
+.previous-rides li:hover {
+    transform: translateY(-3px); /* Blagi pomak prema gore prilikom hover-a */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Jača senka prilikom hover-a */
+}
+
+.previous-rides li p {
+    margin: 0; /* Uklanja default margine */
+    color: #555; /* Tamno siva boja teksta */
+    font-size: 1rem; /* Veličina fonta */
+    line-height: 1.4; /* Visina linije za čitljivost */
+}
+
+.previous-rides li p span {
+    font-weight: bold; /* Bold za bitne informacije (npr. adrese) */
+    color: #333; /* Tamnija boja */
+}

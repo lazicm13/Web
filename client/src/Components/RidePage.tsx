@@ -91,7 +91,8 @@ function RidePage() {
 
   const handleRideEnd = async () => {
     try {
-      const response = await fetch('http://localhost:8149/api/ride/end-ride', {
+      const response = await fetch(`http://localhost:8149/api/ride/end-ride/${ride?.userId}`, {
+
         method: 'POST',
         credentials: 'include',
       });

@@ -38,20 +38,7 @@ public class UserController : ControllerBase
             return Unauthorized(new { message = "User not logged in." });
         }
 
-        // Validate token to get user context (principal)
-        ClaimsPrincipal principal;
-        try
-        {
-            principal = _tokenService.ValidateToken(existingToken);
-        }
-        catch (Exception ex)
-        {
-            // If token validation fails
-            return Unauthorized(new { message = "Invalid token.", details = ex.Message });
-        }
-
-        // Get user ID from token
-        var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+        var userId = _tokenService.GetUsernameFromToken(existingToken);
         if (userId == null)
         {
             return Unauthorized(new { message = "Invalid user information in token." });
@@ -230,17 +217,7 @@ public class UserController : ControllerBase
             return Unauthorized(new { message = "User not logged in." });
         }
 
-        ClaimsPrincipal principal;
-        try
-        {
-            principal = _tokenService.ValidateToken(existingToken);
-        }
-        catch (Exception ex)
-        {
-            return Unauthorized(new { message = "Invalid token.", details = ex.Message });
-        }
-
-        var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+        var userId = _tokenService.GetUsernameFromToken(existingToken);
 
         if (userId == null)
         {

@@ -777,3 +777,4 @@ C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProje
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\AuthenticationService.pdb
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\AuthenticationService.genruntimeconfig.cache
 C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\ref\AuthenticationService.dll
+C:\Users\Marko\Desktop\Faks\4. Godina\Primena Web Programiranja\TaxiTrackerProject\Web\TaxiTracker\AuthenticationService\obj\Debug\net8.0\win-x64\AuthenticationService.MvcApplicationPartsAssemblyInfo.cs

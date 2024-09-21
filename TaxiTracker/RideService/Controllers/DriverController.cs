@@ -56,8 +56,10 @@ namespace RideService.Controllers
         [Authorize]
         public async Task<IActionResult> AcceptRide(string rideId)
         {
-            Ride ride = await _rideDataRepository.RetrieveRideAsync(rideId);
+            var ride = await _rideDataRepository.RetrieveRideAsync(rideId);
 
+            if (ride == null)
+                return NotFound(new { message = "ride not found!" });
 
             var existingToken = Request.Cookies["jwt"];
             if (string.IsNullOrEmpty(existingToken))
@@ -65,17 +67,7 @@ namespace RideService.Controllers
                 return Unauthorized(new { message = "User not logged in." });
             }
 
-            ClaimsPrincipal principal;
-            try
-            {
-                principal = _tokenService.ValidateToken(existingToken);
-            }
-            catch (Exception ex)
-            {
-                return Unauthorized(new { message = "Invalid token.", details = ex.Message });
-            }
-
-            var userId = principal?.Identity?.Name ?? principal?.FindFirst(ClaimTypes.Name)?.Value;
+            var userId = _tokenService.GetUsernameFromToken(existingToken);
 
             if (userId == null)
             {

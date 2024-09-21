@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './../../Style/dashboard.css'; // Import CSS file for styling
 import VerificationPage from './VerificationDashboard';
+import axios from 'axios';
 
 interface Ride {
   id: string;
@@ -9,6 +10,7 @@ interface Ride {
   endAddress: string;
   price: number;
   distance: number;
+  driverId: string;
 }
 
 function DriverDashboard() {
@@ -16,6 +18,7 @@ function DriverDashboard() {
   const [status, setStatus] = useState<string | null>(null); // State for user status
   const [loading, setLoading] = useState<boolean>(true); // State to track loading status
   const [currentRide, setCurrentRide] = useState<Ride | null>(null); // State for the current ride
+  const [previousRides, setPreviousRides] = useState<Ride[]>([]); 
 
   // Fetch the user's status and rides
   useEffect(() => {
@@ -51,6 +54,8 @@ function DriverDashboard() {
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);
 
+  
+
   useEffect(() => {
     const fetchRides = async () => {
       try {
@@ -71,11 +76,23 @@ function DriverDashboard() {
       }
     };
 
+    const fetchPreviousRides = async () => {
+      try {
+          const response = await axios.get('http://localhost:8149/api/ride/driver-previous', { withCredentials: true });
+          if (response.status === 200 && response.data) {
+              setPreviousRides(response.data); // Save previous rides to state
+          }
+      } catch (error) {
+          console.error('Error fetching previous rides:', error);
+      }
+  };
+    fetchPreviousRides();
     fetchRides(); // Initial fetch for rides
   }, []);
 
   const acceptRide = async (ride: Ride) => {
     try {
+      console.log(ride.id);
       const response = await fetch(`http://localhost:8149/api/driver/accept-ride/${ride.userId}`, {
         method: 'POST',
         headers: {
@@ -147,7 +164,25 @@ function DriverDashboard() {
           )}
         </div>
       )}
+      <div className="previous-rides">
+                <h2>Previous Rides</h2>
+                {previousRides.length > 0 ? (
+                    <ul>
+                        {previousRides.map((ride) => (
+                            <li key={ride.id}>
+                                <p>Ride from {ride.startAddress} to {ride.endAddress} </p>
+                                <p>User: {ride.userId}</p>
+                                <p>Driver: {ride.driverId}</p>
+                                <p>Distance: {ride.distance.toFixed(2)} km</p>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>No previous rides found.</p>
+                )}
+            </div>
     </div>
+    
   );
 }
 
