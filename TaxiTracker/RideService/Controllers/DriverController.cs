@@ -104,9 +104,5 @@ namespace RideService.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
-
-
     }
 }

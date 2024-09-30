@@ -15,13 +15,13 @@ namespace AuthenticationService.Controllers
         private readonly UserDataRepository _repo;
         private readonly TokenService _tokenService;
         private readonly INotificationService _notificationService;
-
         public AdminController(TokenService tokenService, UserDataRepository userDataRepository, INotificationService notificationService)
         {
             _tokenService = tokenService;
             _repo = userDataRepository;
             _notificationService = notificationService;
         }
+
 
         [HttpGet("new-drivers")]
         public async Task<IActionResult> GetNewDrivers()
@@ -36,6 +36,7 @@ namespace AuthenticationService.Controllers
                 return StatusCode(500, new { message = "An error occurred while fetching new drivers.", error = ex.Message });
             }
         }
+
 
         [HttpPut("accept-driver/{emailAddress}")]
         public async Task<IActionResult> AcceptDriver(string emailAddress)
@@ -77,6 +78,7 @@ namespace AuthenticationService.Controllers
             }
         }
 
+
         [HttpPut("reject-driver/{emailAddress}")]
         public async Task<IActionResult> RejectDriver(string emailAddress)
         {
@@ -112,6 +114,7 @@ namespace AuthenticationService.Controllers
                 return StatusCode(500, new { message = "An error occurred while rejecting the driver.", error = ex.Message });
             }
         }
+
 
         [HttpGet("verified-drivers")]
         public async Task<IActionResult> GetVerifiedDrivers()
@@ -153,7 +156,6 @@ namespace AuthenticationService.Controllers
                     return NotFound(new { message = "Driver not found." });
                 }
 
-                // Postavi korisnika kao blokiranog
                 driver.IsBlocked = true;
                 await _repo.UpdateUserAsync(driver);
 
@@ -164,6 +166,7 @@ namespace AuthenticationService.Controllers
                 return StatusCode(500, new { message = "An error occurred while blocking the driver.", error = ex.Message });
             }
         }
+
 
         [HttpPut("unblock-driver/{emailAddress}")]
         public async Task<IActionResult> UnblockDriver(string emailAddress)
@@ -186,9 +189,5 @@ namespace AuthenticationService.Controllers
                 return StatusCode(500, new { message = "An error occurred while unblocking the driver.", error = ex.Message });
             }
         }
-
-
-
-
     }
 }

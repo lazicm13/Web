@@ -21,7 +21,6 @@ public class RegistrationController : ControllerBase
     }
 
     [HttpPost("register")]
-    
     public async Task<IActionResult> Register([FromBody] RegisterRequest user)
     {
         try
@@ -69,6 +68,4 @@ public class RegistrationController : ControllerBase
             return BadRequest(new { message = ex.Message });
         }
     }
-
-    
 }

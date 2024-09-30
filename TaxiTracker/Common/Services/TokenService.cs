@@ -82,17 +82,6 @@ namespace Common.Services
             return null;
         }
 
-        public bool IsUserLoggedIn(string token)
-        {
-            // Proveri da li je token prazan ili null
-            if (string.IsNullOrEmpty(token))
-                return false;
-
-            // Pokušaj da validiraš token
-            var principal = ValidateToken(token);
-            return principal != null; 
-        }
-
         public string GetUsernameFromToken(string token)
         {
             if (string.IsNullOrEmpty(token))
@@ -130,8 +119,5 @@ namespace Common.Services
             }
             return false;
         }
-
-
-
     }
 }

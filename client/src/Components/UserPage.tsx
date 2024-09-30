@@ -1,24 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { getUserData, updateUser, uploadImage } from './../Services/userService';  // Import the service
 import './../Style/userpage.css';
+import './../Services/userService';
 
-interface UserData {
-    fullName: string;
-    username: string;
-    emailAddress: string;
-    birthDate: string;
-    address: string;
-    image: string;
-}
-
-interface EditMode {
-    fullName: boolean;
-    userName: boolean;
-    email: boolean;
-    birthDate: boolean;
-    address: boolean;
-    profileImage: boolean;
-}
 
 function UserPage() {
     const [registrationStatus, setRegistrationStatus] = useState('');

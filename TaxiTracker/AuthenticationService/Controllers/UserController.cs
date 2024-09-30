@@ -31,7 +31,6 @@ public class UserController : ControllerBase
     [Authorize]
     public async Task<IActionResult> GetCurrentUser()
     {
-        // Get JWT token from cookies
         var existingToken = Request.Cookies["jwt"];
         if (string.IsNullOrEmpty(existingToken))
         {
@@ -44,14 +43,12 @@ public class UserController : ControllerBase
             return Unauthorized(new { message = "Invalid user information in token." });
         }
 
-        // Retrieve user from repository based on user ID
         var user = await _repo.RetrieveUserAsync(userId);
         if (user == null)
         {
             return NotFound(new { message = "User not found." });
         }
 
-        // Return user information
         return Ok(new
         {
             fullName = user.FullName,
@@ -79,7 +76,6 @@ public class UserController : ControllerBase
             return Unauthorized(new { message = "Invalid token." });
         }
 
-        // Retrieve user from the database
         var user = await _repo.RetrieveUserAsync(userId);
         if (user == null)
         {
@@ -99,15 +95,12 @@ public class UserController : ControllerBase
 
         try
         {
-            // Save changes to the database
             await _repo.UpdateUserAsync(user);
 
-            // Return successful response
             return Ok(new { message = "User updated successfully." });
         }
         catch (Exception ex)
         {
-            // In case of error, return an appropriate message
             return StatusCode(500, new { message = "An error occurred while updating the user.", error = ex.Message });
         }
     }
@@ -124,32 +117,27 @@ public class UserController : ControllerBase
 
         var userId = _tokenService.GetUsernameFromToken(existingToken);
 
-        // Dohvatiti korisnika iz baze
         var user = await _repo.RetrieveUserAsync(userId);
         if (user == null)
         {
             return NotFound(new { message = "User not found." });
         }
 
-        // Proveriti da li je stara lozinka tačna (proveravamo hash)
         bool isOldPasswordCorrect = _repo.VerifyPassword(changePasswordDto.OldPassword, user.Password);
         if (!isOldPasswordCorrect)
         {
             return StatusCode(403, new { message = "Incorrect old password." });
         }
 
-        // Hashovati novu lozinku
         user.Password = _repo.HashPassword(changePasswordDto.NewPassword);
 
         try
         {
-            // Sačuvati ažuriranog korisnika u bazi
             await _repo.UpdateUserAsync(user);
             return Ok(new { message = "Password changed successfully." });
         }
         catch (Exception ex)
         {
-            // Obrađivanje grešaka
             return StatusCode(500, new { message = "An error occurred while changing the password.", error = ex.Message });
         }
     }
@@ -194,8 +182,6 @@ public class UserController : ControllerBase
             {
                 return NotFound(new { message = "User not found." });
             }
-
-            //await _blobStorageService.DeleteImageAsync(oldImage);
 
             user.Image = imageUrl;
             await _repo.UpdateUserAsync(user);

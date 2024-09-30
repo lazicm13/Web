@@ -16,20 +16,20 @@ namespace AuthenticationService.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private readonly UserDataRepository _repo = new UserDataRepository();
+        private readonly UserDataRepository _repo;
         private readonly IConfiguration _configuration;
         private readonly TokenService _tokenService;
 
-        public LoginController(IConfiguration configuration)
+        public LoginController(IConfiguration configuration, UserDataRepository repo)
         {
             _configuration = configuration;
             _tokenService = new TokenService(configuration);
+            _repo = repo;
         }
 
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
-            // Nastavi sa loginom ako korisnik nije ulogovan
             var user = await _repo.RetrieveUserAsync(loginRequest.EmailAddress);
 
             if (user == null || !_repo.VerifyPassword(loginRequest.Password, user.Password))
@@ -44,13 +44,12 @@ namespace AuthenticationService.Controllers
 
             var token = _tokenService.GenerateJwtToken(loginRequest.EmailAddress, user.UserType.ToString(), _configuration);
 
-            // Store the token in an HttpOnly cookie
             var cookieOptions = new CookieOptions
             {
                 HttpOnly = true,
-                Secure = true, // Set this to true in production (when using HTTPS)
-                SameSite = SameSiteMode.Strict, // Strictest cookie setting for CSRF protection
-                Expires = DateTime.UtcNow.AddHours(1) // Same as token expiry
+                Secure = true, 
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(1) 
             };
 
             Response.Cookies.Append("jwt", token, cookieOptions);
@@ -93,13 +92,6 @@ namespace AuthenticationService.Controllers
             return Ok(new { isLoggedIn = false });
         }
 
-        [HttpGet("check")]
-        [Authorize]
-        public IActionResult CheckAuthentication()
-        {
-            return Ok(new { message = "User is authenticated." });
-        }
-
         [HttpPost("logout")]
         [Authorize]
         public IActionResult Logout()
@@ -107,7 +99,5 @@ namespace AuthenticationService.Controllers
             Response.Cookies.Delete("jwt");
             return Ok(new { message = "Logged out successfully." });
         }
-
-
     }
 }

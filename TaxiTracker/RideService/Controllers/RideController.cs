@@ -23,14 +23,13 @@ namespace RideService.Controllers
         private readonly TokenService tokenService;
         private readonly IRideTrackingService _rideTrackingService;
         //private readonly IConfiguration _configuration;
-        //private readonly TokenService _tokenService;
-
         public RideController(RideDataRepository _rideRepo, TokenService _tokenService, IRideTrackingService rideTrackingService)
         {
             tokenService = _tokenService;
             rideRepo = _rideRepo;
             _rideTrackingService = rideTrackingService;
         }
+
 
         [HttpPost("create")]
         [Authorize]
@@ -56,6 +55,7 @@ namespace RideService.Controllers
 
             return Ok(response);
         }
+
 
         [HttpPost("save")]
         [Authorize]
@@ -101,6 +101,7 @@ namespace RideService.Controllers
             }
         }
 
+
         [HttpGet("ride-details")]
         [Authorize]
         public async Task<IActionResult> GetRideInfo()
@@ -127,6 +128,7 @@ namespace RideService.Controllers
 
             return Ok(new { ride});
         }
+
 
         [HttpGet("ride-status")]
         [Authorize]
@@ -157,6 +159,7 @@ namespace RideService.Controllers
             return Ok(new { status = rideStatus });
         }
 
+
         [HttpGet("current")]
         [Authorize]
         public async Task<IActionResult> GetCurrentRide()
@@ -186,6 +189,7 @@ namespace RideService.Controllers
             }
         }
 
+
         [HttpPost("start-ride")]
         [Authorize]
         public async Task<IActionResult> StartRide()
@@ -211,6 +215,7 @@ namespace RideService.Controllers
 
             return Ok();
         }
+
 
         [HttpPost("end-ride/{id}")]
         [Authorize]
@@ -243,6 +248,7 @@ namespace RideService.Controllers
             
             return Ok();
         }
+
 
         [HttpGet("previous")]
         [Authorize]
@@ -277,6 +283,8 @@ namespace RideService.Controllers
 
             return Ok(userRides);
         }
+
+
         [HttpGet("driver-previous")]
         [Authorize]
         public async Task<IActionResult> GetDriverPreviousRides()
